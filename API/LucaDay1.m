@@ -1,5 +1,5 @@
 try
-    delete(sourceapp_MIQAS)
+    delete(sourceapp_ICP_Base)
     delete(imp_mod)
     delete(int_mod)
     delete(clas_mod)
@@ -11,14 +11,11 @@ end
 clear
 clc
 
-sourceapp_MIQAS=MIQAS;
-settings.sourceapp_MIQAS = sourceapp_MIQAS;
-
-imp_mod = Import_Module(sourceapp_MIQAS);
+sourceapp_ICP_Base = ICP_Base;
+settings.sourceapp_ICP_Base = sourceapp_ICP_Base;
 
 settings.import_module_GUI_update_state = true;
-settings.MIQAS_GUI_update_state = true;
-
+settings.ICP_Base_GUI_update_state = true;
 
 settings.session_name = "Luca_Day_1";
 settings.session_id = 0;
@@ -26,30 +23,31 @@ settings.session_id = 0;
 settings.project_name = "Others";
 settings.project_id = 0;
 
-measurementpath = "C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Project LARP\Test Data\Mineral Analysis\Luca Day 1\Silicates-TE.csv";
+measurementpath = "C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\Test Data\Mineral Analysis\Luca Day 1\Silicates-TE.csv";
 settings.massspec.Value = "Agilent 7900";
 
-logfilepath = "C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Project LARP\Test Data\Mineral Analysis\Luca Day 1\201124_TE_log_20241120_162728.log";
+logfilepath = "C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\Test Data\Mineral Analysis\Luca Day 1\201124_TE_log_20241120_162728.log";
 settings.laser.Value = "Resonetics Verbose Log (.log)";
 
-dwelltimepath = "C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Project LARP\Test Data\Mineral Analysis\Luca Day 1\AcqMethod.xml";
+dwelltimepath = "C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\Test Data\Mineral Analysis\Luca Day 1\AcqMethod.xml";
 settings.dwelltime.Value = "Agilent AcqMethod.xml";
 
 settings.import_module_GUI_update_state = true;
-settings.MIQAS_GUI_update_state = true;
+settings.ICP_Base_GUI_update_state = true;
 settings.classification_module_GUI_update_state = true;
 settings.interval_module_GUI_update_state = true;
 settings.reductiontype = 'Matrix';
 
-[~] = measurement_logfile_import_public(imp_mod, measurementpath, logfilepath, dwelltimepath, settings);
+imp_mod = Import_Module(sourceapp_ICP_Base, settings.project_name, settings.project_id, settings.session_id, settings);
 
+[~] = measurement_logfile_import_public(imp_mod, measurementpath, logfilepath, dwelltimepath, settings);
 
 % Att the signal detection is a part of the above function but has to be moved
 % at some point and done properly
 %[imp_mod.base.project.session.spot.signal_starts, imp_mod.base.project.session.spot.signal_ends] = detect_signals(imp_mod.base.project.session.fullsignal_raw, numel(imp_mod.base.project.session.spotname));
 
-int_mod = Interval_Module(sourceapp_MIQAS, settings.project_name, settings.project_id, settings.session_id, imp_mod.base.project);
-
+[project_id, session_id] = save_to_base(sourceapp_ICP_Base, imp_mod.project_id, imp_mod.base.project.session, imp_mod.session_id, imp_mod.base.project_name, settings);
+int_mod = Interval_Module(sourceapp_ICP_Base, sourceapp_ICP_Base.base.project_name, project_id, session_id, settings);
 delete(imp_mod)
 
 %settings.bg_lower_indent = 20;
@@ -68,8 +66,8 @@ settings.spike_elimination = false;
 %settings.spike_elimination_spotnumber = [1,2,3, 4,5,6,    50,51,52,   53,54,55,   109, 110, 111,  112,113,114];
 spike_elimination_public(int_mod, settings)
 
-clas_mod = Classification_Module(sourceapp_MIQAS, settings.project_name, settings.project_id, settings.session_id, int_mod.base.project);
-
+[project_id, session_id] = save_to_base(sourceapp_ICP_Base, int_mod.project_id, int_mod.base.project.session, int_mod.session_id, int_mod.base.project_name, settings);
+clas_mod = Classification_Module(sourceapp_ICP_Base, sourceapp_ICP_Base.base.project_name, project_id, session_id, settings);
 delete(int_mod)
 
 % everything needs to match lengths and PRM and SRM need a type whereas for
@@ -122,53 +120,80 @@ settings.bracket_id = [1,1,6, 6,1,1, 1,1,1, 1,1,1, 1,1,1, 1,1,1, 1,1,1,...
 
 assign_spots_to_reference_materials(clas_mod, settings)
 
-
-drift_mod = Drift_Module(sourceapp_MIQAS, settings.project_name, settings.project_id, settings.session_id, clas_mod.base.project);
+[project_id, session_id] = save_to_base(sourceapp_ICP_Base, clas_mod.project_id, clas_mod.base.project.session, clas_mod.session_id, clas_mod.base.project_name, settings);
+drift_mod = Drift_Module(sourceapp_ICP_Base, sourceapp_ICP_Base.base.project_name, project_id, session_id, settings);
 delete(clas_mod)
 
 
 % Reference materials for each sequence
-settings.internal_standard_for_primary_reference_material = [
-    repmat("GSD_1G", 1, length(4:24)), ...       % First sequence
-    repmat("NIST612", 1, length(206:228)), ...   % Second sequence
-    repmat("Sca_17", 1, length(302:319))         % Third sequence
+
+settings.internal_standard_for_primary_reference_material= [
+    repmat("GSD_1G", 1, length(4:145)), ...       % PRMs for bracket_ids for GSD
+    repmat("GSD_1G", 1, length(152:200)), ... 
+    repmat("GSD_1G", 1, length(234:295)), ... 
+    repmat("GSD_1G", 1, length(302:319)), ...
+    repmat("GSD_1G", 1, length(4:24)), ...
+    repmat("NIST612", 1, length(206:228)), ...   % PRMs for bracket_ids for NIST
+    repmat("Sca_17", 1, length(302:319))         % PRMs for bracket_ids for Sca-17
 ];
 
-% Spot numbers in sequences
-settings.spotnumber_for_internal_standard = [
-    4:24, ...           % First sequence
-    206:228, ...        % Second sequence
-    302:319             % Third sequence
+settings.internal_standard_for_bracket_id = [
+    repmat(1, 1, length(4:145)), ...       % Bracket_ids for GSD
+    repmat(2, 1, length(152:200)), ... 
+    repmat(4, 1, length(234:295)), ... 
+    repmat(5, 1, length(302:319)), ...
+    repmat(6, 1, length(4:24)), ...
+    repmat(1, 1, length(206:228)), ...   % Bracket_ids for NIST
+    repmat(5, 1, length(302:319))         % bracket_ids for Sca-17
 ];
 
-% Internal standards for each sequence
+settings.spotnumber_for_internal_standard= [
+    4:145, ...       % Spotnumbers for GSD
+    152:200, ... 
+    234:295, ... 
+    302:319, ...
+    4:24, ...
+    206:228, ...   % Spotnumbers for NIST
+    302:319         % Spotnumbers for Sca-17
+];
+
 settings.internal_standard = [
-    repmat("Fe57", 1, length(4:24)), ...         % First sequence
-    repmat("Ti49", 1, length(206:228)), ...      % Second sequence
-    repmat("Na23", 1, length(302:319))           % Third sequence
+    repmat("Fe57", 1, length(4:145)), ...       % IS for GSD
+    repmat("Fe57", 1, length(152:200)), ... 
+    repmat("Fe57", 1, length(234:295)), ... 
+    repmat("Fe57", 1, length(302:319)), ...
+    repmat("Fe57", 1, length(4:24)), ...
+    repmat("Ti49", 1, length(206:228)), ...   % IS for NIST
+    repmat("Na23", 1, length(302:319))         % IS for Sca-17
 ];
 
-% Mass fractions for each sequence
 settings.internal_standard_mass_fraction = [
-    repmat(500, 1, length(4:24)), ...           % First sequence
-    repmat(600, 1, length(206:228)), ...        % Second sequence
-    repmat(700, 1, length(302:319))             % Third sequence
+    repmat(500, 1, length(4:145)), ...       % Mass fractions for GSD
+    repmat(500, 1, length(152:200)), ... 
+    repmat(500, 1, length(234:295)), ... 
+    repmat(500, 1, length(302:319)), ...
+    repmat(500, 1, length(4:24)), ...
+    repmat(600, 1, length(206:228)), ...   % Mass_fractions for NIST
+    repmat(700, 1, length(302:319))         % Mass_fractions for Sca-17
 ];
+
 
 settings.quantification_module_GUI_update_state = true;
 
-quant_mod = Quantification_Module(sourceapp_MIQAS, settings.project_name, settings.project_id, settings.session_id, drift_mod.base.project);
+[project_id, session_id] = save_to_base(sourceapp_ICP_Base, drift_mod.project_id, drift_mod.base.project.session, drift_mod.session_id, drift_mod.base.project_name, settings);
+quant_mod = Quantification_Module(sourceapp_ICP_Base, sourceapp_ICP_Base.base.project_name, project_id, session_id, settings);
 delete(drift_mod)
 
 assign_internal_standard(quant_mod, settings)
+quantification_wrapper(quant_mod)
+
+[project_id, session_id] = save_to_base(sourceapp_ICP_Base, quant_mod.project_id, quant_mod.base.project.session, quant_mod.session_id, quant_mod.base.project_name, settings);
+results_mod = Results_Module(sourceapp_ICP_Base, sourceapp_ICP_Base.base.project_name, project_id, session_id, settings);
+delete(quant_mod)
 
 
-%save_to_base(sourceapp_MIQAS, int_mod.project_id, int_mod.base.project.session, int_mod.session_id, int_mod.base.project_name, settings)
 
 
-
-% for the referencmaterial and type assignement the user has to input
-% indices and the type/refmat as stings, chars
 
 
 %[settings_default] = measurement_logfile_import_public(imp_mod)
