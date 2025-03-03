@@ -1,4 +1,0 @@
-All functions named _X are from SILLS version 134
-
-All other functions come from version 132. Version 132 is the one that got distributed everywhere and that
-everybody uses.

@@ -1,7 +1,0 @@
-Uncut_Signals_plus_Logfile.m is the wrapper for the import of mineral analyses to test things
-	Press Run in the Script and it will import the raw data and transform it from SIGDAT (raw data) to STD, UNK and A
-	wich are the right format for Sills
-	It also sets the Intervals already and the drifttime. In theory, these functions should be done optionally later in
-	the import Module.
-	
-When the data is in UNK, STD and A use the public_import_fullSTD fullUNK fullA to import everything to SILLS
