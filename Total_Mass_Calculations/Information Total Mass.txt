@@ -1,0 +1,12 @@
+In the Oxides.xlsx file the user can define the elements that should be considered as Oxides to normalize to for quantification.
+ICP-Base always searches for an .xlsx file that lies in the Oxides folder. Renaming the folder or saving the file with a different filetype will make it fail.
+
+The first row holds the element oxide names
+
+The second row holds the oxide conversion factor
+	Example: Divide the molecular weight of Na2O (61.979) divided by 2x the atomic weight of Na (22.9898) so 61.979/(2*22.9898) = 1.3480
+
+
+If Fe is a major, only write FeO in the Oxides.xlsx file! Fe2O3 and the conversion factor is already hardcoded in the program (= 1.4297). The amount of Fe2+ and Fe3+ can be adjusted by the ratio in the quantification module.
+
+If an analyte was measured that is not found in the oxides table, the calculation will fail.
