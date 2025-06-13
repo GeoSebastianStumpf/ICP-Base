@@ -1,8 +1,6 @@
-Nominator;Denominator;Color;LineWidth;Linestyle;Marker;MarkerSize;MarkerFaceColor;MarkerEdgeColor
-Na23;Co59;green;2;-;s;3;magenta;magenta
-Ca43;Co59;blue;2;-;o;3;red;red
-Fe57;Co59;red;2;-;+;3;blue;blue
-K39;Co59;magenta;2;-;*;3;green;green
-Ca43;Mn55;cyan;2;-;s;3;black;black
-Rb85;Mn55;black;2;-;o;3;red;black
-Si29;Mg25;cyan;2;-;none;0;none;none
+Nominator,Denominator,Color,LineWidth,Linestyle,Marker,MarkerSize,MarkerFaceColor,MarkerEdgeColor
+Na23,Co59,blue,2,-,s,3,magenta,magenta
+Ca43,Co59,blue,2,-,o,3,black,black
+Cl35,Co59,cyan,2,-,+,3,black,black
+K39,Co59,blue,2,-,*,3,green,green
+Mg25,Fe57,black,2,-,o,3,red,black

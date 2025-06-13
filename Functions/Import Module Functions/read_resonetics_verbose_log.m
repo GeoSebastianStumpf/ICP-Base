@@ -105,28 +105,7 @@ function [spotname] = read_resonetics_verbose_log(filepath)
             fired(i) = [];
         end
     end
-    % 
-    % %% Check the spotname and if it contains e.g. GSD classify it as a standard
-    % % Initialize an empty cell array for classification
-    % std_unk_classification = cell(size(spotname));
-    % 
-    % % Loop through each entry in spotname
-    % for i = 1:length(spotname)
-    %     % Check if the entry contains 'GSD'
-    %     if contains(spotname{i}, 'GSD') || contains(spotname{i}, 'SRM')
-    %         std_unk_classification{i} = 1;
-    %     else
-    %         std_unk_classification{i} = 0;
-    %     end
-    % end
-    % 
-    % for i = 1:length(spotname)
-    %     % Check if the entry contains 'GSD'
-    %     if contains(spotname{i}, 'GSD')
-    %         default_srm{i} = 'GSD-1G.xls';
-    %     elseif contains(spotname{i}, 'Sca')
-    %         default_srm{i} = 'Sca_17.xls';
-    %     end
-    % end
 
+
+    
 end

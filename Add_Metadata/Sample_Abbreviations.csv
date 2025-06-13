@@ -1,0 +1,16 @@
+﻿SRM610,SRM612,SRM614,SRM616,GSD_1G,GSD_2G,ATHO_G,BCR_2G,AGN_BE11,Sca_17,Sc_1,Grt_1,Di-1,W2_Ol,Opx_1,Di_NG,Titanite_Standard,Quartz_Audetat,Silicate_Glass,Synthetic_Quartz,AGN_BE1,AGN_BE2,AGN_BE3,AGN_BE4,AGN_BE10,AGN_BE12,AGN_BE13,AGN_BE14,AFG_BE,Melt,Grt,Kino,Ol,Mst,Vapour,Vein,Carb
+NIST610,NIST612,NIST614,NIST616,GSD-1G,GSD-2G,ATHO,BCR-2G,BE11,Sca-17,Sc-1,Grt-1,Di-1,W2-Ol,Opx-1,Di_NG,Ti_,Qtz_AA,Sil_Glass,Qtz_synth,AGN-BE1,AGN-BE2,AGN-BE3,AGN-BE4,AGN-BE10,AGN-BE12,AGN-BE13,AGN-BE14,AFG_BE,Melt,Grt,Kino,Ol,Mst,Vapour,vein,Carb
+SRM610,SRM612,SRM614,SRM616,1G,gsd-2g,atho,bcr-2g,AGN-BE11,Sc-17,sc-1,Grt_1,di-1,W2,Opx_1,,,,,,AGN_BE1,AGN_BE2,AGN_BE3,AGN_BE4,AGN_BE10,AGN_BE12,AGN_BE13,AGN_BE14,AFG,,,,,,,,
+NISTSRM610,NISTSRM612,NISTSRM614,NISTSRM616,gsd-1g,GSD_2G,,BCR-2g,,Scap-17,Sc_1,grt-1,Di_1,w2-ol,opx-1,,,,,,,,,,,,,,,,,,,,,,
+SRM 610,SRM 612,SRM 614,SRM 616,GSD_1G,gsd_2g,,BCR_2G,,scap-17,sc_1,grt_1,di_1,W2_Ol,opx_1,,,,,,,,,,,,,,,,,,,,,,
+NIST 610,NIST 612,NIST 614,NIST 616,gsd_1g,gsd_2G,,BCR_2g,,sca-17,,,,W2_ol,,,,,,,,,,,,,,,,,,,,,,,
+SRM_610,SRM_612,SRM_614,SRM_616,gsd_1G,GSD_2g,,BCR_2G,,Sca_17,,,,,,,,,,,,,,,,,,,,,,,,,,,
+NIST_610,NIST_612,NIST_614,NIST_616,GSD_1g,,,,,sca_17,,,,,,,,,,,,,,,,,,,,,,,,,,,
+NIST_SRM_610,NIST_SRM_612,NIST_SRM_614,NIST_SRM_616,,,,,,scap_17,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,Scap_17,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,SCAP,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,Sca,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,scap,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,Scap,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,sca,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,SCA,,,,,,,,,,,,,,,,,,,,,,,,,,,
