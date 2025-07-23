@@ -22,19 +22,24 @@ else
     fil=options.plot_settings.MarkerFaceColor;
 end
 
-if  (isfield(options,'default') && options.default==true)|| not(isfield(options,'plot_settings')) || isempty(options.plot_settings)  || not(isfield(options.plot_settings,'MarkerFaceAlpha')) || isempty(options.plot_settings.MarkerFaceAlpha) || not(isfield(options.plot_settings.MarkerFaceAlpha,'Value')) || isempty(options.plot_settings.MarkerFaceAlpha.Value)
-    mfa=3/8;
-    options_definition.plot_settings.MarkerFaceAlpha=mfa;
+if  (isfield(options,'default') && options.default==true)|| not(isfield(options,'plot_settings')) || isempty(options.plot_settings)  || not(isfield(options.plot_settings,'LineAlpha')) || isempty(options.plot_settings.LineAlpha) || not(isfield(options.plot_settings.LineAlpha,'Value')) || isempty(options.plot_settings.LineAlpha.Value)
+    la=1;
+    options_definition.plot_settings.LineAlpha=la;
 else
-    mfa=options.plot_settings.MarkerFaceAlpha.Value;
+    la=options.plot_settings.LineAlpha.Value;
 end
 
+UserData.LineAlpha=la;
+
 if  (isfield(options,'default') && options.default==true) || not(isfield(options,'plot_settings'))|| isempty(options.plot_settings)  || not(isfield(options.plot_settings,'symbol')) || isempty(options.plot_settings.symbol)
-    symb='o';
+    symb='.';
     options_definition.plot_settings.symbol=symb;
 else
     symb=options.plot_settings.symbol;
 end
+
+
+
 
 if  (isfield(options,'default') && options.default==true) || not(isfield(options,'plot_settings'))|| isempty(options.plot_settings)  || not(isfield(options.plot_settings,'MarkerEdgeColor')) || isempty(options.plot_settings.MarkerEdgeColor)
     if strcmp(symb,'.')
@@ -48,12 +53,6 @@ else
 
 end
 
-if  (isfield(options,'default') && options.default==true) || not(isfield(options,'plot_settings'))|| isempty(options.plot_settings)  || not(isfield(options.plot_settings,'MarkerEdgeAlpha')) || isempty(options.plot_settings.MarkerEdgeAlpha)  || not(isfield(options.plot_settings.MarkerEdgeAlpha,'Value')) || isempty(options.plot_settings.MarkerEdgeAlpha.Value)
-    mea=4/8;
-    options_definition.plot_settings.MarkerEdgeAlpha=mea;
-else
-    mea=options.plot_settings.MarkerEdgeAlpha.Value;
-end
 
 if  (isfield(options,'default') && options.default==true) || not(isfield(options,'plot_settings'))|| isempty(options.plot_settings)  || not(isfield(options.plot_settings,'MarkerLineWidth')) || isempty(options.plot_settings.MarkerLineWidth)  || not(isfield(options.plot_settings.MarkerLineWidth,'Value')) || isempty(options.plot_settings.MarkerLineWidth.Value)
     mlw=1.5;
@@ -106,7 +105,6 @@ if not(exist('ax2plot','var')) || isempty(ax2plot)
 
 end
 
-
 Elements={'H','He','Li','Be','B','C','N','O','F','Ne','Na','Mg','Al','Si','P','S','Cl',...
     'Ar','K','Ca','Sc','Ti','V','Cr','Mn','Fe','Co','Ni','Cu','Zn','Ga','Ge','As',...
     'Se','Br','Kr','Rb','Sr','Y','Zr','Nb','Mo','Tc','Ru','Rh','Pd','Ag','Cd','In',...
@@ -116,21 +114,39 @@ Elements={'H','He','Li','Be','B','C','N','O','F','Ne','Na','Mg','Al','Si','P','S
     'Cf','Es','Fm','Md','No','Lr','Rf','Db','Sg','Bh','Hs','Mt','Uun','Uuu','Uub'};
 
 
-headers= replace(T.Properties.VariableNames,{'0','1','2','3','4','5','6','7','8','9'},'');
-T=T(:,ismember(headers,Elements));
-headers=headers(ismember(headers,Elements));
 
 if strcmp(options.type.Value,'REE')
     Element_Names={'La', 'Ce', 'Pr', 'Nd', 'Sm', 'Eu', 'Gd', 'Tb', 'Dy', 'Ho', 'Er', 'Tm', 'Yb', 'Lu'};
+    options.xValues=[1 1.01466 1.02975 1.04529 1.07357 1.08650 1.09975 1.11333 1.12725 1.14042 1.15278 1.16426 1.17480 1.18434];
+
 elseif strcmp(options.type.Value,'TE')
     Element_Names={'Li','Be','Na','Mg','Al','Si','K','Ca','Sc','Ti','V','Cr','Mn','Fe','Co','Ni','Cu','Zn','As','Rb','Sr','Y','Zr','Nb','Mo','Ag','In','Cs','Ba','La','Ce','Pr','Nd','Sm','Eu','Gd','Tb','Dy','Ho','Er','Tm','Yb','Lu','Hf','Ta','W','Pb','Bi','U'};
 elseif strcmp(options.type.Value,'All')
-    Element_Names=Elements;%;
-elseif strcmp(options.type.Value,'Custom') || startsWith(options.type.Value,'custom_')
 
-    if isfield(options,'Element_List') && iscell(options.Element_List) && not(isempty(options.Element_List(ismember(options.Element_List, Elements))))
+
+    headers= replace(T.Properties.VariableNames,{'0','1','2','3','4','5','6','7','8','9'},'');
+    T=T(:,ismember(headers,Elements));
+    headers=headers(ismember(headers,Elements));
+elseif strcmp(options.type.Value,'Custom') || startsWith(options.type.Value,'custom_')
+    if isfield(options,'Element_List') && iscell(options.Element_List)
         Element_Names= options.Element_List;
+        Elements = Element_Names;
+    end
+    %   T_=T;
+    headers= T.Properties.VariableNames;
+    if sum(ismember(headers,Elements))==0
+        %  T=T_;
+        headers= replace(T.Properties.VariableNames,{'0','1','2','3','4','5','6','7','8','9'},'');
+        T=T(:,ismember(headers,Elements));
+        headers=headers(ismember(headers,Elements));
+        % ath problem if not unique
     else
+    end
+    T=T(:,ismember(headers,Elements));
+    headers=headers(ismember(headers,Elements));
+
+
+    if not(isfield(options,'Element_List') && iscell(options.Element_List) && not(isempty(options.Element_List(ismember(options.Element_List, Elements)))))
 
         if not(isempty(ax2plot.XAxis.TickLabels)) && not(isequal(ax2plot.XAxis.TickLabels',headers))
             Element_Names=unique([ax2plot.XAxis.TickLabels' headers ] );%;
@@ -151,7 +167,8 @@ elseif strcmp(options.type.Value,'Custom') || startsWith(options.type.Value,'cus
         end
 
         %             disp(options.TENorm.Name)
-        %             norm_vector
+    else
+        norm_vector=ones(1,numel(Element_Names));
     end
 end
 
@@ -184,6 +201,7 @@ end
 
 for n=1:numel(Element_Names)
     try
+        % replace(T.Properties.VariableNames,{'0','1','2','3','4','5','6','7','8','9'},'')
         if any(ismember(headers,Element_Names{n}))
             if sum(ismember(headers,Element_Names{n}))==1
                 if istable(T(:,ismember(headers,Element_Names{n})))
@@ -209,42 +227,47 @@ for n=1:numel(Element_Names)
     end
 end
 
+if isempty(D)
+    return
+end
 
-if strcmp(options.type.Value,'Custom') || startsWith(options.type.Value,'custom_')
+if isfield(options,'xValues')
+    x=options.xValues;
+else
+    x=1:size(D,2);
+end
 
-
+if strcmpi(options.type.Value,'Custom') || startsWith(options.type.Value,'custom')
     if isfield(options,'TENorm') && isfield(options.TENorm,'NormState') && options.TENorm.NormState==true
-
         D=D./norm_vector;
-
-        if size(D,1)==size(norm_vector,2)
-            D=D';
-        end
-
-
         if  isfield(options.TENorm,'Name')
             ylabel(ax2plot,options.TENorm.Name,Interpreter="none");
         end
     end
 
-    if isfield(options,'legend') && isfield(options.legend,'String')
-        plot(ax2plot,1: size(D,2),D,'-','Color',[fil,mfa],'LineWidth',mlw,'HandleVisibility','on',Tag=options.legend.String);
-    else
-        plot(ax2plot,1: size(D,2),D,'-','Color',[fil,mfa],'LineWidth',mlw,'HandleVisibility','on',Tag=num2str(numel([ax2plot.Children])));
+    if size(D,1)==size(D,2)
+        D=D';
     end
-    set(ax2plot,'YScale','log','XLim',[min(1) max(size(D,2))],'XTick',1: size(D,2),'XTickLabel',Element_Names)
+
+    if isfield(options,'legend') && isfield(options.legend,'String')
+        plot(ax2plot,x,D,'-','Color',[fil,la],'Marker',symb,'LineWidth',mlw,'HandleVisibility','on','Tag',options.legend.String,'UserData',UserData);
+    else
+        plot(ax2plot,x,D,'-','Color',[fil,la],'Marker',symb,'LineWidth',mlw,'HandleVisibility','on','Tag',num2str(numel([ax2plot.Children])),'UserData',UserData);
+    end
+    set(ax2plot,'YScale','log','XLim',[min(x) max(x)],'XTick',x,'XTickLabel',Element_Names)
 
 
 else
-    plot(ax2plot,1: size(D,2),D,'-','Color',[fil,mfa],'LineWidth',mlw,'HandleVisibility','off');
+    plot(ax2plot,x,D,'-','Color',[fil,la],'Marker',symb,'LineWidth',mlw,'HandleVisibility','on','UserData',UserData);
 end
 
-plot(ax2plot,nan,nan,'-','Color',[fil,mfa],'LineWidth',mlw,'HandleVisibility','off');
 
 if plot_DL==true
-    scatter(ax2plot,1: size(D_DL,2),D_DL,100,'_','filled','MarkerFaceAlpha',0.5,'MarkerEdgeAlpha',0.5,'MarkerEdgeColor',[0.8 0.8 0.8],'MarkerFaceColor',[0.8 0.8 0.8],'LineWidth',1,'HandleVisibility','off');
+    scatter(ax2plot,x,D_DL,100,'_','filled','MarkerFaceAlpha',0.5,'MarkerEdgeAlpha',0.5,'MarkerEdgeColor',[0.8 0.8 0.8],'MarkerFaceColor',[0.8 0.8 0.8],'LineWidth',1,'HandleVisibility','off');
 end
 
+ax2plot.XGrid=true;
+ax2plot.YGrid=true;
 
 if  isfield(options,'legend') && isfield(options.legend,'String')
     legend_str=options.legend.String(any(not(isnan(X1)) & not(isnan(Y1))));

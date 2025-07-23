@@ -1104,6 +1104,10 @@ if options.XYplot.Value==true
         ax2plot.YScale=options.custom.YScale;
     end
 
+    if  isfield(options,'custom') && isfield(options.custom,'CScale') && not(isempty(options.custom.CScale))
+        ax2plot.ColorScale=options.custom.CScale;
+    end
+
     if  isfield(options,'custom') && isfield(options.custom,'XGrid') && not(isempty(options.custom.XGrid))
         ax2plot.XGrid=options.custom.XGrid;
     end
