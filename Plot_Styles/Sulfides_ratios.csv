@@ -1,0 +1,6 @@
+Nominator,Denominator,Color,LineWidth,Linestyle,Marker,MarkerSize,MarkerFaceColor,MarkerEdgeColor
+Si29,S34,green,2,-,s,3,magenta,magenta
+Si29,Co59,blue,2,-,o,3,red,red
+Mg24,S34,red,2,-,+,3,blue,blue
+Mg24,Ni60,magenta,2,-,*,3,green,green
+Si29,Mg24,black,2,-,o,2,black,black
