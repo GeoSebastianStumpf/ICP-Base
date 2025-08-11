@@ -1,0 +1,6 @@
+Nominator,Denominator,Color,LineWidth,Linestyle,Marker,MarkerSize,MarkerFaceColor,MarkerEdgeColor
+Na23,Co59,blue,2,-,s,3,magenta,magenta
+Ca43,Co59,blue,2,-,o,3,black,black
+Cl35,Co59,cyan,2,-,+,3,black,black
+K39,Co59,blue,2,-,*,3,green,green
+Mg25,Fe57,black,2,-,o,3,red,black

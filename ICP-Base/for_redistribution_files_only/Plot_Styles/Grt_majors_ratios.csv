@@ -1,0 +1,7 @@
+Nominator,Denominator,Color,LineWidth,Linestyle,Marker,MarkerSize,MarkerFaceColor,MarkerEdgeColor
+Ca43,Al27,blue,2,-,*,4,cyan,black
+Ba137,Fe57,cyan,2,-,o,4,green,green
+Mg25,Si29,green,2,-,s,4,red,red
+Si29,Al27,magenta,2,-,*,4,green,green
+Mg25,Al27,black,2,-,o,4,red,black
+Ba137,Lu175,red,2,-,none,0,none,none

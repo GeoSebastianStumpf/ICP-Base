@@ -1,0 +1,10 @@
+Analytes;Color;LineWidth;Linestyle;Marker;MarkerSize;MarkerFaceColor;MarkerEdgeColor
+Ba137;green;2;-;o;1;blue;magenta
+Rb85;cyan;2;-;s;1;magenta;black
+Na23;blue;2;-;*;3;red;red
+Cl35;blue;2;-;none;0;none;none
+K39;[1,0.5,1];2;-;s;1;cyan;black
+Ca43;magenta;2;-;o;1;blue;black
+Cs133;cyan;2;-;x;1;blue;red
+S34;[1, 0.65,0];2;-;none;0;none;none
+Fe57;black;2;-;none;0;none;none
