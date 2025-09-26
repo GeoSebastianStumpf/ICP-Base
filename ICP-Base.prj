@@ -8,7 +8,7 @@
       <file>${PROJECT_ROOT}\ICP-Base_resources\icon_24.png</file>
       <file>${PROJECT_ROOT}\ICP-Base_resources\icon_16.png</file>
     </param.icons>
-    <param.version>1.00.50813</param.version>
+    <param.version>1.00.50926</param.version>
     <param.authnamewatermark>Sebastian Stumpf</param.authnamewatermark>
     <param.email>sebastian.stumpf@unibe.ch</param.email>
     <param.company>University of Bern</param.company>
@@ -32,8 +32,8 @@
     <param.web.mcr>false</param.web.mcr>
     <param.package.mcr>true</param.package.mcr>
     <param.no.mcr>false</param.no.mcr>
-    <param.web.mcr.name>ICP_Base_v_1_00_50813_win</param.web.mcr.name>
-    <param.package.mcr.name>ICP_Base_v_1_00_50813_win_mcr</param.package.mcr.name>
+    <param.web.mcr.name>ICP_Base_v_1_00_50926_win</param.web.mcr.name>
+    <param.package.mcr.name>ICP_Base_v_1_00_50926_win_mcr</param.package.mcr.name>
     <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
     <param.windows.command.prompt>true</param.windows.command.prompt>
     <param.create.log>false</param.create.log>
