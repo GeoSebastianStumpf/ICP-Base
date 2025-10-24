@@ -1,5 +1,14 @@
+
+% Two versions
+    % Once everything is done in the API
+    % Once ICP_Base is opened, an existing base is loaded, and then iterate
+    % through some internal standards in the quantification module and give
+    % back the results
+
+
+%%
 try
-    delete(sourceapp_MIQAS)
+    delete(sourceapp_ICP_Base)
     delete(imp_mod)
     delete(int_mod)
     delete(clas_mod)
@@ -12,46 +21,44 @@ clear
 clc
 
 
-sourceapp_MIQAS=MIQAS;
-settings.sourceapp_MIQAS = sourceapp_MIQAS;
+sourceapp_ICP_Base = ICP_Base;
+settings.sourceapp_ICP_Base = sourceapp_ICP_Base;
 
-imp_mod = Import_Module(sourceapp_MIQAS);
+settings.ICP_Base_GUI_update_state = true;
+
+% Import Module
 
 settings.import_module_GUI_update_state = true;
-settings.MIQAS_GUI_update_state = true;
 
-
-settings.session_name = "Alm-Min-1";
+settings.session_name = 'Alm-Min-1'; % use '' not ""
 settings.session_id = 0;
 
-settings.project_name = "Almirez";
+settings.project_name = 'Almirez'; % use '' not ""
 settings.project_id = 0;
 
-measurementpath = "C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Project LARP\Test Data\Mineral Analysis\Alm06_Min\Alm-Min-1.csv";
-settings.massspec.Value = "Agilent 7900";
+% measurementpath = "C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Project LARP\Test Data\Mineral Analysis\Alm06_Min\Alm-Min-1.csv";
+% settings.massspec.Value = "Agilent 7900";
+% 
+% logfilepath = "C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Project LARP\Test Data\Mineral Analysis\Alm06_Min\Alm06_Min_log_20231130_172714.log";
+% settings.laser.Value = "Resonetics Verbose Log (.log)";
 
-logfilepath = "C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Project LARP\Test Data\Mineral Analysis\Alm06_Min\Alm06_Min_log_20231130_172714.log";
-settings.laser.Value = "Resonetics Verbose Log (.log)";
-
-dwelltimepath = "C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Project LARP\Test Data\Mineral Analysis\Alm06_Min\AcqMethod.xml";
-settings.dwelltime.Value = "Agilent AcqMethod.xml";
+settings.mass_spec_metadata_path = "C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Project LARP\Test Data\Mineral Analysis\Alm06_Min\AcqMethod.xml";
+settings.mass_spec_metadata.Value = "Agilent AcqMethod (.xml)";
 
 settings.import_module_GUI_update_state = true;
-settings.MIQAS_GUI_update_state = true;
-settings.classification_module_GUI_update_state = true;
 settings.reductiontype = 'Matrix';
 
+imp_mod = Import_Module(sourceapp_ICP_Base, settings.project_name, settings.project_id, settings.session_id);
 
-[~] = measurement_logfile_import_public(imp_mod, measurementpath, logfilepath, dwelltimepath, settings);
+[~] = import_mass_spec_metadata_API(imp_mod, settings.mass_spec_metadata_path, settings);
 
-
-% Att the signal detection is a part of the above function but has to be moved
-% at some point and done properly
-%[imp_mod.base.project.session.spot.signal_starts, imp_mod.base.project.session.spot.signal_ends] = detect_signals(imp_mod.base.project.session.fullsignal_raw, numel(imp_mod.base.project.session.spotname));
-
-int_mod = Interval_Module(sourceapp_MIQAS, settings.project_name, settings.project_id, settings.session_id, imp_mod.base.project);
-
+% save back to base and close import module
+save_to_base(sourceapp_ICP_Base, imp_mod.project_id, imp_mod.base.project.session, imp_mod.session_id, imp_mod.base.project_name, settings)
 delete(imp_mod)
+
+%% Interval Module
+% get data from base
+int_mod = Interval_Module(sourceapp_ICP_Base, settings.project_name, settings.project_id, settings.session_id);
 
 settings.interval_module_GUI_update_state = true;
 
@@ -63,7 +70,9 @@ set_automatic_background(int_mod, settings)
 %settings.matrix_upper_indent = 5;
 set_automatic_matrix(int_mod, settings)
 
-clas_mod = Classification_Module(sourceapp_MIQAS, settings.project_name, settings.project_id, settings.session_id, int_mod.base.project);
+%% Classification Module
+
+clas_mod = Classification_Module(sourceapp_ICP_Base, settings.project_name, settings.project_id, settings.session_id, int_mod.base.project);
 
 delete(int_mod)
 
@@ -72,7 +81,7 @@ delete(int_mod)
 % Make sure to use the exact same spelling as the .csv reference material
 % files are named
 % All of this is case sensitive
-
+settings.classification_module_GUI_update_state = true;
 settings.spotnumber = [1,2,3,   43,44,45,   87,88,89,    133,134,135];
 settings.type = ["PRM", "PRM", "PRM",  "PRM", "PRM", "PRM",   "PRM", "PRM", "PRM", "PRM", "PRM", "PRM"];
 settings.referencematerial = ["GSD_1G", "GSD_1G", "GSD_1G", "GSD_1G", "GSD_1G", "GSD_1G",    "GSD_1G", "GSD_1G", "GSD_1G", "GSD_1G", "GSD_1G", "GSD_1G"];
@@ -80,10 +89,12 @@ settings.bracket_id = [1,1,1, 1,1,1, 1,1,1, 1,1,1];
 
 assign_spots_to_reference_materials(clas_mod, settings)
 
-drift_mod = Drift_Module(sourceapp_MIQAS, settings.project_name, settings.project_id, settings.session_id, clas_mod.base.project);
+%% Drift Module
+
+drift_mod = Drift_Module(sourceapp_ICP_Base, settings.project_name, settings.project_id, settings.session_id, clas_mod.base.project);
 delete(clas_mod)
 
-%save_to_base(sourceapp_MIQAS, int_mod.project_id, int_mod.base.project.session, int_mod.session_id, int_mod.base.project_name, settings)
+%save_to_base(sourceapp_ICP_Base, int_mod.project_id, int_mod.base.project.session, int_mod.session_id, int_mod.base.project_name, settings)
 
 
 
@@ -97,7 +108,7 @@ delete(clas_mod)
 %% asdf
 
 try
-    delete(sourceapp_MIQAS)
+    delete(sourceapp_ICP_Base)
     delete(imp_mod)
 catch ME
     disp("help")
@@ -106,8 +117,8 @@ end
 clear
 clc
 
-sourceapp_MIQAS=MIQAS;
-settings.sourceapp_MIQAS = sourceapp_MIQAS;
+sourceapp_ICP_Base=ICP_Base;
+settings.sourceapp_ICP_Base = sourceapp_ICP_Base;
 
 
 measurementpath = ["C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Project LARP\Test Data\Mineral Analysis\Alm06_Min\Alm-Min-1.csv",...
@@ -143,7 +154,7 @@ settings.project_id = [1, 1, 2, 3, 3, 3]; %[0, 0, 0, 0];
 settings.session_name = ["Alm-Min-1", "Alm-Min-2", "VCa-Min-1", "standards_test", "Luca Day 1", "Natalia"];
 settings.session_id = [0, 0, 0, 0, 0, 0];
 
-settings.MIQAS_GUI_update_state = true;
+settings.ICP_Base_GUI_update_state = true;
 settings.import_module_GUI_update_state = true;
 settings.interval_module_GUI_update_state = true;
 
@@ -191,12 +202,12 @@ for i = 1:numel(measurementpath)
     end
 
     % open Import Module
-    imp_mod = Import_Module(sourceapp_MIQAS);
+    imp_mod = Import_Module(sourceapp_ICP_Base);
     % Import data
     measurement_logfile_import_public(imp_mod, measurementpath(i), logfilepath(i), dwelltimepath(i), current_settings);
 
     % open Interval Module and transfer data
-    int_mod = Interval_Module(sourceapp_MIQAS, current_settings.project_name, current_settings.project_id, current_settings.session_id, imp_mod.base.project);
+    int_mod = Interval_Module(sourceapp_ICP_Base, current_settings.project_name, current_settings.project_id, current_settings.session_id, imp_mod.base.project);
     %delete Import Module
     delete(imp_mod)
     % set the backgrounds
@@ -205,7 +216,7 @@ for i = 1:numel(measurementpath)
     set_automatic_matrix(int_mod, current_settings)
     
     %save to base
-    save_to_base(sourceapp_MIQAS, int_mod.project_id, int_mod.base.project.session, int_mod.session_id, int_mod.base.project_name, current_settings)
+    save_to_base(sourceapp_ICP_Base, int_mod.project_id, int_mod.base.project.session, int_mod.session_id, int_mod.base.project_name, current_settings)
     %delte Interval Module
     delete(int_mod)
 end
