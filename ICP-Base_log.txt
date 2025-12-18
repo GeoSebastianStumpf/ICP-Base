@@ -4,3 +4,1158 @@ Set 'VariableNamingRule' to 'preserve' to use the original column headers as tab
 [Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating
 variable names for the table. The original column headers are saved in the VariableDescriptions property.
 Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',1604,1)">1604 </a>        end
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',1604,1)">1604 </a>        end
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',3027,1)">3027 </a>                if ~isfield(app.base.project.session.config, 'total_oxides_path')
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',3027,1)">3027 </a>                if ~isfield(app.base.project.session.config, 'total_oxides_path')
+app.base.project.session.config.total_oxides_path = fullfile(app.sourceapp.installpath, 'Total_Oxide_Calculations');
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Classification_Module.mlapp',942,1)">942 </a>            selectedFolder = uigetdir('', 'Select Reference Material Folder');
+ app.base.project.session.config.RM_folder_path = fullfile(app.sourceapp.installpath,'RM_Files');
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Classification_Module.mlapp',942,1)">942 </a>            selectedFolder = uigetdir('', 'Select Reference Material Folder');
+dbcont
+
+ans =
+
+     2
+
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',3993,1)">3993 </a>            if isequal(host_inclusion, 'Matrix')
+dbcont
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+{Conversion to cell from double is not possible.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/ImportTableButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 4062)" style="font-weight:bold">Quantification_Module/ImportTableButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',4062,0)">line 4062</a>)
+                app.base.project.session.spot.internal_standard{bracket_id, PRM}(spot_numbers) = internal_standard;
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+{Conversion to cell from double is not possible.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/ImportTableButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 4065)" style="font-weight:bold">Quantification_Module/ImportTableButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',4065,0)">line 4065</a>)
+                app.base.project.session.spot.internal_standard{bracket_id, PRM}(spot_numbers) = internal_standard;
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',4065,1)">4065 </a>                app.base.project.session.spot.internal_standard{bracket_id, PRM}(spot_numbers) = values_cell;
+dbcont
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+{Undefined function 'isnan' for input arguments of type 'cell'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/ImportTableButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 4063)" style="font-weight:bold">Quantification_Module/ImportTableButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',4063,0)">line 4063</a>)
+                nan_mask = isnan(internal_standard);
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original
+column headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+clc
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+dbquit
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+
+mass_fraction_host_i =
+
+  1×57 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> row vector
+
+   1.0e+05 *
+
+  Columns 1 through 15
+
+    0.0001    0.0001    0.0002    2.9750    0.0000    1.8511    0.0006         0    0.0009    0.0001    0.0010    0.0000    0.0002    0.0000    0.0000
+
+  Columns 16 through 30
+
+    0.0119    0.7731    0.0018    0.0223    0.0000    0.0008    0.0000         0    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+  Columns 31 through 45
+
+         0    0.0000    0.0000    0.0000         0    0.0000    0.0000         0         0         0         0         0         0         0         0
+
+  Columns 46 through 57
+
+         0         0         0         0         0         0    0.0000    0.0000    0.0000    0.0000         0    0.0000
+
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2059,1)">2059 </a>        end
+           second_internal_standard_mass_fraction = app.base.project.session.spot.second_internal_standard_mass_fraction_inclusion{bracket_idx,prm_idx}{unk}; % Cisinc
+            sensitivity_relative_to_is2 = app.sensitivity_relative_to_second_internal_standard_inclusion{bracket_idx,prm_idx}{unk,:};
+
+            mass_fraction_host_i = app.base.project.session.spot.matrix_composition{bracket_idx,prm_idx}{unk,:}; % Cihost
+
+            incl_total_oxide = app.base.project.session.spot.internal_standard_oxide_wt_inclusion{bracket_idx,prm_idx}{unk}; % Oxide_inc
+            incl_fe_ratio = app.base.project.session.spot.Fe_ratio_for_total_oxide_inclusion{bracket_idx,prm_idx}{unk}; % fe_ratio
+
+            intensity_mix_i = app.base.project.session.spot.bkgd_corrected_cps_mix{unk,:}; % Iimix
+app.base.project.session.spot.internal_standard_inclusion{bracket_idx,prm_idx}{unk}
+
+ans =
+
+    'Total Oxides'
+
+app.base.project.session.spot.internal_standard{bracket_idx,prm_idx}{unk}
+
+ans =
+
+    'Si29'
+
+mass_fraction_host_i
+
+mass_fraction_host_i =
+
+  1×57 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> row vector
+
+   1.0e+05 *
+
+  Columns 1 through 15
+
+    0.0001    0.0001    0.0002    2.9750    0.0000    1.8511    0.0006         0    0.0009    0.0001    0.0010    0.0000    0.0002    0.0000    0.0000
+
+  Columns 16 through 30
+
+    0.0119    0.7731    0.0018    0.0223    0.0000    0.0008    0.0000         0    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+  Columns 31 through 45
+
+         0    0.0000    0.0000    0.0000         0    0.0000    0.0000         0         0         0         0         0         0         0         0
+
+  Columns 46 through 57
+
+         0         0         0         0         0         0    0.0000    0.0000    0.0000    0.0000         0    0.0000
+
+app.base.project.session.spot.matrix_composition{bracket_idx,prm_idx}
+
+ans =
+
+  38×57 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+     <strong>Li7</strong>       <strong>B11</strong>       <strong>Na23</strong>         <strong>Mg25</strong>        <strong>Al27</strong>         <strong>Si29</strong>        <strong>P31</strong>      <strong>S34</strong>     <strong>Cl35</strong>       <strong>K39</strong>       <strong>Ca43</strong>      <strong>Sc45</strong>      <strong>Ti49</strong>       <strong>V51</strong>       <strong>Cr53</strong>      <strong>Mn55</strong>     <strong>Fe57</strong>      <strong>Co59</strong>      <strong>Ni61</strong>      <strong>Cu65</strong>       <strong>Zn66</strong>       <strong>As75</strong>      <strong>Br79</strong>      <strong>Rb85</strong>        <strong>Sr88</strong>        <strong>Y89</strong>         <strong>Zr90</strong>         <strong>Nb93</strong>         <strong>Mo95</strong>        <strong>Ag109</strong>       <strong>Cd111</strong>        <strong>In115</strong>       <strong>Sn118</strong>        <strong>Sb121</strong>      <strong>I127</strong>      <strong>Cs133</strong>       <strong>Ba137</strong>        <strong>La139</strong>        <strong>Ce140</strong>        <strong>Pr141</strong>        <strong>Nd146</strong>       <strong>Sm147</strong>        <strong>Eu151</strong>        <strong>Gd157</strong>        <strong>Tb159</strong>        <strong>Dy163</strong>        <strong>Ho165</strong>         <strong>Er167</strong>        <strong>Tm169</strong>       <strong>Yb173</strong>        <strong>Lu175</strong>        <strong>W182</strong>         <strong>Tl205</strong>       <strong>Pb208</strong>        <strong>Bi209</strong>        <strong>Th232</strong>         <strong>U238</strong>   
+    <strong>______</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>__________</strong>    <strong>_______</strong>    <strong>__________</strong>    <strong>______</strong>    <strong>___</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_____</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>______</strong>    <strong>________</strong>    <strong>____</strong>    <strong>________</strong>    <strong>________</strong>    <strong>________</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>________</strong>    <strong>_________</strong>    <strong>________</strong>    <strong>_________</strong>    <strong>________</strong>    <strong>_________</strong>    <strong>____</strong>    <strong>_________</strong>    <strong>________</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>________</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>__________</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>________</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>________</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>__________</strong>
+
+         0         0          0             0          0             0         0     0          0          0         0         0         0          0         0         0        0         0         0          0         0           0     0             0           0           0            0            0           0            0           0            0           0            0     0              0           0            0            0            0            0           0            0            0            0            0             0            0            0           0            0            0            0           0            0            0             0
+         0         0          0             0          0             0         0     0          0          0         0         0         0          0         0         0        0         0         0          0         0           0     0             0           0           0            0            0           0            0           0            0           0            0     0              0           0            0            0            0            0           0            0            0            0            0             0            0            0           0            0            0            0           0            0            0             0
+         0         0          0             0          0             0         0     0          0          0         0         0         0          0         0         0        0         0         0          0         0           0     0             0           0           0            0            0           0            0           0            0           0            0     0              0           0            0            0            0            0           0            0            0            0            0             0            0            0           0            0            0            0           0            0            0             0
+         0         0          0             0          0             0         0     0          0          0         0         0         0          0         0         0        0         0         0          0         0           0     0             0           0           0            0            0           0            0           0            0           0            0     0              0           0            0            0            0            0           0            0            0            0            0             0            0            0           0            0            0            0           0            0            0             0
+         0         0          0             0          0             0         0     0          0          0         0         0         0          0         0         0        0         0         0          0         0           0     0             0           0           0            0            0           0            0           0            0           0            0     0              0           0            0            0            0            0           0            0            0            0            0             0            0            0           0            0            0            0           0            0            0             0
+         0         0          0             0          0             0         0     0          0          0         0         0         0          0         0         0        0         0         0          0         0           0     0             0           0           0            0            0           0            0           0            0           0            0     0              0           0            0            0            0            0           0            0            0            0            0             0            0            0           0            0            0            0           0            0            0             0
+    7.0092    7.6707     2.7214     3.053e+05     4.0849    1.8511e+05    71.107     0     72.726    0.99949     73.63    4.8706    23.894    0.54728    4.3752      1191    71738    161.56    2265.7    0.45578    77.737    0.080181     0      0.010341    0.051053    0.023888     0.015426     0.064479    0.034304     0.024969    0.093453    0.0014221    0.037416    0.0084384     0       0.023544     0.01804    0.0019426     0.005062     0.000806            0           0    0.0015755    0.0051776            0            0    0.00072984    0.0031351    0.0020582     0.07301     0.009779    0.0029911     0.016822    0.022929     0.010978    0.0010057     0.0011803
+    8.1255    8.5945    0.63314    3.0276e+05    0.16898    1.8511e+05    89.672     0     87.811    0.46544    30.989     7.204    23.719    0.67318    3.2582    1091.1    70930    165.48    2673.6    0.41883    78.908    0.038062     0      0.014412           0    0.030691    0.0086994     0.046563           0     0.026382    0.053054     0.003437     0.04897     0.025502     0       0.014084           0            0    0.0015037            0            0           0            0            0            0    0.0086151             0    0.0049181    0.0071978    0.047681     0.014346    0.0022316    0.0078064    0.013431     0.014388    0.0030615     0.0011114
+         0         0          0             0          0             0         0     0          0          0         0         0         0          0         0         0        0         0         0          0         0           0     0             0           0           0            0            0           0            0           0            0           0            0     0              0           0            0            0            0            0           0            0            0            0            0             0            0            0           0            0            0            0           0            0            0             0
+    5.7319    10.169     13.054    2.9979e+05    0.19038    1.8511e+05    41.593     0     78.816     5.7906    234.04    4.8649    23.078    0.21308    3.1721      1102    74621    170.26    2223.7     1.9268    77.307     0.93934     0      0.043922      2.0031    0.049789     0.017954    0.0093838           0     0.027692           0    0.0068249    0.020654     0.013577     0       0.032007     0.68244     0.036662     0.074738     0.045171     0.041862           0            0            0    0.0067419     0.028092     0.0069366            0            0           0     0.006938            0     0.016205    0.088561     0.042551            0     0.0072495
+    7.5821    9.7671     13.823    3.0832e+05     4.4786    1.8511e+05     65.49     0     100.89     12.087    132.44    5.6829    24.453    0.68248     4.692    1107.5    75444    169.87    2370.9    0.75112    78.784     0.36999     0      0.092949      2.4887    0.022943     0.010448     0.096172    0.029898     0.050157     0.18788     0.012223    0.082858     0.041028     0       0.028803       1.114     0.015782     0.048567    0.0042696     0.024311    0.027077            0            0    0.0038798            0             0     0.017401            0           0    0.0040398            0     0.022092      0.1588    0.0085831            0             0
+      7.16    13.374     4.6639    2.9468e+05    0.66399    1.8511e+05    65.349     0     92.793     3.6477    303.68    5.4001    24.798    0.64202    5.8782    1257.5    75843    172.29    2299.6    0.32162    79.348     0.22724     0      0.068788     0.64539    0.043736     0.046849      0.10299           0     0.075918     0.21665     0.004616    0.056431     0.018151     0        0.12999      0.1572     0.023223     0.017933            0     0.027145           0            0            0            0     0.017158             0     0.038251            0    0.052201            0            0     0.027193    0.029482     0.029174            0     0.0045512
+    4.9311    14.939     6.1508    2.6313e+05    0.53085    1.8511e+05    21.468     0     134.87     2.0162    627.45    4.6404    23.166    0.98158    11.073    1234.2    84061    192.43    2478.8    0.21615     79.15     0.18791     0       0.15056      1.9805    0.035736     0.033919      0.14028           0      0.29232     0.25041            0     0.10946     0.048294     0        0.20894     0.60785      0.05048     0.069293            0      0.07867           0            0            0            0     0.049803             0     0.055474            0           0            0            0     0.016088    0.022874     0.057333            0     0.0066153
+    7.9111    9.0116       16.9    3.0091e+05     1.7366    1.8511e+05    106.74     0     98.599     6.6378    262.32     5.265    26.212      2.585    16.608    1333.2    92561    172.62    2476.8     1.3537    84.151     0.45415     0      0.054632      2.5465     0.21063     0.030412     0.091826           0     0.075057    0.058249     0.024319    0.044911     0.048001     0       0.079239     0.42564      0.11393       0.1424     0.026128     0.038043           0     0.013104            0      0.01769     0.024842      0.017698     0.027244     0.028068           0            0     0.022296     0.029298     0.02186     0.034628     0.008501      0.039206
+    5.1153    7.1586     17.849     2.975e+05     1.0516    1.8511e+05    60.291     0     87.734     7.4272    100.58    4.7022    17.824    0.35116    2.6964    1191.7    77305    176.31    2230.3    0.92455    79.218     0.14708     0       0.12875      1.3171    0.029083     0.052931     0.027629    0.078002      0.22863           0    0.0098349     0.27063     0.044478     0       0.027753     0.24432            0            0            0            0           0            0            0            0            0             0            0            0           0            0     0.019529     0.085081    0.055939     0.047343            0      0.015181
+    5.8989    12.074      16.66    2.9705e+05     1.4549    1.8511e+05    51.287     0     76.608     7.3366    231.17    5.0051    24.795    0.26872    2.9704    1592.9    75720    169.17    2283.2     2.2105    76.748     0.52995     0      0.077195      1.5356     0.05577     0.010321     0.092622           0      0.11088    0.076474    0.0082326     0.11325     0.064429     0       0.079257     0.29433     0.015754      0.02715    0.0043936     0.050063           0            0     0.028265            0            0     0.0039433            0            0           0    0.0039973    0.0082925     0.039398    0.077636     0.026533            0             0
+    2.4328    28.172     4.4231    3.0452e+05     1.8099    1.8511e+05    5.9312     0     115.77     1.8987    208.39    8.0655    376.65     5.6844     144.6    1163.1    76948    170.64    3118.7    0.35542    71.278      4.8614     0      0.049288    0.041297      1.1912       1.6643      0.43517           0     0.048165     0.22416    0.0079361     0.36886     0.056563     0        0.11696           0     0.010209            0            0     0.099489           0            0            0            0      0.19115      0.046937        0.107     0.045737     0.13956     0.048465     0.097803     0.028492    0.033094     0.043158     0.010631       0.12851
+    2.6491    30.363     25.184    3.0987e+05     2.5012    1.8511e+05    31.094     0     106.19     8.2063    294.98    8.8443       666      12.44    150.59    1149.4    76501    163.75      3269    0.67753    81.272      5.8031     0       0.03153      2.6913     0.77636       1.7821      0.49907           0      0.20732    0.085211     0.013841     0.13344     0.052466     0       0.083943      0.5885      0.13662      0.18115     0.024349     0.081708    0.031066    0.0095706     0.029873     0.012567     0.035962      0.021958     0.039813    0.0085101     0.27299     0.022337      0.20596     0.050117     0.11652     0.033583     0.012131       0.11196
+    4.0497    11.858     69.234    2.5651e+05     4.3418    1.8511e+05    28.664     0     77.085     10.783     334.9    3.8122    255.12     18.574    470.31    832.47    79717    179.96    3538.7     2.0312    80.299      6.6849     0       0.14138      1.0832     0.18825            0      0.24977     0.19377      0.18873           0            0     0.38201      0.10959     0        0.12859      0.3198     0.069209      0.10313            0            0           0            0            0     0.025018            0             0      0.11472            0           0            0            0      0.15524    0.067766      0.07357            0      0.027048
+     3.107    30.871     11.277    3.0487e+05     5.2953    1.8511e+05    3.5949     0     102.18     4.7317    88.936    11.881    527.92     8.9837    157.89    914.52    81535    182.83    3496.6    0.75411    93.289      5.6125     0      0.048953     0.42243      2.0556       2.4655      0.56833    0.049299     0.025469           0     0.015384     0.16419     0.011507     0       0.074964     0.13092     0.014745     0.026287    0.0024135      0.01317           0    0.0047554     0.047774    0.0065096      0.12399      0.085573      0.34329     0.059307     0.58746     0.086424      0.15097    0.0090915     0.05428     0.020326            0       0.20707
+    2.5508    8.1718     15.993    3.0503e+05     110.99    1.8511e+05    7.8636     0     130.16     9.0455    95.134    9.2625    94.111     11.896    418.96    932.22    71367    156.58    3274.3     1.8239    90.095      3.6248     0      0.071356      2.1787     0.37728      0.21181      0.11697    0.043195     0.020213    0.040767    0.0059327    0.068487     0.083007     0        0.11956     0.63316     0.044218      0.12045    0.0091825     0.027132    0.010207    0.0030248     0.010222    0.0058077     0.058443     0.0086198     0.044566     0.016774     0.18108     0.026884     0.022201    0.0065656     0.26077     0.018332    0.0019775      0.057035
+    6.5463    9.0284    0.70518    3.2215e+05     0.5177    1.8511e+05    52.091     0     81.173    0.62376    33.472    6.9224    23.758      0.563    2.1728    1111.2    73829    162.41    2328.6    0.54288    80.057    0.075567     0      0.009401           0    0.021719     0.010654     0.075991    0.030453     0.042908     0.03771    0.0041689    0.080807    0.0087888     0       0.015501    0.016322            0    0.0036794            0    0.0086045           0            0            0            0     0.005551     0.0013588     0.018259     0.002631    0.075805    0.0056972            0     0.016147    0.043736    0.0071287    0.0017986    0.00071314
+    6.5229    9.5713     3.7636    3.1742e+05     6.2911    1.8511e+05    60.394     0     95.249     0.4744    112.85    6.8848     22.57    0.44694    3.1673    1119.8    75845    171.81    2597.1    0.98126      82.6     0.19746     0      0.013378     0.15654    0.031216     0.023739      0.10014    0.012732    0.0087487    0.064786     0.001641    0.041338     0.012414     0        0.01766    0.086028    0.0071629     0.019498    0.0039195     0.010838           0    0.0038438            0     0.001811            0       0.00179     0.015844    0.0034411    0.043404     0.011198    0.0069369      0.02979    0.059176     0.014479            0      0.003672
+    5.9306    8.1165      3.698    3.2065e+05    0.24289    1.8511e+05    43.154     0     86.978      1.249    85.864    5.7921    22.903    0.36546     1.881    1079.9    73073    167.81    2712.9    0.62074    75.313    0.080496     0      0.048151    0.044479    0.022712     0.012309     0.052349    0.049149    0.0035613    0.021234    0.0022045    0.027896      0.01666     0      0.0069182    0.027667            0     0.006025            0     0.013492           0            0      0.01646            0            0             0            0            0    0.028469    0.0071381    0.0043302    0.0018813    0.031714    0.0060136            0     0.0022614
+    6.6456    8.3468     28.042    2.7884e+05    0.38109    1.8511e+05    75.369     0     180.15     14.116    579.49    4.9268    18.931    0.38432    3.1641      1133    84417    193.45    3006.2     1.5817    84.045      1.4284     0      0.066027      17.644    0.092019      0.04068     0.051057    0.079666     0.053089     0.10135            0     0.15829     0.065713     0       0.082784      3.1654     0.028916      0.17001     0.023331     0.067396           0            0      0.03895     0.011076            0             0     0.046411            0    0.034267     0.016401     0.030162     0.028271    0.071506     0.023466            0      0.020119
+    7.9683    9.0226     6.7546    2.9994e+05       2.12    1.8511e+05    84.903     0     135.44     3.9226    181.44    4.4463     20.07    0.38808    2.6054    1049.4    79672    179.86      3161     0.8301     78.68     0.13367     0      0.086391      1.1411    0.028144      0.01015     0.046849    0.028256       0.1199     0.10436     0.011468     0.18554      0.10982     0       0.086528     0.70373     0.021283     0.015932    0.0086499     0.024797    0.027842    0.0084703     0.028692            0     0.015864             0     0.017959    0.0075999    0.048917    0.0040073            0     0.047563    0.066934     0.042972    0.0053015     0.0041531
+    7.9165    7.2745     26.008    3.2565e+05    0.50249    1.8511e+05    64.189     0     142.98     3.8046    243.93    5.7325    20.964    0.30108    3.8221    1190.1    79497    177.34    2532.9    0.59333    80.475     0.33069     0      0.074643      1.1122    0.059484    0.0087679     0.066327    0.024277      0.10915    0.029838     0.012698     0.13461     0.046814     0       0.065917     0.40742            0     0.027224            0     0.041503    0.023676            0            0    0.0033642     0.013728     0.0033622     0.015046     0.003293    0.062485            0    0.0063283     0.053595    0.041301     0.032057    0.0044953      0.010377
+    6.0662    8.4876     27.362     2.976e+05     0.8487    1.8511e+05    50.635     0     127.06     6.4482    220.39    4.7737    18.519    0.19897    5.1283    1025.7    77208    175.12    2903.4    0.70688    74.863     0.71997     0       0.13721     0.59988    0.069976     0.015671     0.069034    0.041345      0.20455     0.10321            0    0.075391     0.064631     0      0.0054654     0.35324     0.015356     0.024321            0            0           0     0.012198            0    0.0058121            0             0      0.02648            0    0.037407    0.0062258     0.021918     0.074793    0.022975      0.01566            0     0.0088593
+    7.8021     8.906     45.623    3.1271e+05    0.19751    1.8511e+05    72.848     0     120.44     4.6251    374.54    5.1035    19.515    0.48792    4.7251      1073    82246    185.23    3251.8     6.9724    79.746     0.41563     0      0.023195      2.3505    0.055255            0     0.085304     0.10083       0.1892    0.067345            0      0.1076     0.081239     0       0.091336     0.81071     0.040259     0.061362            0            0     0.10183     0.015532      0.10538            0     0.028133             0            0    0.0069952     0.18355    0.0071162     0.014307     0.025977    0.043472     0.059088     0.010074       0.01125
+    6.0562    7.1053     22.767    3.1798e+05     10.852    1.8511e+05    56.275     0     132.02     2.4173    216.94    5.6677    28.241    0.93175    14.271    1068.9    74329    168.48    3070.1     1.2959    76.969     0.55687     0      0.045217      1.5463    0.036718     0.021136      0.04346    0.056352      0.13628    0.071694            0    0.059054      0.02485     0       0.035726     0.84951      0.03341     0.044104      0.02644      0.10366    0.059141            0            0            0      0.13771             0            0    0.0078646           0    0.0084202            0     0.038836      0.1013     0.022796            0      0.021295
+    6.7594    9.0396     7.8509    3.1144e+05     0.1023    1.8511e+05    45.471     0     98.241     1.0679    338.16    5.2943    19.807    0.21573    2.7954    1095.2    77647    180.11      2915    0.55948    73.502    0.086468     0       0.15441     0.24231     0.12535            0     0.045423           0     0.026556           0     0.016376    0.078191     0.074236     0        0.02931           0     0.023338            0            0            0           0            0            0            0            0      0.016648            0            0           0            0            0     0.021066           0     0.014394            0             0
+    5.9206    9.7686     10.796    2.9194e+05    0.33858    1.8511e+05    29.833     0      95.43     1.3812    122.32     4.825     17.92    0.42168    2.6819    992.89    85287    194.19    3074.3    0.36796    92.883     0.22147     0      0.048899     0.83406    0.066276            0      0.11704           0     0.083683           0            0           0      0.02401     0       0.033046      0.0756    0.0083453     0.025787            0     0.079444           0            0      0.04453            0            0     0.0062301     0.028297            0           0            0            0     0.025689    0.033344     0.048246            0     0.0032434
+         0         0          0             0          0             0         0     0          0          0         0         0         0          0         0         0        0         0         0          0         0           0     0             0           0           0            0            0           0            0           0            0           0            0     0              0           0            0            0            0            0           0            0            0            0            0             0            0            0           0            0            0            0           0            0            0             0
+         0         0          0             0          0             0         0     0          0          0         0         0         0          0         0         0        0         0         0          0         0           0     0             0           0           0            0            0           0            0           0            0           0            0     0              0           0            0            0            0            0           0            0            0            0            0             0            0            0           0            0            0            0           0            0            0             0
+         0         0          0             0          0             0         0     0          0          0         0         0         0          0         0         0        0         0         0          0         0           0     0             0           0           0            0            0           0            0           0            0           0            0     0              0           0            0            0            0            0           0            0            0            0            0             0            0            0           0            0            0            0           0            0            0             0
+         0         0          0             0          0             0         0     0          0          0         0         0         0          0         0         0        0         0         0          0         0           0     0             0           0           0            0            0           0            0           0            0           0            0     0              0           0            0            0            0            0           0            0            0            0            0             0            0            0           0            0            0            0           0            0            0             0
+         0         0          0             0          0             0         0     0          0          0         0         0         0          0         0         0        0         0         0          0         0           0     0             0           0           0            0            0           0            0           0            0           0            0     0              0           0            0            0            0            0           0            0            0            0            0             0            0            0           0            0            0            0           0            0            0             0
+         0         0          0             0          0             0         0     0          0          0         0         0         0          0         0         0        0         0         0          0         0           0     0             0           0           0            0            0           0            0           0            0           0            0     0              0           0            0            0            0            0           0            0            0            0            0             0            0            0           0            0            0            0           0            0            0             0
+
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2056,1)">2056 </a>                 mass_fraction_host_i = app.base.project.session.spot.matrix_composition{bracket_idx,prm_idx}{unk,:}; % Cihost
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbcont
+dbcont
+app.base.project.session.spot.bkgd_corrected_cps_mix{unk,:}
+
+ans =
+
+   1.0e+07 *
+
+  Columns 1 through 15
+
+    0.0008    0.0004    0.0617    3.1826    0.0001    0.3328    0.0006    0.0004    0.0005    0.0087    0.0001    0.0006    0.0003    0.0001    0.0000
+
+  Columns 16 through 30
+
+    0.1844    0.2075    0.0209    0.0032    0.0001    0.0020    0.0001    0.0000    0.0000    0.0030    0.0000    0.0000    0.0000    0.0000    0.0000
+
+  Columns 31 through 45
+
+    0.0000    0.0000    0.0000    0.0000    0.0001    0.0000    0.0001    0.0000    0.0000    0.0000    0.0000         0         0         0    0.0000
+
+  Columns 46 through 57
+
+         0         0         0    0.0000    0.0000    0.0000    0.0000    0.0000    0.0001    0.0000         0    0.0000
+
+app.base.project.session.spot.bkgd_corrected_cps_mix
+
+ans =
+
+  38×57 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+     <strong>Li7</strong>       <strong>B11</strong>         <strong>Na23</strong>          <strong>Mg25</strong>          <strong>Al27</strong>          <strong>Si29</strong>        <strong>P31</strong>       <strong>S34</strong>       <strong>Cl35</strong>        <strong>K39</strong>         <strong>Ca43</strong>      <strong>Sc45</strong>      <strong>Ti49</strong>        <strong>V51</strong>           <strong>Cr53</strong>          <strong>Mn55</strong>          <strong>Fe57</strong>          <strong>Co59</strong>       <strong>Ni61</strong>      <strong>Cu65</strong>     <strong>Zn66</strong>      <strong>As75</strong>      <strong>Br79</strong>      <strong>Rb85</strong>        <strong>Sr88</strong>        <strong>Y89</strong>       <strong>Zr90</strong>      <strong>Nb93</strong>      <strong>Mo95</strong>     <strong>Ag109</strong>     <strong>Cd111</strong>     <strong>In115</strong>     <strong>Sn118</strong>     <strong>Sb121</strong>      <strong>I127</strong>     <strong>Cs133</strong>     <strong>Ba137</strong>     <strong>La139</strong>     <strong>Ce140</strong>     <strong>Pr141</strong>     <strong>Nd146</strong>     <strong>Sm147</strong>     <strong>Eu151</strong>     <strong>Gd157</strong>     <strong>Tb159</strong>     <strong>Dy163</strong>     <strong>Ho165</strong>     <strong>Er167</strong>     <strong>Tm169</strong>     <strong>Yb173</strong>     <strong>Lu175</strong>      <strong>W182</strong>     <strong>Tl205</strong>     <strong>Pb208</strong>     <strong>Bi209</strong>     <strong>Th232</strong>      <strong>U238</strong> 
+    <strong>______</strong>    <strong>______</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>__________</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>_____</strong>    <strong>______</strong>    <strong>_____</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>__________</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>
+
+         0         0             0             0             0             0         0         0         0             0         0         0         0             0             0             0             0             0        0         0        0         0         0         0             0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+         0         0             0             0             0             0         0         0         0             0         0         0         0             0             0             0             0             0        0         0        0         0         0         0             0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+         0         0             0             0             0             0         0         0         0             0         0         0         0             0             0             0             0             0        0         0        0         0         0         0             0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+         0         0             0             0             0             0         0         0         0             0         0         0         0             0             0             0             0             0        0         0        0         0         0         0             0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+         0         0             0             0             0             0         0         0         0             0         0         0         0             0             0             0             0             0        0         0        0         0         0         0             0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+         0         0             0             0             0             0         0         0         0             0         0         0         0             0             0             0             0             0        0         0        0         0         0         0             0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+     25135     11351    7.7806e+06    8.2308e+07         20517    8.7637e+06     20052     15832     55250    8.4385e+05    7517.4     14341    7788.4        5682.8         11985    5.2035e+06    6.9197e+06     5.858e+05    90123    9931.5    65567      5059    864.93    3506.2    2.2461e+05    1906.5    112.62    219.05    18.571     35.04    60.119    13.413    71.747     233.5    2960.6      1397    8680.3    1412.9    2656.9     370.8     273.5    52.103    47.421    51.111    27.976    151.91    94.802    78.572    84.405    80.952    104.21    29.861    105.08    3966.2    126.99         0    174.31
+     14892    4817.9    5.1593e+06    2.4976e+07        1103.7    2.7725e+06     10169    8946.3     36775    5.6156e+05    4985.8    5667.6    1519.3        981.87        545.13    1.4708e+06    2.2441e+06    1.9447e+05    33995    7138.9    25858    2829.3     624.5    2313.7    1.4152e+05      1356    33.176    59.265        20    24.357    19.213    26.247    57.324    173.16    858.46    1011.4    5488.2    1036.4    1966.1    332.08    250.61    39.475    51.864    26.247    66.299    71.497     106.2        60    13.018    26.667    25.827    22.913    87.455    2338.5    57.585    13.228    114.07
+     20823    9353.5    1.8798e+06    7.0684e+07        3124.9     7.323e+06     20975    8996.8     14960    2.0422e+05    2082.1     13516    3826.4        1463.2        1169.7    3.1172e+06    4.8776e+06    4.6653e+05    87608    2036.4    43987    2833.2    426.18    755.24         53671    604.02    38.062    241.97    21.855    27.778    16.529    21.488    73.096    66.223    1450.7    464.82    2361.6    304.87    620.05    71.534    54.408    21.488    5.5096    16.529    10.744    43.159    38.614    16.253    21.855    21.671    38.889     31.68    42.057      1144    23.003    16.667    35.009
+    6905.1    3855.3    1.6801e+06    2.1243e+07         308.1    2.2626e+06    3690.3      3833     12525    1.8219e+05    1682.7      3915    1089.4        552.94        282.79    1.1525e+06     1.595e+06    1.4658e+05    21992    2658.4    14573      1201    238.47    590.58         43854    333.96    22.653    41.673    11.538    71.419    11.327    7.1983    15.102    62.527    676.83    329.59    1831.1    244.68    512.98    71.701    48.447    30.558     14.82    11.327    11.221    11.433    11.538    11.256    7.6923    30.487    41.461    13.109    36.838    981.05    30.663    3.8109     22.23
+     10125    4293.4    2.8751e+06    2.2233e+07        1688.6    2.3809e+06     10047    5789.5     21029    2.9585e+05    2682.7    4910.6    1393.2        1011.9         702.2    1.2059e+06    1.6446e+06    1.5141e+05    23266    3658.6    19022    1736.7    370.92    1125.1         75765    512.52    37.141    66.164    24.138    37.069    5.8908         0    33.908     106.9    658.59    392.62    2604.8       399    648.01    148.71    67.601    5.9626        50    24.425    6.1063    17.888      12.5    18.319     18.75     18.75    43.319    12.356    70.115    1651.1    71.912    6.1063    21.444
+     11394    5702.6    3.2823e+06    2.4912e+07        623.39    2.6488e+06    6510.7      6654     23782     3.294e+05    3070.8      5470    2031.8        889.32        760.93    1.5654e+06    1.8853e+06    1.7098e+05    24971    4811.5    20532    1925.4    473.13    1208.5         85617      2612    122.66    122.65    31.086    63.822     13.41    18.164    59.793    83.807    653.22    622.84    3171.1    631.04    1062.8    202.38    108.64     36.35     22.35    22.714    40.177    71.424    90.457    144.14    90.231    61.898    49.472    9.0727    68.633    1900.3    69.855         0    37.466
+     12808    5782.2    3.5873e+06    2.5943e+07        5992.2    2.6904e+06     10050    7254.5     26022    3.9137e+05    3222.7    5675.1    1577.4        527.72        752.31    1.6279e+06    2.1131e+06    1.8231e+05    25959    5562.3    23486    2466.2    461.26    1567.7         98135    797.33    54.546    127.27    26.459    42.469         0    9.0909    78.021    78.744    706.46    615.23    3625.5    562.44    1262.3    178.97    181.01    18.182    44.912    27.273    26.459    61.601    27.001     71.37    62.822    26.052    36.092    9.0909    57.531    1722.9     109.5    8.9552     62.28
+     20024    8431.3    1.0106e+07    3.1256e+07        4908.3    3.2398e+06     16296     11814     73035    1.0594e+06    9055.6      7787    2897.4        5088.7        3461.8    2.2355e+06    2.6924e+06    2.1606e+05    32789     15209    39489    6248.3    1047.5    3920.9    2.6648e+05    1525.1    88.235    116.67        25    53.431    32.598    7.8431     25.49    237.26    633.06      1838     10452    1891.9    3592.7    597.82    400.01    65.441    91.667        75    24.265    133.33    89.706    108.33    72.549    89.951    56.618    46.569    160.54    4369.4    124.51         0    89.461
+      7724    3676.1    6.1705e+05    3.1826e+07        750.06    3.3284e+06    5935.7    3527.6    5303.1         87317    700.82    5645.2    3161.3        814.81        184.96    1.8436e+06    2.0748e+06     2.088e+05    31748    554.21    19662    693.17    212.49    273.25         29691    184.62    22.575    153.85    7.6923    47.659    14.716    7.1906    42.308    109.81    789.38    111.04    682.98    53.846    176.93    46.154    15.385         0         0         0    7.5251         0         0         0    23.077    15.385    15.385    10.786    97.993    593.01    31.104         0    28.763
+     10972      5444    3.7504e+06    2.3962e+07         16645    2.5182e+06    3778.5    6694.7     26875    4.0775e+05    3486.5    6017.6    1862.9         822.9        1022.9    2.0366e+06    1.9921e+06    1.6361e+05    22972    5525.2    21667      1301    470.17    1532.3    1.0371e+05    817.02     39.13    168.77     19.71    46.304     24.42         0     65.29    123.12    817.48    677.87    3926.3    588.44    1309.2       180       115    14.565        55     39.42     19.71     44.13    64.566    24.856    29.638    29.565    34.275        10    67.609    2108.9    67.609         5    121.34
+     10862     12988    4.2914e+06    3.2795e+07         15114    3.4213e+06    916.84    8257.5     30531    4.6525e+05    4696.6     11642     44495         47454         87893    2.0834e+06     3.064e+06    2.3495e+05    47296    6208.6    34860    5036.4    579.85    2016.2    1.3206e+05    2407.4    1709.2    900.03    10.884    10.658    21.315    21.315    87.303    117.99     579.6     782.6    4864.9    840.41    1465.2    144.45    166.67    10.884    21.995    10.884    44.444    75.964    99.094    144.45    77.778    63.946    143.54     82.54    62.585    2696.8    79.366    31.973    475.07
+    7454.5     10862    3.6085e+06     2.006e+07        8168.4    2.1145e+06    1796.3    6870.7     26074    4.1016e+05      3641    7370.7     67599         69309         54038     1.218e+06    2.1677e+06    1.5472e+05    32071    6068.8    21508    4909.9    468.23    1615.7    1.0262e+05    1360.1    1506.4    676.44    14.717    49.057    4.9057         5     153.4    131.67    521.69    740.06    3504.1    555.02    1258.3       220    168.78    39.245        35    32.358    23.585    29.528     54.34        45        75    54.434    53.302    73.679    96.605    2461.7    106.13    29.434     272.5
+    6057.6    5287.8    1.3883e+06    3.1119e+07         63132    3.3483e+06    2514.6    5771.9     11581    2.2277e+05    2117.1     10005     57098     1.611e+05    3.2601e+05    1.4789e+06    2.8696e+06    2.2343e+05    48009    2268.6    27142    3344.6    372.54    780.19         57489    829.81    282.59    361.55         0     20.71    30.262    15.046    135.59    60.411    613.25    331.55    2238.9    406.86    757.52    106.51    91.801         0    7.5232    61.031    22.063    23.077    30.769    60.862    7.5232    37.785    53.424    22.654    38.969    1377.2    60.947    15.216    232.51
+    9217.3     19351    2.9056e+06     4.298e+07         95389    4.6239e+06     857.7    5352.7     20363    2.9199e+05    1979.6     17173     51133         72379         43705    1.9789e+06    4.2031e+06    3.1873e+05    64252    3289.9    34444    5853.4     400.9    887.44         68880    6046.6    4582.1    1058.3    14.825    43.948    24.474    82.808     162.9    59.679    1204.4     506.6    2651.7       270    516.86       115    48.026    19.737        20    29.781    49.386    123.69    313.78    487.66    380.02    357.91       215    163.68     67.72    1610.6     36.93    19.649    911.26
+     22131     10621    1.0186e+07    5.3544e+07    7.6154e+06     5.605e+06    820.58     15366     69014    1.0957e+06    6959.6     31885     16273    1.2799e+05    3.3377e+05    2.6877e+06     5.077e+06    3.6358e+05    77538    9896.1    55518     11442    1243.4      4160    2.3857e+05    1779.1    358.18    215.79    32.772    30.947     52.07    52.632    36.631       215    1377.2    1802.3    9148.7    1310.5    2660.4    348.78     219.3    65.684    44.982    45.545    52.983    98.316    72.351    118.11    79.368    91.649    52.491    123.93    152.28      4837    167.58    32.772    312.81
+     13900    6096.3    4.7421e+06    2.9328e+07        2314.1    3.1243e+06     12423    9799.9     36463    4.8915e+05    4689.5    7263.8      1575        1099.8        341.89    1.5295e+06     2.232e+06    2.0239e+05    32911    9618.7    23827      3131    572.22    1913.5    1.3242e+05    1658.5    6.4928    64.058    23.923    59.112    23.575    13.101    65.624    132.86    1327.8    840.02    4634.3    924.42    2111.2     287.7    275.56    41.218    45.971    45.913    65.507    110.15    105.89    59.343     48.58     52.29    35.556    19.459    83.092    3106.3    76.078    2.1063    29.179
+     18370    8057.9    3.9959e+06    4.8293e+07        5052.7    5.1215e+06     12268     11027     29603    4.5739e+05    4295.8     13054    2717.9        2477.2        797.28    2.6344e+06    3.8268e+06    3.3194e+05    51798    6543.5    34290    3737.4     542.7    1669.3    1.2192e+05    1380.3     68.75    267.05    36.435    31.392    18.111    11.932    59.518    135.51    1230.7    724.21    5069.8    880.53    1924.2    237.51    235.37    43.395    30.966    24.574     31.25    61.648    55.682    36.648    43.324    42.045     56.25    24.645    89.347    2545.7    126.42    24.574    108.24
+     15745    7831.1    8.8721e+05    6.4334e+07        339.81    6.8366e+06     11767    7129.3    8126.6    1.0255e+05    1074.5     12838    3065.2         843.4        760.24     3.222e+06    4.3278e+06    4.3342e+05    71889    1525.1    38692    718.63    324.99    274.76         25735    263.64    22.222    331.52    32.525     77.98    54.747         0    62.425    7.2718    1557.4    204.05    1132.4    233.34    395.77    63.636         0    32.727    42.626    43.636         0    11.111    54.949    11.111         0    21.414    10.909    5.2525    22.828    519.42    12.525    11.111    15.152
+     17861    6930.4    2.9757e+06     3.264e+07        2523.2    3.6883e+06     19807     19353     39139    1.0294e+06    7045.1    6841.2    2456.8        1991.1        792.22    2.3728e+06    3.7646e+06    2.5336e+05    39046      7221    35979    3819.7    769.38    3820.3    2.4623e+05    2001.9     30.62    106.45    25.806    61.035    45.161    12.903    73.836    414.28    1017.4    1520.6    8493.2    1301.8    3010.2     516.4    327.66    74.194     61.29    79.007    87.097    119.36    109.68    71.532    35.023    31.797    42.499    29.109    82.387    5348.2    94.369    15.924    200.92
+    5053.4    2156.1    1.4109e+06    1.2091e+07         68485    1.3525e+06    3521.3    3494.7     10909    1.5134e+05    1346.1      2103    1009.8        2286.7          4060    6.7326e+05    1.2261e+06         96851    17576    2118.1    11756    1134.6    195.51    650.83         36735     451.4    8.0688    57.606    4.1005    34.524    11.905    4.0344    42.063     56.68    514.74     201.2    1542.8    233.34     451.4        75      62.5    20.503    4.1005    20.503    20.833     32.54    41.138    8.3333    20.503    24.339    4.0344    13.922    46.429    920.71    30.357         0    37.136
+    5725.6    1839.4    1.3203e+06    1.2802e+07        531.24    1.4136e+06    3610.3    3008.3     10413    1.5531e+05    1295.9      2315    983.99        1132.5        393.94     7.272e+05    1.1491e+06         95350    13781    1647.7    10850    1041.9    200.61    569.13         38680    264.71    11.665    58.026         0    66.401    17.049     16.75    27.318    54.171    558.79    317.86      1612     234.4    522.05    57.228    34.995    5.7827         0    11.765    11.565    34.995    5.7827    17.348    11.765     5.683    17.348     5.683    105.68     800.1    55.634         0    17.049
+     12499    6045.6    3.7603e+06    2.6329e+07        1151.8    2.8298e+06      8696      8520     27571    4.2058e+05    3997.5    6055.6    2739.2        1861.5        894.12    1.4537e+06    2.2355e+06    1.7925e+05    29418    5332.1    20144      4128    469.77    1510.2    1.0949e+05    1192.9    92.858    184.13    7.0106    44.444         0     20.37    88.889    91.271    580.42    670.68    4649.7    803.74    1407.3    278.58    154.76    42.196    54.762    63.492    48.677    63.757        50    49.471    21.164    28.175    35.714    17.196    58.333    2065.9    113.49    7.0106    76.786
+    6362.1    3602.6    2.5461e+06    1.3298e+07        931.55    1.4826e+06    3207.4    4660.7     19312    2.9125e+05    2646.3    2454.6    845.74        1064.4        599.32    7.2768e+05    1.3475e+06     1.076e+05    17125    3337.9    12145      2874    327.95    1111.8         78860    560.02        25    57.857    14.524    34.048        20         5    23.571    95.319    346.14    618.37    2865.6    440.01    745.04       105    52.619    14.286    24.048    4.7619    4.5238    42.143     28.81        20    4.7619    38.571    18.095        15    40.477    1316.6    63.334         5     38.69
+    8060.3    4070.8    2.8658e+06    2.2218e+07        1465.2    2.3851e+06    5370.1    5337.2     19928    3.0749e+05      2463    4065.7    1737.2        1237.7        419.18    1.1608e+06    1.8249e+06    1.5214e+05    25644    2966.9    17526    3261.5    394.04    1038.8         72221    506.27    12.083    106.25    18.333    24.583    55.001      17.5    38.751     107.5    511.38    475.03    3363.2    406.26     684.4    61.042      62.5     18.75    24.375         0    24.375        25     18.75    30.625    42.708    49.167      42.5     21.25    86.043    1398.3    68.751        25    64.688
+     19702    8345.8    8.2474e+06    2.8604e+07        2225.9    3.0221e+06     12388     13874     59932    9.1277e+05    8772.7    7229.7    2272.6        1744.9        638.86    1.6734e+06    2.6692e+06    1.9496e+05    30057     13709    34782    6681.6    899.27      3196    2.4119e+05    2677.8    19.706       130    29.412    18.529        10    9.7059    58.235    217.26    784.09    1635.5     10237    1720.2    3398.2    520.02    310.01    58.235    67.647        50        60       100    145.88    138.53        90    98.825    117.94        90    24.706    4642.5    48.235         0    208.53
+     24594     10617    7.0096e+06    6.3853e+07        2582.6    6.6643e+06     10811     15253     50262    7.6858e+05    6832.7     12726    5349.4        2990.5        1343.4    3.1782e+06    4.8293e+06    4.1766e+05    66405    7337.7    48953    8134.1    968.54      2801    1.9931e+05    1314.4    107.14    257.14    42.857    43.177    40.192     6.823    26.972       266    1232.8    1427.5    7580.3    1040.2    1877.5    262.16    142.01    77.293    64.286    20.576    69.936    42.217    55.544    56.077        50    34.755    20.149    94.829    74.734      4679    139.66    6.9296    173.61
+         0         0             0             0             0             0         0         0         0             0         0         0         0             0             0             0             0             0        0         0        0         0         0         0             0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+         0         0             0             0             0             0         0         0         0             0         0         0         0             0             0             0             0             0        0         0        0         0         0         0             0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+         0         0             0             0             0             0         0         0         0             0         0         0         0             0             0             0             0             0        0         0        0         0         0         0             0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+         0         0             0             0             0             0         0         0         0             0         0         0         0             0             0             0             0             0        0         0        0         0         0         0             0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+         0         0             0             0             0             0         0         0         0             0         0         0         0             0             0             0             0             0        0         0        0         0         0         0             0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+         0         0             0             0             0             0         0         0         0             0         0         0         0             0             0             0             0             0        0         0        0         0         0         0             0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+
+            intensity_mix_i = app.base.project.session.spot.bkgd_corrected_cps_mix{unk,:}; % Iimix
+            [max_intensity, max_col_idx] = max(intensity_mix_i);
+            element_names = app.base.project.session.spot.bkgd_corrected_cps_mix.Properties.VariableNames;
+            most_intense_element = element_names{max_col_idx};
+
+         intensity_mix_i = app.base.project.session.spot.bkgd_corrected_cps_mix{unk,:}; % Iimix
+            [max_intensity, max_col_idx] = max(intensity_mix_i);
+            element_names = app.base.project.session.spot.bkgd_corrected_cps_mix.Properties.VariableNames;
+            is_mix_name = element_names{max_col_idx};
+            is_mix_intensity = max_intensity;
+intensity_mix_i
+
+intensity_mix_i =
+
+   1.0e+07 *
+
+  Columns 1 through 15
+
+    0.0008    0.0004    0.0617    3.1826    0.0001    0.3328    0.0006    0.0004    0.0005    0.0087    0.0001    0.0006    0.0003    0.0001    0.0000
+
+  Columns 16 through 30
+
+    0.1844    0.2075    0.0209    0.0032    0.0001    0.0020    0.0001    0.0000    0.0000    0.0030    0.0000    0.0000    0.0000    0.0000    0.0000
+
+  Columns 31 through 45
+
+    0.0000    0.0000    0.0000    0.0000    0.0001    0.0000    0.0001    0.0000    0.0000    0.0000    0.0000         0         0         0    0.0000
+
+  Columns 46 through 57
+
+         0         0         0    0.0000    0.0000    0.0000    0.0000    0.0000    0.0001    0.0000         0    0.0000
+
+app.base.project.session.spot.sensitivities{bracket_idx,prm_idx}(unk)
+{Subscripting into a table using one subscript (as in t(i)) is not supported. Specify a row subscript and a variable subscript, as in t(rows,vars). To
+select variables, use t(:,i) or for one variable t.(i). To select rows, use t(i,:).
+} 
+app.base.project.session.spot.sensitivities{bracket_idx,prm_idx}(unk,:)
+
+ans =
+
+  1×54 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+     <strong>Li7</strong>       <strong>B11</strong>       <strong>Na23</strong>      <strong>Mg25</strong>      <strong>Al27</strong>      <strong>Si29</strong>      <strong>P31</strong>       <strong>Cl35</strong>      <strong>K39</strong>       <strong>Ca43</strong>      <strong>Sc45</strong>      <strong>Ti49</strong>      <strong>V51</strong>       <strong>Cr53</strong>      <strong>Mn55</strong>      <strong>Fe57</strong>      <strong>Co59</strong>     <strong>Ni61</strong>      <strong>Cu65</strong>      <strong>Zn66</strong>      <strong>As75</strong>      <strong>Rb85</strong>      <strong>Sr88</strong>      <strong>Y89</strong>       <strong>Zr90</strong>      <strong>Nb93</strong>     <strong>Mo95</strong>     <strong>Ag109</strong>    <strong>Cd111</strong>     <strong>In115</strong>     <strong>Sn118</strong>     <strong>Sb121</strong>     <strong>Cs133</strong>     <strong>Ba137</strong>     <strong>La139</strong>     <strong>Ce140</strong>     <strong>Pr141</strong>     <strong>Nd146</strong>     <strong>Sm147</strong>     <strong>Eu151</strong>     <strong>Gd157</strong>     <strong>Tb159</strong>     <strong>Dy163</strong>     <strong>Ho165</strong>     <strong>Er167</strong>     <strong>Tm169</strong>     <strong>Yb173</strong>     <strong>Lu175</strong>      <strong>W182</strong>     <strong>Tl205</strong>    <strong>Pb208</strong>     <strong>Bi209</strong>     <strong>Th232</strong>      <strong>U238</strong> 
+    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_____</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_____</strong>    <strong>_____</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_____</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>
+
+    1911.1    671.45    1810.5    164.59    1359.3    29.076    207.54    12.513    1677.4    2.7262    1799.2    113.96    2065.5    216.48    2401.5    47.068    2074.1    22.97    476.47    370.22    722.03    1955.2    2076.2    2488.5    1352.4    2619.4    463.9    1132     364.71    3439.4    1002.9    1108.3    2834.3    292.99    2684.6    2608.7    3271.6    574.29    503.49    1666.9    493.91    3594.9    879.21    3593.3    801.69    3752.8    577.58    3492.7    866.03    2219     1589.1    2824.7    2571.9    3264.5
+
+app.base.project.session.spot.sensitivities{bracket_idx,prm_idx}{unk,:}
+
+ans =
+
+  1×54 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> row vector
+
+   1.0e+03 *
+
+  Columns 1 through 15
+
+    1.9111    0.6714    1.8105    0.1646    1.3593    0.0291    0.2075    0.0125    1.6774    0.0027    1.7992    0.1140    2.0655    0.2165    2.4015
+
+  Columns 16 through 30
+
+    0.0471    2.0741    0.0230    0.4765    0.3702    0.7220    1.9552    2.0762    2.4885    1.3524    2.6194    0.4639    1.1320    0.3647    3.4394
+
+  Columns 31 through 45
+
+    1.0029    1.1083    2.8343    0.2930    2.6846    2.6087    3.2716    0.5743    0.5035    1.6669    0.4939    3.5949    0.8792    3.5933    0.8017
+
+  Columns 46 through 54
+
+    3.7528    0.5776    3.4927    0.8660    2.2190    1.5891    2.8247    2.5719    3.2645
+
+sensitivities.(is_mix_name)
+{Unable to resolve the name sensitivities.Mg25.
+} 
+sensitivities.(is_mix_name)
+{Unable to resolve the name sensitivities.Mg25.
+} 
+ sensitivities(is_mix_name)
+{Unrecognized function or variable 'sensitivities'.
+} 
+
+            sensitivities = app.base.project.session.spot.sensitivities{bracket_idx,prm_idx}(unk,:);
+            sensitivity_is_mix = sensitivities.(is_mix_name)
+
+sensitivity_is_mix =
+
+  <a href="matlab:helpPopup single" style="font-weight:bold">single</a>
+
+  164.5892
+
+sensitivities/sensitivity_is_mix
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mrdivide')" style="font-weight:bold"> / </a>
+Arguments must be numeric, char, or logical.
+} 
+sensitivities
+
+sensitivities =
+
+  1×54 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+     <strong>Li7</strong>       <strong>B11</strong>       <strong>Na23</strong>      <strong>Mg25</strong>      <strong>Al27</strong>      <strong>Si29</strong>      <strong>P31</strong>       <strong>Cl35</strong>      <strong>K39</strong>       <strong>Ca43</strong>      <strong>Sc45</strong>      <strong>Ti49</strong>      <strong>V51</strong>       <strong>Cr53</strong>      <strong>Mn55</strong>      <strong>Fe57</strong>      <strong>Co59</strong>     <strong>Ni61</strong>      <strong>Cu65</strong>      <strong>Zn66</strong>      <strong>As75</strong>      <strong>Rb85</strong>      <strong>Sr88</strong>      <strong>Y89</strong>       <strong>Zr90</strong>      <strong>Nb93</strong>     <strong>Mo95</strong>     <strong>Ag109</strong>    <strong>Cd111</strong>     <strong>In115</strong>     <strong>Sn118</strong>     <strong>Sb121</strong>     <strong>Cs133</strong>     <strong>Ba137</strong>     <strong>La139</strong>     <strong>Ce140</strong>     <strong>Pr141</strong>     <strong>Nd146</strong>     <strong>Sm147</strong>     <strong>Eu151</strong>     <strong>Gd157</strong>     <strong>Tb159</strong>     <strong>Dy163</strong>     <strong>Ho165</strong>     <strong>Er167</strong>     <strong>Tm169</strong>     <strong>Yb173</strong>     <strong>Lu175</strong>      <strong>W182</strong>     <strong>Tl205</strong>    <strong>Pb208</strong>     <strong>Bi209</strong>     <strong>Th232</strong>      <strong>U238</strong> 
+    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_____</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_____</strong>    <strong>_____</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_____</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>
+
+    1911.1    671.45    1810.5    164.59    1359.3    29.076    207.54    12.513    1677.4    2.7262    1799.2    113.96    2065.5    216.48    2401.5    47.068    2074.1    22.97    476.47    370.22    722.03    1955.2    2076.2    2488.5    1352.4    2619.4    463.9    1132     364.71    3439.4    1002.9    1108.3    2834.3    292.99    2684.6    2608.7    3271.6    574.29    503.49    1666.9    493.91    3594.9    879.21    3593.3    801.69    3752.8    577.58    3492.7    866.03    2219     1589.1    2824.7    2571.9    3264.5
+
+table2mat(sensitivities)
+{Unrecognized function or variable 'table2mat'.
+} 
+table2array(sensitivities)
+
+ans =
+
+  1×54 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> row vector
+
+   1.0e+03 *
+
+  Columns 1 through 15
+
+    1.9111    0.6714    1.8105    0.1646    1.3593    0.0291    0.2075    0.0125    1.6774    0.0027    1.7992    0.1140    2.0655    0.2165    2.4015
+
+  Columns 16 through 30
+
+    0.0471    2.0741    0.0230    0.4765    0.3702    0.7220    1.9552    2.0762    2.4885    1.3524    2.6194    0.4639    1.1320    0.3647    3.4394
+
+  Columns 31 through 45
+
+    1.0029    1.1083    2.8343    0.2930    2.6846    2.6087    3.2716    0.5743    0.5035    1.6669    0.4939    3.5949    0.8792    3.5933    0.8017
+
+  Columns 46 through 54
+
+    3.7528    0.5776    3.4927    0.8660    2.2190    1.5891    2.8247    2.5719    3.2645
+
+            sensitivities = app.base.project.session.spot.sensitivities{bracket_idx,prm_idx}(unk,:);
+            sensitivity_is_mix = sensitivities.(is_mix_name);
+            sensitivity_relative_to_is_mix = table2array(sensitivities) ./ sensitivity_is_mix;
+sensitivity_relative_to_is_mix
+
+sensitivity_relative_to_is_mix =
+
+  1×54 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> row vector
+
+  Columns 1 through 15
+
+   11.6113    4.0795   11.0000    1.0000    8.2586    0.1767    1.2609    0.0760   10.1913    0.0166   10.9317    0.6924   12.5495    1.3153   14.5911
+
+  Columns 16 through 30
+
+    0.2860   12.6017    0.1396    2.8949    2.2493    4.3869   11.8796   12.6144   15.1192    8.2169   15.9146    2.8186    6.8778    2.2159   20.8967
+
+  Columns 31 through 45
+
+    6.0931    6.7336   17.2205    1.7801   16.3109   15.8501   19.8773    3.4892    3.0591   10.1277    3.0009   21.8418    5.3418   21.8317    4.8708
+
+  Columns 46 through 54
+
+   22.8011    3.5092   21.2209    5.2618   13.4820    9.6548   17.1620   15.6263   19.8344
+
+       conc_ratio = (intensity_mix_i ./ is_mix_intensity) / sensitivity_relative_to_is_mix;
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mrdivide')" style="font-weight:bold"> / </a>
+Matrix dimensions must agree.
+} 
+(intensity_mix_i ./ is_mix_intensity)
+
+ans =
+
+  Columns 1 through 15
+
+    0.0002    0.0001    0.0194    1.0000    0.0000    0.1046    0.0002    0.0001    0.0002    0.0027    0.0000    0.0002    0.0001    0.0000    0.0000
+
+  Columns 16 through 30
+
+    0.0579    0.0652    0.0066    0.0010    0.0000    0.0006    0.0000    0.0000    0.0000    0.0009    0.0000    0.0000    0.0000    0.0000    0.0000
+
+  Columns 31 through 45
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000         0         0         0    0.0000
+
+  Columns 46 through 57
+
+         0         0         0    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000         0    0.0000
+
+sensitivity_relative_to_is_mix
+
+sensitivity_relative_to_is_mix =
+
+  1×54 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> row vector
+
+  Columns 1 through 15
+
+   11.6113    4.0795   11.0000    1.0000    8.2586    0.1767    1.2609    0.0760   10.1913    0.0166   10.9317    0.6924   12.5495    1.3153   14.5911
+
+  Columns 16 through 30
+
+    0.2860   12.6017    0.1396    2.8949    2.2493    4.3869   11.8796   12.6144   15.1192    8.2169   15.9146    2.8186    6.8778    2.2159   20.8967
+
+  Columns 31 through 45
+
+    6.0931    6.7336   17.2205    1.7801   16.3109   15.8501   19.8773    3.4892    3.0591   10.1277    3.0009   21.8418    5.3418   21.8317    4.8708
+
+  Columns 46 through 54
+
+   22.8011    3.5092   21.2209    5.2618   13.4820    9.6548   17.1620   15.6263   19.8344
+
+element_names
+
+element_names =
+
+  1×57 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+  Columns 1 through 13
+
+    {'Li7'}    {'B11'}    {'Na23'}    {'Mg25'}    {'Al27'}    {'Si29'}    {'P31'}    {'S34'}    {'Cl35'}    {'K39'}    {'Ca43'}    {'Sc45'}    {'Ti49'}
+
+  Columns 14 through 26
+
+    {'V51'}    {'Cr53'}    {'Mn55'}    {'Fe57'}    {'Co59'}    {'Ni61'}    {'Cu65'}    {'Zn66'}    {'As75'}    {'Br79'}    {'Rb85'}    {'Sr88'}    {'Y89'}
+
+  Columns 27 through 38
+
+    {'Zr90'}    {'Nb93'}    {'Mo95'}    {'Ag109'}    {'Cd111'}    {'In115'}    {'Sn118'}    {'Sb121'}    {'I127'}    {'Cs133'}    {'Ba137'}    {'La139'}
+
+  Columns 39 through 49
+
+    {'Ce140'}    {'Pr141'}    {'Nd146'}    {'Sm147'}    {'Eu151'}    {'Gd157'}    {'Tb159'}    {'Dy163'}    {'Ho165'}    {'Er167'}    {'Tm169'}
+
+  Columns 50 through 57
+
+    {'Yb173'}    {'Lu175'}    {'W182'}    {'Tl205'}    {'Pb208'}    {'Bi209'}    {'Th232'}    {'U238'}
+
+sensitivities
+
+sensitivities =
+
+  1×54 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+     <strong>Li7</strong>       <strong>B11</strong>       <strong>Na23</strong>      <strong>Mg25</strong>      <strong>Al27</strong>      <strong>Si29</strong>      <strong>P31</strong>       <strong>Cl35</strong>      <strong>K39</strong>       <strong>Ca43</strong>      <strong>Sc45</strong>      <strong>Ti49</strong>      <strong>V51</strong>       <strong>Cr53</strong>      <strong>Mn55</strong>      <strong>Fe57</strong>      <strong>Co59</strong>     <strong>Ni61</strong>      <strong>Cu65</strong>      <strong>Zn66</strong>      <strong>As75</strong>      <strong>Rb85</strong>      <strong>Sr88</strong>      <strong>Y89</strong>       <strong>Zr90</strong>      <strong>Nb93</strong>     <strong>Mo95</strong>     <strong>Ag109</strong>    <strong>Cd111</strong>     <strong>In115</strong>     <strong>Sn118</strong>     <strong>Sb121</strong>     <strong>Cs133</strong>     <strong>Ba137</strong>     <strong>La139</strong>     <strong>Ce140</strong>     <strong>Pr141</strong>     <strong>Nd146</strong>     <strong>Sm147</strong>     <strong>Eu151</strong>     <strong>Gd157</strong>     <strong>Tb159</strong>     <strong>Dy163</strong>     <strong>Ho165</strong>     <strong>Er167</strong>     <strong>Tm169</strong>     <strong>Yb173</strong>     <strong>Lu175</strong>      <strong>W182</strong>     <strong>Tl205</strong>    <strong>Pb208</strong>     <strong>Bi209</strong>     <strong>Th232</strong>      <strong>U238</strong> 
+    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_____</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_____</strong>    <strong>_____</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_____</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>
+
+    1911.1    671.45    1810.5    164.59    1359.3    29.076    207.54    12.513    1677.4    2.7262    1799.2    113.96    2065.5    216.48    2401.5    47.068    2074.1    22.97    476.47    370.22    722.03    1955.2    2076.2    2488.5    1352.4    2619.4    463.9    1132     364.71    3439.4    1002.9    1108.3    2834.3    292.99    2684.6    2608.7    3271.6    574.29    503.49    1666.9    493.91    3594.9    879.21    3593.3    801.69    3752.8    577.58    3492.7    866.03    2219     1589.1    2824.7    2571.9    3264.5
+
+            % cps like in SILLS
+
+            % Find common elements between mix and sensitivities
+            [common_elements, idx_mix, idx_sens] = intersect(element_names_mix, sensitivity_element_names, 'stable');
+{Unrecognized function or variable 'element_names_mix'.
+} 
+
+            intensity_mix_i = app.base.project.session.spot.bkgd_corrected_cps_mix{unk,:}; % Iimix
+            element_names_mix = app.base.project.session.spot.bkgd_corrected_cps_mix.Properties.VariableNames;
+
+            % Get sensitivity table and its column names
+            sensitivities = app.base.project.session.spot.sensitivities{bracket_idx,prm_idx}(unk,:);
+            sensitivity_element_names = sensitivities.Properties.VariableNames;
+
+            % Find common elements between mix and sensitivities
+            [common_elements, idx_mix, idx_sens] = intersect(element_names_mix, sensitivity_element_names, 'stable');
+
+            % Filter intensity_mix_i to only include elements present in sensitivities
+            intensity_mix_filtered = intensity_mix_i(idx_mix);
+
+            % Find the most intense signal from the filtered data
+            [max_intensity, max_col_idx_filtered] = max(intensity_mix_filtered);
+            is_mix_name = common_elements{max_col_idx_filtered};
+            is_mix_intensity = max_intensity;
+            is_mix_idx = idx_mix(max_col_idx_filtered); % Index in original mix table
+
+            % Calculate the sensitivity of all analytes relative to the
+            % sensitivity of the assumed internal standard in the mix
+            sensitivity_is_mix = sensitivities.(is_mix_name);
+            sensitivity_relative_to_is_mix = table2array(sensitivities) ./ sensitivity_is_mix;
+
+            % Calculate the concentration ratio of all elements relative to
+            % the internal standard in the mix (only for common elements)
+            conc_ratio = (intensity_mix_filtered ./ is_mix_intensity) ./ sensitivity_relative_to_is_mix(idx_sens);
+
+
+conc_ratio_mix
+{Unrecognized function or variable 'conc_ratio_mix'.
+} 
+      % cps like in SILLS
+
+            intensity_mix_i = app.base.project.session.spot.bkgd_corrected_cps_mix{unk,:}; % Iimix
+            element_names_mix = app.base.project.session.spot.bkgd_corrected_cps_mix.Properties.VariableNames;
+
+            % Get sensitivity table and its column names
+            sensitivities = app.base.project.session.spot.sensitivities{bracket_idx,prm_idx}(unk,:);
+            sensitivity_element_names = sensitivities.Properties.VariableNames;
+
+            % Find common elements between mix and sensitivities
+            [common_elements, idx_mix, idx_sens] = intersect(element_names_mix, sensitivity_element_names, 'stable');
+
+            % Filter intensity_mix_i to only include elements present in sensitivities
+            intensity_mix_filtered = intensity_mix_i(idx_mix);
+
+            % Find the most intense signal from the filtered data
+            [max_intensity, max_col_idx_filtered] = max(intensity_mix_filtered);
+            is_mix_name = common_elements{max_col_idx_filtered};
+            is_mix_intensity = max_intensity;
+            is_mix_idx = idx_mix(max_col_idx_filtered); % Index in original mix table
+
+            % Calculate the sensitivity of all analytes relative to the
+            % sensitivity of the assumed internal standard in the mix
+            sensitivity_is_mix = sensitivities.(is_mix_name);
+            sensitivity_relative_to_is_mix = table2array(sensitivities) ./ sensitivity_is_mix;
+
+            % Calculate the concentration ratio of all elements relative to
+            % the internal standard in the mix
+            conc_ratio_mix = (intensity_mix_filtered ./ is_mix_intensity) ./ sensitivity_relative_to_is_mix(idx_sens);
+
+conc_ratio_mix
+
+conc_ratio_mix =
+
+  1×54 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> row vector
+
+  Columns 1 through 15
+
+    0.0000    0.0000    0.0018    1.0000    0.0000    0.5920    0.0001    0.0022    0.0003    0.0013    0.0000    0.0001    0.0000    0.0000    0.0040
+
+  Columns 16 through 30
+
+    0.2280    0.0005    0.0071    0.0000    0.0003    0.0000    0.0000    0.0001    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+  Columns 31 through 45
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000         0         0         0    0.0000         0         0         0
+
+  Columns 46 through 54
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000         0    0.0000
+
+conc_ratio_mix
+
+conc_ratio_mix =
+
+  1×54 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> row vector
+
+  Columns 1 through 15
+
+    0.0000    0.0000    0.0018    1.0000    0.0000    0.5920    0.0001    0.0022    0.0003    0.0013    0.0000    0.0001    0.0000    0.0000    0.0040
+
+  Columns 16 through 30
+
+    0.2280    0.0005    0.0071    0.0000    0.0003    0.0000    0.0000    0.0001    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+  Columns 31 through 45
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000         0         0         0    0.0000         0         0         0
+
+  Columns 46 through 54
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000         0    0.0000
+
+clc
+conc_ratio_mix
+
+conc_ratio_mix =
+
+  1×54 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> row vector
+
+  Columns 1 through 15
+
+    0.0000    0.0000    0.0018    1.0000    0.0000    0.5920    0.0001    0.0022    0.0003    0.0013    0.0000    0.0001    0.0000    0.0000    0.0040
+
+  Columns 16 through 30
+
+    0.2280    0.0005    0.0071    0.0000    0.0003    0.0000    0.0000    0.0001    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+  Columns 31 through 45
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000         0         0         0    0.0000         0         0         0
+
+  Columns 46 through 54
+
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000         0    0.0000
+
+common_elements
+
+common_elements =
+
+  1×54 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+  Columns 1 through 13
+
+    {'Li7'}    {'B11'}    {'Na23'}    {'Mg25'}    {'Al27'}    {'Si29'}    {'P31'}    {'Cl35'}    {'K39'}    {'Ca43'}    {'Sc45'}    {'Ti49'}    {'V51'}
+
+  Columns 14 through 25
+
+    {'Cr53'}    {'Mn55'}    {'Fe57'}    {'Co59'}    {'Ni61'}    {'Cu65'}    {'Zn66'}    {'As75'}    {'Rb85'}    {'Sr88'}    {'Y89'}    {'Zr90'}
+
+  Columns 26 through 37
+
+    {'Nb93'}    {'Mo95'}    {'Ag109'}    {'Cd111'}    {'In115'}    {'Sn118'}    {'Sb121'}    {'Cs133'}    {'Ba137'}    {'La139'}    {'Ce140'}    {'Pr141'}
+
+  Columns 38 through 48
+
+    {'Nd146'}    {'Sm147'}    {'Eu151'}    {'Gd157'}    {'Tb159'}    {'Dy163'}    {'Ho165'}    {'Er167'}    {'Tm169'}    {'Yb173'}    {'Lu175'}
+
+  Columns 49 through 54
+
+    {'W182'}    {'Tl205'}    {'Pb208'}    {'Bi209'}    {'Th232'}    {'U238'}
+
+incl_fe_ratio
+
+incl_fe_ratio =
+
+     1
+
+
+
+            % After calculating conc_ratio_mix and before using it further:
+
+            % Handle Fe ratio if Fe is present
+            fe_idx = find(strcmp(common_elements, 'Fe57')); % Find Fe57 index
+
+            if ~isempty(fe_idx) && ~isnan(incl_fe_ratio) && incl_fe_ratio > 0
+                % incl_fe_ratio is defined as FeO/(FeO + Fe2O3)
+                a = incl_fe_ratio;
+
+                % Split Fe concentration ratio into FeO and Fe2O3 components
+                % Based on SILLS formula:
+                % FeO component (Fe2+):
+                fe2_fraction = 1 - (1/(1 + (0.699480/0.777314)*((1-a)/a)));
+
+                % Fe2O3 component (Fe3+):
+                fe3_fraction = 1/(1 + (0.699480/0.777314)*((1-a)/a));
+
+                % Adjust the Fe concentration ratio
+                % Store original Fe ratio
+                fe_total = conc_ratio_mix(fe_idx);
+
+                % You might want to store both separately or adjust the single Fe value
+                % Option 1: Adjust in place (keeping only total as FeO equivalent)
+                conc_ratio_mix(fe_idx) = fe_total * fe2_fraction;
+
+                % Option 2: If you have separate FeO and Fe2O3 columns (uncomment if needed)
+                % fe2_idx = find(strcmp(common_elements, 'FeO'));
+                % fe3_idx = find(strcmp(common_elements, 'Fe2O3'));
+                % if ~isempty(fe2_idx)
+                %     conc_ratio_mix(fe2_idx) = fe_total * fe2_fraction;
+                % end
+                % if ~isempty(fe3_idx)
+                %     conc_ratio_mix(fe3_idx) = fe_total * fe3_fraction;
+                % end
+            end
+
+app.base.project.session.oxides.preferred_isotopes
+
+ans =
+
+  11×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Al27'  }
+    {'Ca43'  }
+    {'Cr53'  }
+    {'Fe57'  }
+    {'K39'   }
+    {'Mg25'  }
+    {0×0 char}
+    {'Na23'  }
+    {0×0 char}
+    {'Si29'  }
+    {'Ti49'  }
+
+
+            % After calculating conc_ratio_mix and before using it further:
+
+            % Handle Fe ratio if Fe is present
+            % First check if there's a preferred Fe isotope
+            preferred_isotopes = app.base.project.session.oxides.preferred_isotopes;
+            fe_preferred = preferred_isotopes(contains(preferred_isotopes, 'Fe'));
+
+            if ~isempty(fe_preferred) && ~isempty(fe_preferred{1})
+                % Use the preferred Fe isotope
+                fe_idx = find(strcmp(common_elements, fe_preferred{1}));
+            else
+                % Fallback: find any Fe isotope and use the first one
+                fe_idx = find(contains(common_elements, 'Fe'));
+                if ~isempty(fe_idx)
+                    fe_idx = fe_idx(1);
+                end
+            end
+
+            if ~isempty(fe_idx) && ~isnan(incl_fe_ratio) && incl_fe_ratio > 0
+                % incl_fe_ratio is defined as FeO/(FeO + Fe2O3)
+                a = incl_fe_ratio;
+
+                % Split Fe concentration ratio into FeO and Fe2O3 components
+                % Based on SILLS formula:
+                % FeO component (Fe2+):
+                fe2_fraction = 1 - (1/(1 + (0.699480/0.777314)*((1-a)/a)));
+
+                % Fe2O3 component (Fe3+):
+                fe3_fraction = 1/(1 + (0.699480/0.777314)*((1-a)/a));
+
+                % Adjust the Fe concentration ratio
+                % Store original Fe ratio
+                fe_total = conc_ratio_mix(fe_idx);
+
+                % Adjust in place (keeping only total as FeO equivalent)
+                conc_ratio_mix(fe_idx) = fe_total * fe2_fraction;
+            end
+conc_ratio_mix(fe_idx)
+
+ans =
+
+  <a href="matlab:helpPopup single" style="font-weight:bold">single</a>
+
+     0
+
+ Handle Fe ratio if Fe is present
+{Unrecognized function or variable 'Handle'.
+} 
+
+            % Handle Fe ratio if Fe is present
+            % First check if there's a preferred Fe isotope
+            preferred_isotopes = app.base.project.session.oxides.preferred_isotopes;
+            fe_preferred_cell = preferred_isotopes(contains(preferred_isotopes, 'Fe'));
+
+            if ~isempty(fe_preferred_cell) && ~isempty(fe_preferred_cell{1})
+                % Use the preferred Fe isotope
+                fe_idx = find(strcmp(common_elements, fe_preferred_cell{1}));
+            else
+                % Fallback: find any Fe isotope and use the first one
+                fe_idx = find(contains(common_elements, 'Fe'));
+                if ~isempty(fe_idx)
+                    fe_idx = fe_idx(1);
+                end
+            end
+
+            % Apply Fe ratio correction if Fe exists and ratio is valid
+            if ~isempty(fe_idx) && ~isnan(incl_fe_ratio) && incl_fe_ratio ~= 0 && incl_fe_ratio ~= 1
+                % incl_fe_ratio is defined as FeO/(FeO + Fe2O3)
+                fe_ratio = incl_fe_ratio;
+
+                % Get total Fe concentration ratio
+                fe_total = conc_ratio_mix(fe_idx);
+
+                % Calculate Fe2O3 and FeO fractions using the same formula as in total_oxide_calculation
+                % 0.699480/0.777314 is the ratio of Fe in Fe2O3 vs FeO
+                fe_constant = 0.699480/0.777314;
+
+                % Calculate fractions
+                fe2o3_fraction = fe_total * (1-(1/(1+(fe_constant)*((1-fe_ratio)/fe_ratio))));
+                feo_fraction = fe_total * (1/(1+(fe_constant)*((1-fe_ratio)/fe_ratio)));
+
+                % Update Fe concentration ratio to FeO component
+                conc_ratio_mix(fe_idx) = feo_fraction;
+
+                % Add Fe2O3 component
+                conc_ratio_mix = [conc_ratio_mix, fe2o3_fraction];
+                common_elements = [common_elements, {'Fe2O3'}];
+            end
+fe2o3_fraction
+{Unrecognized function or variable 'fe2o3_fraction'.
+} 
+
+            % in the HOST_CALC file the oxide_mat is either taken form the
+            % real value if the host was also quantified using total oxides
+            % or it is simply recalculated if not
+            if ~isequal(app.base.project.session.spot.internal_standard{bracket_idx,prm_idx}{unk}, 'Total Oxides')
+                % in this case, we have to recalculate the total oxide wt%
+                % from the composition
+
+                 mass_fraction_host_i = app.base.project.session.spot.matrix_composition{bracket_idx,prm_idx}{unk,:}; % Cihost
+
+                 % Get oxide conversion factors
+                 oxide_factors = app.base.project.session.oxides.conversion_factors;
+
+                 % Get the element names (column names from the table)
+                 element_names = app.base.project.session.spot.matrix_composition{bracket_idx,prm_idx}.Properties.VariableNames;
+
+                 % Initialize total oxide wt%
+                 total_oxide_wt = 0;
+
+                 % Loop through each element
+                 for j = 1:length(element_names)
+                     element = element_names{j};
+                     mass_frac_ugg = mass_fraction_host_i(j);
+
+                     % Skip if mass fraction is zero or empty
+                     if mass_frac_ugg == 0 || isnan(mass_frac_ugg)
+                         continue;
+                     end
+
+                     % Extract base element name (letters only)
+                     base_element = regexp(element, '^[A-Za-z]+', 'match');
+
+                     if ~isempty(base_element) && isKey(oxide_factors, base_element{1})
+                         % Convert µg/g to wt% (divide by 10000)
+                         element_wt_percent = mass_frac_ugg / 10000;
+
+                         % Convert element wt% to oxide wt%
+                         oxide_wt_percent = element_wt_percent * oxide_factors(base_element{1});
+
+                         % Add to total
+                         total_oxide_wt = total_oxide_wt + oxide_wt_percent;
+                     end
+                 end
+
+                 % total_oxide_wt now contains the total oxide wt% for this unknown
+                 host_total_oxide = total_oxide_wt;
+
+
+            else % in this case the host is also quantified using total oxides and we can just take the value from there
+
+                host_total_oxide = app.base.project.session.spot.internal_standard_oxide_wt{bracket_idx,prm_idx}{unk}; %Oxide_mat
+                host_fe_ratio = app.base.project.session.spot.Fe_ratio_for_total_oxide{bracket_idx,prm_idx}{unk}; % fe_ratio
+
+            end
+
+
+            second_internal_standard_name = app.base.project.session.spot.second_internal_standard_inclusion{bracket_idx,prm_idx}{unk}; % is
+            second_internal_standard_mass_fraction = app.base.project.session.spot.second_internal_standard_mass_fraction_inclusion{bracket_idx,prm_idx}{unk}; % Cisinc
+            sensitivity_relative_to_is2 = app.sensitivity_relative_to_second_internal_standard_inclusion{bracket_idx,prm_idx}{unk,:};
+
+            incl_total_oxide = app.base.project.session.spot.internal_standard_oxide_wt_inclusion{bracket_idx,prm_idx}{unk}; % Oxide_inc
+            incl_fe_ratio = app.base.project.session.spot.Fe_ratio_for_total_oxide_inclusion{bracket_idx,prm_idx}{unk}; % fe_ratio
+
+            % define the internal standard as the element with the highes
+            % cps like in SILLS
+
+            intensity_mix_i = app.base.project.session.spot.bkgd_corrected_cps_mix{unk,:}; % Iimix
+            element_names_mix = app.base.project.session.spot.bkgd_corrected_cps_mix.Properties.VariableNames;
+
+            % Get sensitivity table and its column names
+            sensitivities = app.base.project.session.spot.sensitivities{bracket_idx,prm_idx}(unk,:);
+            sensitivity_element_names = sensitivities.Properties.VariableNames;
+
+            % Find common elements between mix and sensitivities
+            [common_elements, idx_mix, idx_sens] = intersect(element_names_mix, sensitivity_element_names, 'stable');
+
+            % Filter intensity_mix_i to only include elements present in sensitivities
+            intensity_mix_filtered = intensity_mix_i(idx_mix);
+
+            % Find the most intense signal from the filtered data
+            [max_intensity, max_col_idx_filtered] = max(intensity_mix_filtered);
+            is_mix_name = common_elements{max_col_idx_filtered};
+            is_mix_intensity = max_intensity;
+            is_mix_idx = idx_mix(max_col_idx_filtered); % Index in original mix table
+
+            % Calculate the sensitivity of all analytes relative to the
+            % sensitivity of the assumed internal standard in the mix
+            sensitivity_is_mix = sensitivities.(is_mix_name);
+            sensitivity_relative_to_is_mix = table2array(sensitivities) ./ sensitivity_is_mix;
+
+            % Calculate the concentration ratio of all elements relative to
+            % the internal standard in the mix
+            conc_ratio_mix = (intensity_mix_filtered ./ is_mix_intensity) ./ sensitivity_relative_to_is_mix(idx_sens);
+
+
+
+            % After calculating conc_ratio_mix and before using it further:
+
+            % Handle Fe ratio if Fe is present
+            % First check if there's a preferred Fe isotope
+            preferred_isotopes = app.base.project.session.oxides.preferred_isotopes;
+            fe_preferred_cell = preferred_isotopes(contains(preferred_isotopes, 'Fe'));
+
+            if ~isempty(fe_preferred_cell) && ~isempty(fe_preferred_cell{1})
+                % Use the preferred Fe isotope
+                fe_idx = find(strcmp(common_elements, fe_preferred_cell{1}));
+            else
+                % Fallback: find any Fe isotope and use the first one
+                fe_idx = find(contains(common_elements, 'Fe'));
+                if ~isempty(fe_idx)
+                    fe_idx = fe_idx(1);
+                end
+            end
+
+            % Apply Fe ratio correction if Fe exists and ratio is valid
+            if ~isempty(fe_idx) && ~isnan(incl_fe_ratio) && incl_fe_ratio ~= 0 && incl_fe_ratio ~= 1
+                % incl_fe_ratio is defined as FeO/(FeO + Fe2O3)
+                fe_ratio = incl_fe_ratio;
+
+                % Get total Fe concentration ratio
+                fe_total = conc_ratio_mix(fe_idx);
+
+                % Calculate Fe2O3 and FeO fractions using the same formula as in total_oxide_calculation
+                % 0.699480/0.777314 is the ratio of Fe in Fe2O3 vs FeO
+                fe_constant = 0.699480/0.777314;
+
+                % Calculate fractions
+                fe2o3_fraction = fe_total * (1-(1/(1+(fe_constant)*((1-fe_ratio)/fe_ratio))));
+                feo_fraction = fe_total * (1/(1+(fe_constant)*((1-fe_ratio)/fe_ratio)));
+
+                % Update Fe concentration ratio to FeO component
+                conc_ratio_mix(fe_idx) = feo_fraction;
+
+                % Add Fe2O3 component
+                conc_ratio_mix = [conc_ratio_mix, fe2o3_fraction];
+                common_elements = [common_elements, {'Fe2O3'}];
+            end
+fe2o3_fraction
+{Unrecognized function or variable 'fe2o3_fraction'.
+} 
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2043,1)">2043 </a>                 mass_fraction_host_i = app.base.project.session.spot.matrix_composition{bracket_idx,prm_idx}{unk,:}; % Cihost
+dbcont
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2154,1)">2154 </a>                fe_total = conc_ratio_mix(fe_idx);
+dbcont
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbcont
+dbstep
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2203,1)">2203 </a>            oxide_conc_arb_mix_0001 = conc_ratio_mix_0001 .* oxide_factors_array';
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbcont
+{Dot indexing is not supported for variables of this type.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/total_oxide_calculation_inclusion_two_IS', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 2213)" style="font-weight:bold">Quantification_Module/total_oxide_calculation_inclusion_two_IS</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2213,0)">line 2213</a>)
+                    mass_fraction_host_array(j) = mass_fraction_host_i.(common_elements{j});
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/calculate_inclusion_mass_fractions', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 1339)" style="font-weight:bold">Quantification_Module/calculate_inclusion_mass_fractions</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',1339,0)">line 1339</a>)
+                            [intstd_elements_intensity , internal_standard_mass_fraction, intstd_elements_name] = total_oxide_calculation_inclusion_two_IS(app, bracket_idx, prm_idx, unk);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/quantification_wrapper', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 2831)" style="font-weight:bold">Quantification_Module/quantification_wrapper</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2831,0)">line 2831</a>)
+            calculate_inclusion_mass_fractions(app)
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/ProceedtoResultsModuleButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 3603)" style="font-weight:bold">Quantification_Module/ProceedtoResultsModuleButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',3603,0)">line 3603</a>)
+                    lods_failed = quantification_wrapper(app);
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2213,1)">2213 </a>                    mass_fraction_host_array(j) = mass_fraction_host_i.(common_elements{j});
+common_elements{j}
+
+ans =
+
+    'Li7'
+
+mass_fraction_host_i
+
+mass_fraction_host_i =
+
+  1×57 <a href="matlab:helpPopup single" style="font-weight:bold">single</a> row vector
+
+   1.0e+05 *
+
+  Columns 1 through 15
+
+    0.0001    0.0001    0.0002    2.9750    0.0000    1.8511    0.0006         0    0.0009    0.0001    0.0010    0.0000    0.0002    0.0000    0.0000
+
+  Columns 16 through 30
+
+    0.0119    0.7731    0.0018    0.0223    0.0000    0.0008    0.0000         0    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+  Columns 31 through 45
+
+         0    0.0000    0.0000    0.0000         0    0.0000    0.0000         0         0         0         0         0         0         0         0
+
+  Columns 46 through 57
+
+         0         0         0         0         0         0    0.0000    0.0000    0.0000    0.0000         0    0.0000
+
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2179,1)">2179 </a>            mass_fraction_host_table = app.base.project.session.spot.matrix_composition{bracket_idx,prm_idx}(unk,:);
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbcont
+dbstep
+dbstep
+dbstep
+dbcont
+dbstep
+dbstep
+dbstep
+dbcont
+dbstep
+dbstep
+dbstep
+dbstep
+dbcont
+[Warning: Matrix correction failed: second internal standard out of bounds] 
+[Warning: Matrix correction failed: maximum iterations reached] 
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2262,1)">2262 </a>                warning('Matrix correction failed: second internal standard out of bounds');
+Cisinc_0001 < Cisinc_1
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2262,1)">2262 </a>                warning('Matrix correction failed: second internal standard out of bounds');
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2259,1)">2259 </a>            if second_internal_standard_mass_fraction < min(Cisinc_0001, Cisinc_1) || ...
+dbstep
+dbquit
+{Undefined function 'unique_PRMs' for input arguments of type 'double'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/total_oxide_calculation_inclusion_two_IS', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 2262)" style="font-weight:bold">Quantification_Module/total_oxide_calculation_inclusion_two_IS</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2262,0)">line 2262</a>)
+                message = {['The matrix correction for spot #' num2str(unk) ' for primary reference material ' char(unique_PRMs(prm_idx)) ' could not be calculated.']};
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/calculate_inclusion_mass_fractions', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 1339)" style="font-weight:bold">Quantification_Module/calculate_inclusion_mass_fractions</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',1339,0)">line 1339</a>)
+                            [intstd_elements_intensity , internal_standard_mass_fraction, intstd_elements_name] = total_oxide_calculation_inclusion_two_IS(app, bracket_idx, prm_idx, unk);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/quantification_wrapper', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 2835)" style="font-weight:bold">Quantification_Module/quantification_wrapper</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2835,0)">line 2835</a>)
+            calculate_inclusion_mass_fractions(app)
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/ProceedtoResultsModuleButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 3607)" style="font-weight:bold">Quantification_Module/ProceedtoResultsModuleButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',3607,0)">line 3607</a>)
+                    lods_failed = quantification_wrapper(app);
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2262,1)">2262 </a>                message = {['The matrix correction for spot #' num2str(unk) ' for primary reference material ' char(unique_PRMs(prm_idx)) ' could not be calculated.']};
+                % therefore the LODs cannot be calculated
+                unique_PRMs = unique(app.base.project.session.spot.referencematerial);
+                unique_PRMs = unique_PRMs(~strcmp(unique_PRMs, 'None'));
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2266,1)">2266 </a>                message = {['The matrix correction for spot #' num2str(unk) ' for primary reference material ' char(unique_PRMs(prm_idx)) ' could not be calculated.']};
+dbcont
+[Warning: Matrix correction failed: maximum iterations reached] 
+dbquit
+clc
