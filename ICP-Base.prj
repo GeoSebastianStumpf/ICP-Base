@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="573120613" file="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base.prj" location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev" name="ICP-Base" preferred-package-location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="2851795898" file="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base.prj" location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev" name="ICP-Base" preferred-package-location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>ICP_Base</param.appname>
     <param.icon>${PROJECT_ROOT}\ICP-Base_resources\icon.ico</param.icon>
     <param.icons>
@@ -8,7 +8,7 @@
       <file>${PROJECT_ROOT}\ICP-Base_resources\icon_24.png</file>
       <file>${PROJECT_ROOT}\ICP-Base_resources\icon_16.png</file>
     </param.icons>
-    <param.version>1.00</param.version>
+    <param.version>1.00.60109</param.version>
     <param.authnamewatermark>Sebastian Stumpf</param.authnamewatermark>
     <param.email>sebastian.stumpf@unibe.ch</param.email>
     <param.company>University of Bern</param.company>
@@ -32,8 +32,8 @@
     <param.web.mcr>true</param.web.mcr>
     <param.package.mcr>false</param.package.mcr>
     <param.no.mcr>false</param.no.mcr>
-    <param.web.mcr.name>ICP_Base_v_1_00_51218_win</param.web.mcr.name>
-    <param.package.mcr.name>ICP_Base_v_1_00_51218_win_mcr</param.package.mcr.name>
+    <param.web.mcr.name>ICP_Base_v_1_00_60109_win</param.web.mcr.name>
+    <param.package.mcr.name>ICP_Base_v_1_00_60109_win_mcr</param.package.mcr.name>
     <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
     <param.windows.command.prompt>true</param.windows.command.prompt>
     <param.create.log>false</param.create.log>
@@ -77,29 +77,22 @@
       <file>${PROJECT_ROOT}\ICP_Base.mlapp</file>
     </fileset.main>
     <fileset.resources>
-      <file>${PROJECT_ROOT}\Add_Metadata</file>
-      <file>${PROJECT_ROOT}\Dev</file>
       <file>${PROJECT_ROOT}\Dev\icon.ico</file>
-      <file>${PROJECT_ROOT}\Example Data</file>
-      <file>${PROJECT_ROOT}\Functions</file>
       <file>${PROJECT_ROOT}\Modules</file>
-      <file>${PROJECT_ROOT}\Plot_Styles</file>
-      <file>${PROJECT_ROOT}\RM_Files</file>
-      <file>${PROJECT_ROOT}\Total_Oxide_Calculations</file>
       <file>${PROJECT_ROOT}\VisModulev4</file>
     </fileset.resources>
     <fileset.package>
       <file>${PROJECT_ROOT}\Add_Metadata</file>
-      <file>${PROJECT_ROOT}\Dev</file>
       <file>${PROJECT_ROOT}\Example Data</file>
       <file>${PROJECT_ROOT}\Functions</file>
-      <file>${PROJECT_ROOT}\ICP-Base Manual.pdf</file>
       <file>${PROJECT_ROOT}\Plot_Styles</file>
       <file>${PROJECT_ROOT}\RM_Files</file>
       <file>${PROJECT_ROOT}\Total_Oxide_Calculations</file>
     </fileset.package>
     <fileset.depfun>
       <file>${MATLAB_ROOT}\toolbox\local\userpath.m</file>
+      <file>${PROJECT_ROOT}\Dev\ICP-Base Icon.png</file>
+      <file>${PROJECT_ROOT}\Functions\DisplayError.m</file>
       <file>${PROJECT_ROOT}\ICP-Base_resources\icon_48.png</file>
     </fileset.depfun>
     <build-deliverables>

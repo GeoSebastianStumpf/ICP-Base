@@ -1,0 +1,7 @@
+Nominator;Denominator;Color;LineWidth;Linestyle;Marker;MarkerSize;MarkerFaceColor;MarkerEdgeColor
+Na23;K39;green;2;-;s;3;magenta;magenta
+Na23;Ca43;blue;2;-;o;3;red;red
+Na23;Cl35;red;2;-;+;3;blue;blue
+Na23;S34;magenta;2;-;*;3;green;green
+Cl35;K39;black;2;-;none;0;none;none
+Cl35;Ca43;black;2;--;none;0;none;none
