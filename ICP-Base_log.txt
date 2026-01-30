@@ -1159,3 +1159,1770 @@ dbcont
 [Warning: Matrix correction failed: maximum iterations reached] 
 dbquit
 clc
+clc
+ 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%   Error   %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%        13-Jan-2026 11:55:53
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Error occured during: Import failed
+_________________________________________
+%%001%%
+Error in file:
+C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m
+Error in line: 37
+_________________________________________
+  
+%%002%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 4691
+_________________________________________
+  
+%%003%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 1673
+_________________________________________
+  
+%%004%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 1548
+_________________________________________
+  
+Error in message: Index exceeds the number of array elements. Index must not exceed 0.
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+  
+  
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/NextButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 4815)" style="font-weight:bold">Import_Module/NextButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',4815,0)">line 4815</a>)
+'Value' must be a character vector, string scalar or an empty cell array when component is single selection.
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/NextButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 4815)" style="font-weight:bold">Import_Module/NextButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',4815,0)">line 4815</a>)
+'Value' must be a character vector, string scalar or an empty cell array when component is single selection.
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+ 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%   Error   %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%        13-Jan-2026 11:56:24
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Error occured during: Import failed
+_________________________________________
+%%001%%
+Error in file:
+C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m
+Error in line: 37
+_________________________________________
+  
+%%002%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 4691
+_________________________________________
+  
+%%003%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 1673
+_________________________________________
+  
+%%004%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 1548
+_________________________________________
+  
+Error in message: Index exceeds the number of array elements. Index must not exceed 0.
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+  
+  
+clc
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+ 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%   Error   %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%        13-Jan-2026 12:09:08
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Error occured during: Import failed
+_________________________________________
+%%001%%
+Error in file:
+C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m
+Error in line: 37
+_________________________________________
+  
+%%002%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 4511
+_________________________________________
+  
+%%003%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 1665
+_________________________________________
+  
+%%004%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 1151
+_________________________________________
+  
+Error in message: '2.519;0;0;166.67;48775.36;0;700.02;1719122.52;97603.03;106915.6;2000.13;500.01;0;1000.03;300;281855.54;700.02;0;100;200;0;0;250;0;0;0;0;0;0;0;0;0;0;100;200;300;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;50;0;200;0;0' is longer than the maximum allowed length for a table variable name.
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+  
+  
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+ 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%   Error   %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%        13-Jan-2026 12:10:32
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Error occured during: Import failed
+_________________________________________
+%%001%%
+Error in file:
+C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m
+Error in line: 37
+_________________________________________
+  
+%%002%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 4511
+_________________________________________
+  
+%%003%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 1665
+_________________________________________
+  
+%%004%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 1151
+_________________________________________
+  
+Error in message: '2.519;0;0;166.67;48775.36;0;700.02;1719122.52;97603.03;106915.6;2000.13;500.01;0;1000.03;300;281855.54;700.02;0;100;200;0;0;250;0;0;0;0;0;0;0;0;0;0;100;200;300;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;50;0;200;0;0' is longer than the maximum allowed length for a table variable name.
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+  
+  
+ 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%   Error   %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%        13-Jan-2026 12:11:14
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Error occured during: Import failed
+_________________________________________
+%%001%%
+Error in file:
+C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m
+Error in line: 37
+_________________________________________
+  
+%%002%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 4526
+_________________________________________
+  
+Error in message: Unrecognized field name "spot".
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+  
+  
+clc
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+{Unrecognized method, property, or field 'allsignals_axes' for class 'Import_Module'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/draw_rectangle', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 1111)" style="font-weight:bold">Import_Module/draw_rectangle</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1111,0)">line 1111</a>)
+            rect = drawrectangle(app.allsignals_axes, 'Color', [0.5 0.5 0.5], 'LineWidth', 0.5);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/DrawRectangleButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 5378)" style="font-weight:bold">Import_Module/DrawRectangleButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5378,0)">line 5378</a>)
+            draw_rectangle(app)
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1119,1)">1119 </a>            xData = get(app.ManualSelectionAxes, 'XData');
+get(app.ManualSelectionAxes, 'XData')
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.control.UIAxes/get')" style="font-weight:bold">matlab.ui.control.UIAxes/get</a>
+Unrecognized property XData for class UIAxes.
+} 
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1118,1)">1118 </a>        end
+app.signal_start_end
+
+ans =
+
+   1.0e+03 *
+
+    0.9501    1.1561
+
+rect.Position
+
+ans =
+
+   1.0e+09 *
+
+    0.0000    0.0026    0.0000    1.1318
+
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1118,1)">1118 </a>        end
+rect.Position
+
+ans =
+
+   1.0e+06 *
+
+    0.0005    3.0392    0.0002    1.6314
+
+app.signal_start_end
+
+ans =
+
+  515.1099  744.0476
+
+ceil(app.signal_start_end)
+
+ans =
+
+   516   745
+
+round(app.signal_start_end)
+
+ans =
+
+   515   744
+
+[pos(1), pos(1) + pos(3)]
+
+ans =
+
+  515.1099  744.0476
+
+round([pos(1), pos(1) + pos(3)])
+
+ans =
+
+   515   744
+
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1119,1)">1119 </a>        end
+app.signal_start_end
+
+ans =
+
+        1339        1660
+
+dbquit
+{Unrecognized function or variable 'keybord'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/store_signal_start_end', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 1116)" style="font-weight:bold">Import_Module/store_signal_start_end</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1116,0)">line 1116</a>)
+              keybord
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/AssignButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 5353)" style="font-weight:bold">Import_Module/AssignButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5353,0)">line 5353</a>)
+            store_signal_start_end(app)
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+dbquit
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+app.base.project.session.spot.signal_starts
+
+ans =
+
+         184
+         380
+         577
+         774
+         970
+        1167
+        1369
+        1565
+        1794
+        1991
+        2187
+        2384
+        2581
+        2778
+        2977
+        3173
+        3370
+        3566
+        3763
+        3960
+        4156
+        4375
+        4572
+        4767
+        4962
+        5157
+        5353
+        5548
+        5745
+        5941
+        6136
+        6332
+        6528
+        6731
+        6926
+        7121
+        7318
+        7513
+        7709
+        7932
+        8127
+        8323
+        8518
+        8714
+        8936
+        9132
+        9329
+        9525
+        9722
+        9919
+       10116
+       10315
+       10512
+       11365
+       11556
+       11752
+       11949
+       12146
+       12367
+       12563
+       12758
+       12955
+       13153
+       13350
+       13554
+       13751
+       13953
+       14150
+       14346
+       14544
+       14741
+       14937
+       15136
+       15333
+       15529
+       15726
+       15944
+       16140
+       16339
+       16537
+       16733
+       16929
+       17127
+       17324
+       17520
+       17718
+       17920
+       18119
+       18326
+       18529
+       18725
+       18922
+       19119
+       19315
+       19532
+
+app.base.project.session.spot.signal_ends(1:10)
+
+ans =
+
+         249
+         446
+         642
+         840
+        1036
+        1233
+        1435
+        1632
+        1859
+        2055
+
+app.base.project.session.spot.signal_starts(1:10)
+
+ans =
+
+         184
+         380
+         577
+         774
+         970
+        1167
+        1369
+        1565
+        1794
+        1991
+
+app.base.project.session.spot.name(1:10)
+
+ans =
+
+  10×1 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'GSD_1G_50 µm - 1' }
+    {'GSD_1G_50 µm - 2' }
+    {'GSD_1G_50 µm - 3' }
+    {'NIST612_50 µm - 1'}
+    {'NIST612_50 µm - 2'}
+    {'NIST612_50 µm - 3'}
+    {'NIST610_50 µm - 1'}
+    {'NIST610_50 µm - 2'}
+    {'granat1_50 µm - 1'}
+    {'granat1_50 µm - 2'}
+
+dbquit
+dbquit
+app.signal_start_end
+
+ans =
+
+   191   722
+
+dbquit
+app.SpotnameEditField.Value
+
+ans =
+
+    'spot1'
+
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1117,1)">1117 </a>            spot_name = app.SpotnameEditField.Value;
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1117,1)">1117 </a>            spot_name = app.SpotnameEditField.Value;
+dbstep
+dbstep
+dbcont
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1142,1)">1142 </a>        end
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1142,1)">1142 </a>        end
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1142,1)">1142 </a>        end
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1142,1)">1142 </a>        end
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1142,1)">1142 </a>        end
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1142,1)">1142 </a>        end
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1142,1)">1142 </a>        end
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1142,1)">1142 </a>        end
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1142,1)">1142 </a>        end
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1142,1)">1142 </a>        end
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1142,1)">1142 </a>        end
+dbquit
+dbquit
+dbquit
+dbquit
+dbquit
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1117,1)">1117 </a>            spot_name = app.SpotnameEditField.Value;
+dbcont
+{Index exceeds the number of array elements. Index must not exceed 0.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/store_signal_start_end', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 1118)" style="font-weight:bold">Import_Module/store_signal_start_end</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1118,0)">line 1118</a>)
+            signal_start = app.signal_start_end(1);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/AssignButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 5374)" style="font-weight:bold">Import_Module/AssignButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5374,0)">line 5374</a>)
+            store_signal_start_end(app)
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+clc
+{Unrecognized function or variable 'rect'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/store_signal_start_end', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 1142)" style="font-weight:bold">Import_Module/store_signal_start_end</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1142,0)">line 1142</a>)
+            delete(rect)
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/AssignButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 5376)" style="font-weight:bold">Import_Module/AssignButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5376,0)">line 5376</a>)
+            store_signal_start_end(app)
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+clc
+{Unrecognized field name "spot".
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/update_manual_selection', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 1073)" style="font-weight:bold">Import_Module/update_manual_selection</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1073,0)">line 1073</a>)
+            el_names = app.base.project.session.spot.signal_data(:, 2:end).Properties.VariableNames;
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/ChooseMassSpecDropDown_3ValueChanged', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 5405)" style="font-weight:bold">Import_Module/ChooseMassSpecDropDown_3ValueChanged</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5405,0)">line 5405</a>)
+            update_manual_selection(app)
+} 
+Error while evaluating DropDown PrivateValueChangedFcn.
+
+clc
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+{Unrecognized function or variable 'rect'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/store_signal_start_end', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 1146)" style="font-weight:bold">Import_Module/store_signal_start_end</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1146,0)">line 1146</a>)
+            delete(rect)
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/AssignButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 5390)" style="font-weight:bold">Import_Module/AssignButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5390,0)">line 5390</a>)
+            store_signal_start_end(app)
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1146,1)">1146 </a>            delete(app.rectangle)
+dbcont
+clc
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5436,1)">5436 </a>    if isfield(app.base.project.session.spot, 'name')
+dbcont
+dbquit
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5437,1)">5437 </a>            if isfield(app.base.project.session.spot, 'name')
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5437,1)">5437 </a>            if isfield(app.base.project.session.spot, 'name')
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5437,1)">5437 </a>            if isfield(app.base.project.session.spot, 'name')
+dbquit
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5453,1)">5453 </a>            if isfield(app.base.project.session.spot, 'name') && ~isempty(app.base.project.session.spot.name)
+dbcont
+dbcont
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Setting the "KeyPressFcn" property is not permitted while this mode is active.] 
+[Warning: Setting the "KeyPressFcn" property is not permitted while this mode is active.] 
+[Warning: Setting the "KeyPressFcn" property is not permitted while this mode is active.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+{Index exceeds the number of array elements. Index must not exceed 0.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/store_signal_start_end', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 1158)" style="font-weight:bold">Import_Module/store_signal_start_end</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1158,0)">line 1158</a>)
+            signal_start = app.signal_start_end(1);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/AssignButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 5426)" style="font-weight:bold">Import_Module/AssignButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5426,0)">line 5426</a>)
+            store_signal_start_end(app)
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5426,1)">5426 </a>            store_signal_start_end(app)
+app.signal_start_end
+
+ans =
+
+     []
+
+dbquit
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1158,1)">1158 </a>            if isempty(spot_name)
+isempty(spot_name)
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+dbstep
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1159,1)">1159 </a>                return
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1157,1)">1157 </a>            spot_name = app.SpotnameEditField.Value;
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1157,1)">1157 </a>            spot_name = app.SpotnameEditField.Value;
+dbquit
+[Warning: Setting the "KeyPressFcn" property is not permitted while this mode is active.] 
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1157,1)">1157 </a>            spot_name = app.SpotnameEditField.Value;
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1157,1)">1157 </a>            spot_name = app.SpotnameEditField.Value;
+dbcont
+ 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%   Error   %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%        13-Jan-2026 14:59:51
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Error occured during: Import failed
+_________________________________________
+%%001%%
+Error in file:
+C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m
+Error in line: 37
+_________________________________________
+  
+%%002%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 4824
+_________________________________________
+  
+%%003%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 1799
+_________________________________________
+  
+%%004%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 1674
+_________________________________________
+  
+Error in message: Index exceeds the number of array elements. Index must not exceed 0.
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+  
+  
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1674,1)">1674 </a>                if ~(sills_data.STD(i).bgwindow_index(1) == 1 && sills_data.STD(i).bgwindow_index(2) == 1)
+sills_data.STD(i).bgwindow_index
+
+ans =
+
+   304   511
+
+dbcont
+dbcont
+dbcont
+dbcont
+dbcont
+dbcont
+dbcont
+ 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%   Error   %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%        13-Jan-2026 15:02:07
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Error occured during: Import failed
+_________________________________________
+%%001%%
+Error in file:
+C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m
+Error in line: 37
+_________________________________________
+  
+%%002%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 4824
+_________________________________________
+  
+%%003%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 1799
+_________________________________________
+  
+%%004%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 1674
+_________________________________________
+  
+Error in message: Index exceeds the number of array elements. Index must not exceed 0.
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+  
+  
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1674,1)">1674 </a>                if ~(sills_data.STD(i).bgwindow_index(1) == 1 && sills_data.STD(i).bgwindow_index(2) == 1)
+dbcont
+dbcont
+dbcont
+dbcont
+dbcont
+dbcont
+sills_data.STD(i).bgwindow_index
+
+ans =
+
+     []
+
+dbquit
+clc
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+ 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%   Error   %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%        13-Jan-2026 15:08:39
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Error occured during: Import failed
+_________________________________________
+%%001%%
+Error in file:
+C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m
+Error in line: 37
+_________________________________________
+  
+%%002%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 4707
+_________________________________________
+  
+%%003%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp
+Error in line: 1085
+_________________________________________
+  
+Error in message: Unrecognized property 'Interpreter' for class 'matlab.ui.control.EditField'.
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+  
+  
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1178,1)">1178 </a>        end
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1178,1)">1178 </a>        end
+dbcont
+clc
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+{Operands to the logical and (&&) and or (||) operators must be convertible to logical scalar values.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/update_manual_selection_axes', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 1097)" style="font-weight:bold">Import_Module/update_manual_selection_axes</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1097,0)">line 1097</a>)
+            if isempty(app.selected_analytes_man_sel) || app.selected_analytes_man_sel == 0
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/ManSelElementListBoxValueChanged', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 5432)" style="font-weight:bold">Import_Module/ManSelElementListBoxValueChanged</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5432,0)">line 5432</a>)
+             update_manual_selection_axes(app)
+} 
+Error while evaluating ListBox PrivateValueChangedFcn.
+
+opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1097,0)
+opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1097,0)
+clc
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Setting the "KeyPressFcn" property is not permitted while this mode is active.] 
+[Warning: Setting the "KeyPressFcn" property is not permitted while this mode is active.] 
+[Warning: Setting the "KeyPressFcn" property is not permitted while this mode is active.] 
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('text')" style="font-weight:bold">text</a>
+X and Y must be the same length
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/update_manual_selection_axes', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 1123)" style="font-weight:bold">Import_Module/update_manual_selection_axes</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1123,0)">line 1123</a>)
+                    text(app.ManualSelectionAxes, mid_x, y_max, names{i}, ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/ManSelElementListBoxValueChanged', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 5432)" style="font-weight:bold">Import_Module/ManSelElementListBoxValueChanged</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5432,0)">line 5432</a>)
+             update_manual_selection_axes(app)
+} 
+Error while evaluating ListBox PrivateValueChangedFcn.
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('text')" style="font-weight:bold">text</a>
+X and Y must be the same length
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/update_manual_selection_axes', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 1123)" style="font-weight:bold">Import_Module/update_manual_selection_axes</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1123,0)">line 1123</a>)
+                    text(app.ManualSelectionAxes, mid_x, y_max, names{i}, ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/ManSelElementListBoxValueChanged', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 5432)" style="font-weight:bold">Import_Module/ManSelElementListBoxValueChanged</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5432,0)">line 5432</a>)
+             update_manual_selection_axes(app)
+} 
+Error while evaluating ListBox PrivateValueChangedFcn.
+
+clc
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('text')" style="font-weight:bold">text</a>
+X and Y must be the same length
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/update_manual_selection_axes', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 1123)" style="font-weight:bold">Import_Module/update_manual_selection_axes</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1123,0)">line 1123</a>)
+                    text(app.ManualSelectionAxes, mid_x, y_max, names{i}, ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/ManSelElementListBoxValueChanged', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 5432)" style="font-weight:bold">Import_Module/ManSelElementListBoxValueChanged</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5432,0)">line 5432</a>)
+             update_manual_selection_axes(app)
+} 
+Error while evaluating ListBox PrivateValueChangedFcn.
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('text')" style="font-weight:bold">text</a>
+X and Y must be the same length
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/update_manual_selection_axes', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 1123)" style="font-weight:bold">Import_Module/update_manual_selection_axes</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1123,0)">line 1123</a>)
+                    text(app.ManualSelectionAxes, mid_x, y_max, names{i}, ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/ManSelElementListBoxValueChanged', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 5432)" style="font-weight:bold">Import_Module/ManSelElementListBoxValueChanged</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5432,0)">line 5432</a>)
+             update_manual_selection_axes(app)
+} 
+Error while evaluating ListBox PrivateValueChangedFcn.
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('text')" style="font-weight:bold">text</a>
+X and Y must be the same length
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/update_manual_selection_axes', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 1123)" style="font-weight:bold">Import_Module/update_manual_selection_axes</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',1123,0)">line 1123</a>)
+                    text(app.ManualSelectionAxes, mid_x, y_max, names{i}, ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Import_Module/ManSelElementListBoxValueChanged', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp', 5432)" style="font-weight:bold">Import_Module/ManSelElementListBoxValueChanged</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Import_Module.mlapp',5432,0)">line 5432</a>)
+             update_manual_selection_axes(app)
+} 
+Error while evaluating ListBox PrivateValueChangedFcn.
+
+clc
+[Warning: Setting the "KeyPressFcn" property is not permitted while this mode is active.] 
+[Warning: Setting the "KeyPressFcn" property is not permitted while this mode is active.] 
+[Warning: Setting the "KeyPressFcn" property is not permitted while this mode is active.] 
+[Warning: Setting the "KeyPressFcn" property is not permitted while this mode is active.] 
+[Warning: Setting the "KeyPressFcn" property is not permitted while this mode is active.] 
+[Warning: Setting the "KeyPressFcn" property is not permitted while this mode is active.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('table2array', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\datatypes\tabular\table2array.m', 34)" style="font-weight:bold">table2array</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\datatypes\tabular\table2array.m',34,0)">line 34</a>)
+Input argument must be a table.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Results_Module/update_results_table', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Results_Module.mlapp', 416)" style="font-weight:bold">Results_Module/update_results_table</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Results_Module.mlapp',416,0)">line 416</a>)
+                lod_array = table2array(limits_of_detection);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Results_Module/update_results_module_GUI', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Results_Module.mlapp', 272)" style="font-weight:bold">Results_Module/update_results_module_GUI</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Results_Module.mlapp',272,0)">line 272</a>)
+            update_results_table(app)
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Results_Module/HostInclusionDropDownValueChanged', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Results_Module.mlapp', 2523)" style="font-weight:bold">Results_Module/HostInclusionDropDownValueChanged</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Results_Module.mlapp',2523,0)">line 2523</a>)
+            update_results_module_GUI(app)
+} 
+Error while evaluating DropDown PrivateValueChangedFcn.
+
+opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Results_Module.mlapp',416,0)
+opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Results_Module.mlapp',416,0)
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Results_Module.mlapp',416,1)">416 </a>                lod_array = table2array(limits_of_detection);
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Results_Module.mlapp',416,1)">416 </a>                lod_array = table2array(limits_of_detection);
+dbquit
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',3339,1)">3339 </a>            changes = check_changes(app);
+dbquit
+{Unrecognized field name "unmixing_via".
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Interval_Module/update_Interval_Module_GUI', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp', 1921)" style="font-weight:bold">Interval_Module/update_Interval_Module_GUI</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',1921,0)">line 1921</a>)
+                if isempty(app.base.project.session.spot.unmixing_via{app.selected_spot})
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Interval_Module/NextSignalButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp', 2501)" style="font-weight:bold">Interval_Module/NextSignalButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',2501,0)">line 2501</a>)
+            update_Interval_Module_GUI(app)
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+{Unrecognized field name "unmixing_via".
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Interval_Module/update_Interval_Module_GUI', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp', 1921)" style="font-weight:bold">Interval_Module/update_Interval_Module_GUI</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',1921,0)">line 1921</a>)
+                if isempty(app.base.project.session.spot.unmixing_via{app.selected_spot})
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Interval_Module/PreviousSignalButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp', 2521)" style="font-weight:bold">Interval_Module/PreviousSignalButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',2521,0)">line 2521</a>)
+            update_Interval_Module_GUI(app)
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+{Unrecognized field name "unmixing_via".
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Interval_Module/update_Interval_Module_GUI', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp', 1921)" style="font-weight:bold">Interval_Module/update_Interval_Module_GUI</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',1921,0)">line 1921</a>)
+                if isempty(app.base.project.session.spot.unmixing_via{app.selected_spot})
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Interval_Module/PreviousSignalButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp', 2521)" style="font-weight:bold">Interval_Module/PreviousSignalButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',2521,0)">line 2521</a>)
+            update_Interval_Module_GUI(app)
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+clc
+{Unrecognized field name "unmixing_via".
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Interval_Module/update_Interval_Module_GUI', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp', 1921)" style="font-weight:bold">Interval_Module/update_Interval_Module_GUI</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',1921,0)">line 1921</a>)
+                if isempty(app.base.project.session.spot.unmixing_via{app.selected_spot})
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Interval_Module/NextSignalButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp', 2501)" style="font-weight:bold">Interval_Module/NextSignalButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',2501,0)">line 2501</a>)
+            update_Interval_Module_GUI(app)
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+ 
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%   Error   %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%        13-Jan-2026 16:17:09
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Error occured during: Proceed to other module failed
+_________________________________________
+%%001%%
+Error in file:
+C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m
+Error in line: 37
+_________________________________________
+  
+%%002%%
+Error in file:
+C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp
+Error in line: 4099
+_________________________________________
+  
+Error in message: Unrecognized field name "background_starts".
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+  
+  
+{Unrecognized field name "unmixing_via".
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Interval_Module/update_Interval_Module_GUI', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp', 1921)" style="font-weight:bold">Interval_Module/update_Interval_Module_GUI</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',1921,0)">line 1921</a>)
+                if isempty(app.base.project.session.spot.unmixing_via{app.selected_spot})
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Interval_Module/SpotListBoxValueChanged', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp', 2314)" style="font-weight:bold">Interval_Module/SpotListBoxValueChanged</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',2314,0)">line 2314</a>)
+            update_Interval_Module_GUI(app)
+} 
+Error while evaluating ListBox PrivateValueChangedFcn.
+
+{Unrecognized field name "unmixing_via".
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Interval_Module/update_Interval_Module_GUI', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp', 1921)" style="font-weight:bold">Interval_Module/update_Interval_Module_GUI</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',1921,0)">line 1921</a>)
+                if isempty(app.base.project.session.spot.unmixing_via{app.selected_spot})
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Interval_Module/SpotListBoxValueChanged', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp', 2314)" style="font-weight:bold">Interval_Module/SpotListBoxValueChanged</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',2314,0)">line 2314</a>)
+            update_Interval_Module_GUI(app)
+} 
+Error while evaluating ListBox PrivateValueChangedFcn.
+
+clc
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',3339,1)">3339 </a>            changes = check_changes(app);
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',3339,1)">3339 </a>            changes = check_changes(app);
+dbquit
+
+ans =
+
+     1
+
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',3339,1)">3339 </a>            changes = check_changes(app);
+dbquit
+
+ans =
+
+     1
+
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',3339,1)">3339 </a>            changes = check_changes(app);
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',2492,1)">2492 </a>            if app.selected_spot == numel(app.SpotListBox.Items)
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Drift_Module.mlapp',819,1)">819 </a>            calculate_background_corrected_matrix_intensities(app)
+dbcont
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',1814,1)">1814 </a>                        if isfield(app.base.project.session.spot, 'bkgd_corrected_cps')
+dbcont
+dbcont
+
+ans =
+
+     1
+
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',480,1)">480 </a>                    app.active_spot_indices = first_spot_start:signal_end;
+dbquit
+[Warning: PNG library warning: iCCP: cHRM chunk does not match sRGB.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('impnginfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m', 13)" style="font-weight:bold">impnginfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m',13,0)">line 13</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imfinfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m', 228)" style="font-weight:bold">imfinfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m',228,0)">line 228</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal/IconUtils/getPNGFileForView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m', 45)" style="font-weight:bold">matlab.ui.internal/IconUtils/getPNGFileForView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m',45,0)">line 45</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/FigureController/updateIconView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m', 160)" style="font-weight:bold">matlab.ui.internal.controller/FigureController/updateIconView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m',160,0)">line 160</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})')" style="font-weight:bold">matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})</a>
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 117)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',117,0)">line 117</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 75)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',75,0)">line 75</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/WebCanvasContainerController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m', 43)" style="font-weight:bold">matlab.ui.internal.controller/WebCanvasContainerController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m',43,0)">line 43</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebControllerFactory/create', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m', 94)" style="font-weight:bold">matlab.ui.internal.componentframework/WebControllerFactory/create</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m',94,0)">line 94</a>)
+] 
+[Warning: PNG library warning: iCCP: cHRM chunk does not match sRGB.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('impnginfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m', 13)" style="font-weight:bold">impnginfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m',13,0)">line 13</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imfinfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m', 228)" style="font-weight:bold">imfinfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m',228,0)">line 228</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal/IconUtils/getPNGFileForView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m', 45)" style="font-weight:bold">matlab.ui.internal/IconUtils/getPNGFileForView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m',45,0)">line 45</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/FigureController/updateIconView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m', 160)" style="font-weight:bold">matlab.ui.internal.controller/FigureController/updateIconView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m',160,0)">line 160</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})')" style="font-weight:bold">matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})</a>
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 117)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',117,0)">line 117</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 75)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',75,0)">line 75</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/WebCanvasContainerController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m', 43)" style="font-weight:bold">matlab.ui.internal.controller/WebCanvasContainerController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m',43,0)">line 43</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebControllerFactory/create', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m', 94)" style="font-weight:bold">matlab.ui.internal.componentframework/WebControllerFactory/create</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m',94,0)">line 94</a>)
+] 
+
+ans =
+
+     1
+
+[Warning: PNG library warning: iCCP: cHRM chunk does not match sRGB.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('impnginfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m', 13)" style="font-weight:bold">impnginfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m',13,0)">line 13</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imfinfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m', 228)" style="font-weight:bold">imfinfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m',228,0)">line 228</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal/IconUtils/getPNGFileForView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m', 45)" style="font-weight:bold">matlab.ui.internal/IconUtils/getPNGFileForView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m',45,0)">line 45</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/FigureController/updateIconView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m', 160)" style="font-weight:bold">matlab.ui.internal.controller/FigureController/updateIconView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m',160,0)">line 160</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})')" style="font-weight:bold">matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})</a>
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 117)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',117,0)">line 117</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 75)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',75,0)">line 75</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/WebCanvasContainerController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m', 43)" style="font-weight:bold">matlab.ui.internal.controller/WebCanvasContainerController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m',43,0)">line 43</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebControllerFactory/create', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m', 94)" style="font-weight:bold">matlab.ui.internal.componentframework/WebControllerFactory/create</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m',94,0)">line 94</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.dialog/DialogHelper/getFigureID', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+dialog\DialogHelper.m', 14)" style="font-weight:bold">matlab.ui.internal.dialog/DialogHelper/getFigureID</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+dialog\DialogHelper.m',14,0)">line 14</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.dialog/DialogHelper/validateUIfigure', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+dialog\DialogHelper.m', 42)" style="font-weight:bold">matlab.ui.internal.dialog/DialogHelper/validateUIfigure</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+dialog\DialogHelper.m',42,0)">line 42</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('uialert', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\uialert.m', 42)" style="font-weight:bold">uialert</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\uialert.m',42,0)">line 42</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Spike_Submodule/update_spike_plot', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp', 143)" style="font-weight:bold">Spike_Submodule/update_spike_plot</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp',143,0)">line 143</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Spike_Submodule/startupFcn', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp', 235)" style="font-weight:bold">Spike_Submodule/startupFcn</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp',235,0)">line 235</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Spike_Submodule>@(app)startupFcn(app,varargin{:})', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp', 387)" style="font-weight:bold">Spike_Submodule>@(app)startupFcn(app,varargin{:})</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp',387,0)">line 387</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.apps/AppBase/runStartupFcn', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m', 43)" style="font-weight:bold">matlab.apps/AppBase/runStartupFcn</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m',43,0)">line 43</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Spike_Submodule', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp', 387)" style="font-weight:bold">Spike_Submodule</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp',387,0)">line 387</a>)] 
+[In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Interval_Module/IndividualMenuSelected', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp', 4244)" style="font-weight:bold">Interval_Module/IndividualMenuSelected</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',4244,0)">line 4244</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m', 37)" style="font-weight:bold">matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m',37,0)">line
+37</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/WebMenuController/fireActionEvent', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebMenuController.m', 67)" style="font-weight:bold">matlab.ui.internal.controller/WebMenuController/fireActionEvent</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebMenuController.m',67,0)">line 67</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/WebMenuController/handleEvent', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebMenuController.m', 55)" style="font-weight:bold">matlab.ui.internal.controller/WebMenuController/handleEvent</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebMenuController.m',55,0)">line 55</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller.WebMenuController>@(varargin)obj.handleEvent(varargin{:})', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebMenuController.m', 36)" style="font-weight:bold">matlab.ui.internal.controller.WebMenuController>@(varargin)obj.handleEvent(varargin{:})</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebMenuController.m',36,0)">line 36</a>)
+] 
+[Warning: PNG library warning: iCCP: cHRM chunk does not match sRGB.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('impnginfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m', 13)" style="font-weight:bold">impnginfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m',13,0)">line 13</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imfinfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m', 228)" style="font-weight:bold">imfinfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m',228,0)">line 228</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal/IconUtils/getPNGFileForView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m', 45)" style="font-weight:bold">matlab.ui.internal/IconUtils/getPNGFileForView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m',45,0)">line 45</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/FigureController/updateIconView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m', 160)" style="font-weight:bold">matlab.ui.internal.controller/FigureController/updateIconView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m',160,0)">line 160</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})')" style="font-weight:bold">matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})</a>
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 117)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',117,0)">line 117</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 75)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',75,0)">line 75</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/WebCanvasContainerController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m', 43)" style="font-weight:bold">matlab.ui.internal.controller/WebCanvasContainerController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m',43,0)">line 43</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebControllerFactory/create', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m', 94)" style="font-weight:bold">matlab.ui.internal.componentframework/WebControllerFactory/create</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m',94,0)">line 94</a>)
+] 
+[Warning: PNG library warning: iCCP: cHRM chunk does not match sRGB.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('impnginfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m', 13)" style="font-weight:bold">impnginfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m',13,0)">line 13</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imfinfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m', 228)" style="font-weight:bold">imfinfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m',228,0)">line 228</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal/IconUtils/getPNGFileForView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m', 45)" style="font-weight:bold">matlab.ui.internal/IconUtils/getPNGFileForView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m',45,0)">line 45</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/FigureController/updateIconView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m', 160)" style="font-weight:bold">matlab.ui.internal.controller/FigureController/updateIconView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m',160,0)">line 160</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})')" style="font-weight:bold">matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})</a>
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 117)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',117,0)">line 117</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 75)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',75,0)">line 75</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/WebCanvasContainerController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m', 43)" style="font-weight:bold">matlab.ui.internal.controller/WebCanvasContainerController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m',43,0)">line 43</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebControllerFactory/create', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m', 94)" style="font-weight:bold">matlab.ui.internal.componentframework/WebControllerFactory/create</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m',94,0)">line 94</a>)
+] 
+[Warning: PNG library warning: iCCP: cHRM chunk does not match sRGB.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('impnginfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m', 13)" style="font-weight:bold">impnginfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m',13,0)">line 13</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imfinfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m', 228)" style="font-weight:bold">imfinfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m',228,0)">line 228</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal/IconUtils/getPNGFileForView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m', 45)" style="font-weight:bold">matlab.ui.internal/IconUtils/getPNGFileForView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m',45,0)">line 45</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/FigureController/updateIconView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m', 160)" style="font-weight:bold">matlab.ui.internal.controller/FigureController/updateIconView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m',160,0)">line 160</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})')" style="font-weight:bold">matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})</a>
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 117)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',117,0)">line 117</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 75)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',75,0)">line 75</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/WebCanvasContainerController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m', 43)" style="font-weight:bold">matlab.ui.internal.controller/WebCanvasContainerController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m',43,0)">line 43</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebControllerFactory/create', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m', 94)" style="font-weight:bold">matlab.ui.internal.componentframework/WebControllerFactory/create</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m',94,0)">line 94</a>)
+] 
+[Warning: PNG library warning: iCCP: cHRM chunk does not match sRGB.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('impnginfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m', 13)" style="font-weight:bold">impnginfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m',13,0)">line 13</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imfinfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m', 228)" style="font-weight:bold">imfinfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m',228,0)">line 228</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal/IconUtils/getPNGFileForView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m', 45)" style="font-weight:bold">matlab.ui.internal/IconUtils/getPNGFileForView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m',45,0)">line 45</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/FigureController/updateIconView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m', 160)" style="font-weight:bold">matlab.ui.internal.controller/FigureController/updateIconView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m',160,0)">line 160</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})')" style="font-weight:bold">matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})</a>
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 117)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',117,0)">line 117</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 75)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',75,0)">line 75</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/WebCanvasContainerController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m', 43)" style="font-weight:bold">matlab.ui.internal.controller/WebCanvasContainerController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m',43,0)">line 43</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebControllerFactory/create', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m', 94)" style="font-weight:bold">matlab.ui.internal.componentframework/WebControllerFactory/create</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m',94,0)">line 94</a>)
+] 
+[Warning: PNG library warning: iCCP: cHRM chunk does not match sRGB.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('impnginfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m', 13)" style="font-weight:bold">impnginfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m',13,0)">line 13</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imfinfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m', 228)" style="font-weight:bold">imfinfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m',228,0)">line 228</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal/IconUtils/getPNGFileForView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m', 45)" style="font-weight:bold">matlab.ui.internal/IconUtils/getPNGFileForView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m',45,0)">line 45</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/FigureController/updateIconView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m', 160)" style="font-weight:bold">matlab.ui.internal.controller/FigureController/updateIconView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m',160,0)">line 160</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})')" style="font-weight:bold">matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})</a>
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 117)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',117,0)">line 117</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 75)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',75,0)">line 75</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/WebCanvasContainerController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m', 43)" style="font-weight:bold">matlab.ui.internal.controller/WebCanvasContainerController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m',43,0)">line 43</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebControllerFactory/create', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m', 94)" style="font-weight:bold">matlab.ui.internal.componentframework/WebControllerFactory/create</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m',94,0)">line 94</a>)
+] 
+[Warning: PNG library warning: iCCP: cHRM chunk does not match sRGB.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('impnginfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m', 13)" style="font-weight:bold">impnginfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\private\impnginfo.m',13,0)">line 13</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imfinfo', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m', 228)" style="font-weight:bold">imfinfo</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\imagesci\imfinfo.m',228,0)">line 228</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal/IconUtils/getPNGFileForView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m', 45)" style="font-weight:bold">matlab.ui.internal/IconUtils/getPNGFileForView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\IconUtils.m',45,0)">line 45</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/FigureController/updateIconView', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m', 160)" style="font-weight:bold">matlab.ui.internal.controller/FigureController/updateIconView</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\FigureController.m',160,0)">line 160</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})')" style="font-weight:bold">matlab.ui.internal.componentframework.WebComponentController>@(varargin)obj.updateIconView(varargin{:})</a>
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 117)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/modifyDependentViewPropertiesValues</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',117,0)">line 117</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebComponentController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m', 75)" style="font-weight:bold">matlab.ui.internal.componentframework/WebComponentController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebComponentController.m',75,0)">line 75</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/WebCanvasContainerController/add', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m', 43)" style="font-weight:bold">matlab.ui.internal.controller/WebCanvasContainerController/add</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebCanvasContainerController.m',43,0)">line 43</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.componentframework/WebControllerFactory/create', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m', 94)" style="font-weight:bold">matlab.ui.internal.componentframework/WebControllerFactory/create</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+componentframework\WebControllerFactory.m',94,0)">line 94</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.dialog/DialogHelper/getFigureID', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+dialog\DialogHelper.m', 14)" style="font-weight:bold">matlab.ui.internal.dialog/DialogHelper/getFigureID</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+dialog\DialogHelper.m',14,0)">line 14</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.dialog/DialogHelper/validateUIfigure', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+dialog\DialogHelper.m', 42)" style="font-weight:bold">matlab.ui.internal.dialog/DialogHelper/validateUIfigure</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+dialog\DialogHelper.m',42,0)">line 42</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('uialert', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\uialert.m', 42)" style="font-weight:bold">uialert</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\uialert.m',42,0)">line 42</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Spike_Submodule/update_spike_plot', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp', 143)" style="font-weight:bold">Spike_Submodule/update_spike_plot</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp',143,0)">line 143</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Spike_Submodule/startupFcn', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp', 235)" style="font-weight:bold">Spike_Submodule/startupFcn</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp',235,0)">line 235</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Spike_Submodule>@(app)startupFcn(app,varargin{:})', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp', 387)" style="font-weight:bold">Spike_Submodule>@(app)startupFcn(app,varargin{:})</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp',387,0)">line 387</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.apps/AppBase/runStartupFcn', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m', 43)" style="font-weight:bold">matlab.apps/AppBase/runStartupFcn</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m',43,0)">line 43</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Spike_Submodule', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp', 387)" style="font-weight:bold">Spike_Submodule</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Spike_Submodule.mlapp',387,0)">line 387</a>)] 
+[In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Interval_Module/IndividualMenuSelected', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp', 4244)" style="font-weight:bold">Interval_Module/IndividualMenuSelected</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',4244,0)">line 4244</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m', 37)" style="font-weight:bold">matlab.apps.AppBase>@(source,event)tryCallback(appdesigner.internal.service.AppManagementService.instance(),app,callback,requiresEventData,event)</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\appdesigner\appdesigner\runtime\+matlab\+apps\AppBase.m',37,0)">line
+37</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/WebMenuController/fireActionEvent', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebMenuController.m', 67)" style="font-weight:bold">matlab.ui.internal.controller/WebMenuController/fireActionEvent</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebMenuController.m',67,0)">line 67</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller/WebMenuController/handleEvent', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebMenuController.m', 55)" style="font-weight:bold">matlab.ui.internal.controller/WebMenuController/handleEvent</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebMenuController.m',55,0)">line 55</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.ui.internal.controller.WebMenuController>@(varargin)obj.handleEvent(varargin{:})', 'C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebMenuController.m', 36)" style="font-weight:bold">matlab.ui.internal.controller.WebMenuController>@(varargin)obj.handleEvent(varargin{:})</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2021b\toolbox\matlab\uitools\uicomponents\components\+matlab\+ui\+internal\+controller\WebMenuController.m',36,0)">line 36</a>)
+] 
+{Index in position 2 exceeds array bounds. Index must not exceed 1.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/update_matrix_table', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 494)" style="font-weight:bold">Quantification_Module/update_matrix_table</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',494,0)">line 494</a>)
+            internal_std = app.base.project.session.spot.internal_standard{app.BracketIdDropDown.Value, app.selected_PRM}(nonPRMIndices);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/update_quantification_module_GUI', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 314)" style="font-weight:bold">Quantification_Module/update_quantification_module_GUI</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',314,0)">line 314</a>)
+                update_matrix_table(app)
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/PrimaryReferenceMaterialDropDownValueChanged', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 3655)" style="font-weight:bold">Quantification_Module/PrimaryReferenceMaterialDropDownValueChanged</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',3655,0)">line 3655</a>)
+            update_quantification_module_GUI(app)
+} 
+Error while evaluating DropDown PrivateValueChangedFcn.
+
+{Index in position 2 exceeds array bounds. Index must not exceed 1.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/update_matrix_table', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 494)" style="font-weight:bold">Quantification_Module/update_matrix_table</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',494,0)">line 494</a>)
+            internal_std = app.base.project.session.spot.internal_standard{app.BracketIdDropDown.Value, app.selected_PRM}(nonPRMIndices);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/update_quantification_module_GUI', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 314)" style="font-weight:bold">Quantification_Module/update_quantification_module_GUI</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',314,0)">line 314</a>)
+                update_matrix_table(app)
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/PrimaryReferenceMaterialDropDownValueChanged', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 3655)" style="font-weight:bold">Quantification_Module/PrimaryReferenceMaterialDropDownValueChanged</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',3655,0)">line 3655</a>)
+            update_quantification_module_GUI(app)
+} 
+Error while evaluating DropDown PrivateValueChangedFcn.
+
+opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',494,0)
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',494,1)">494 </a>            internal_std = app.base.project.session.spot.internal_standard{app.BracketIdDropDown.Value, app.selected_PRM}(nonPRMIndices);
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',2504,1)">2504 </a>            if app.selected_spot == numel(app.SpotListBox.Items)
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Interval_Module.mlapp',2504,1)">2504 </a>            if app.selected_spot == numel(app.SpotListBox.Items)
+dbquit
+clc
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',489,1)">489 </a>            nonPRMIndices = ~strcmp(app.base.project.session.spot.type, "PRM");
+dbquit
+{Unrecognized field name "mix_composition".
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/calculate_all_inclusion_limits_of_detection', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 2543)" style="font-weight:bold">Quantification_Module/calculate_all_inclusion_limits_of_detection</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2543,0)">line 2543</a>)
+                        if all(app.base.project.session.spot.mix_composition{bracket_idx,prm_idx}{:,:} == 0)
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/quantification_wrapper', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 2784)" style="font-weight:bold">Quantification_Module/quantification_wrapper</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2784,0)">line 2784</a>)
+            lods_failed = calculate_all_inclusion_limits_of_detection(app);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Quantification_Module/ProceedtoResultsModuleButtonPushed', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp', 3553)" style="font-weight:bold">Quantification_Module/ProceedtoResultsModuleButtonPushed</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',3553,0)">line 3553</a>)
+                    lods_failed = quantification_wrapper(app);
+} 
+Error while evaluating Button PrivateButtonPushedFcn.
+
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2596,1)">2596 </a>                                message = {['The limits of detection for spot #' num2str(unk) ' for primary reference material ' char(unique_PRMs(prm_idx)) ' could not be calculated. Make sure that the host for this spot is quantified.']};
+app.base.project.session.spot.matrix_composition{bracket_idx, prm_idx}
+
+ans =
+
+  40×23 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+     <strong>Li7</strong>        <strong>B11</strong>         <strong>Na23</strong>        <strong>Mg25</strong>        <strong>Al27</strong>        <strong>Si29</strong>        <strong>Cl35</strong>       <strong>K39</strong>       <strong>Ca43</strong>      <strong>Ti49</strong>        <strong>Mn55</strong>         <strong>Fe57</strong>        <strong>Cu65</strong>         <strong>Zn66</strong>        <strong>As75</strong>       <strong>Br79</strong>      <strong>Rb85</strong>          <strong>Sr88</strong>         <strong>Cs133</strong>        <strong>Ba137</strong>         <strong>Au197</strong>         <strong>Pb208</strong>        <strong>Bi209</strong>  
+    <strong>______</strong>    <strong>________</strong>    <strong>________</strong>    <strong>_________</strong>    <strong>______</strong>    <strong>__________</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>_________</strong>    <strong>________</strong>    <strong>_________</strong>    <strong>________</strong>    <strong>_________</strong>    <strong>____</strong>    <strong>_________</strong>    <strong>__________</strong>    <strong>_________</strong>    <strong>__________</strong>    <strong>__________</strong>    <strong>_________</strong>    <strong>_________</strong>
+
+         0           0           0            0         0             0         0          0         0          0            0           0            0           0            0     0              0             0            0             0             0            0            0
+         0           0           0            0         0             0         0          0         0          0            0           0            0           0            0     0              0             0            0             0             0            0            0
+         0           0           0            0         0             0         0          0         0          0            0           0            0           0            0     0              0             0            0             0             0            0            0
+         0           0           0            0         0             0         0          0         0          0            0           0            0           0            0     0              0             0            0             0             0            0            0
+         0           0           0            0         0             0         0          0         0          0            0           0            0           0            0     0              0             0            0             0             0            0            0
+         0           0           0            0         0             0         0          0         0          0            0           0            0           0            0     0              0             0            0             0             0            0            0
+    1.6245    0.043552     0.25887      0.02944    10.862    4.6739e+05      56.9    0.86558    24.863    0.74068      0.13736     0.23749     0.021982     0.15741    0.0067859     0       0.010456     0.0013257     0.014001     0.0017428    0.00026648    0.0089611     0.016778
+    1.8593    0.044068     0.12813     0.034679    11.497    4.6739e+05    45.663    0.85747    31.027    0.76511     0.090218     0.14382      0.01594     0.21185    0.0051535     0      0.0055181    0.00021605     0.019961     0.0016977    0.00041048    0.0084414     0.014232
+    2.4379    0.043519    0.092611    0.0081892    13.983    4.6738e+05    39.879    0.84387    34.523    0.86096     0.080215     0.10894    0.0044735     0.41076    0.0027375     0       0.007196    0.00051432    0.0040646     0.0018608    0.00017176      0.01409     0.023382
+    1.7423    0.069827      1.2191    0.0060156    11.334    4.6738e+05    47.495    0.18542    46.099    0.80768      0.64515     0.21945     0.033176     0.39671     0.010167     0       0.017594     0.0047056     0.005233     0.0030729    0.00087949      0.01783     0.014493
+    2.2477    0.035203     0.16214     0.042185     13.81    4.6739e+05    42.966    0.34676    27.003    0.88491      0.07323     0.24152     0.017253     0.38176     0.011139     0       0.014749     0.0019655     0.021319             0    0.00033291     0.012244     0.014357
+    2.0465    0.039952     0.22437     0.016988    13.273    4.6738e+05    44.141    0.47175    35.021    0.79829      0.15654     0.15943     0.012121     0.40124    0.0034507     0        0.02023     0.0022801    0.0080215      0.011432    0.00019491     0.011184     0.012115
+    1.8779    0.033314    0.066346     0.029599    13.465    4.6739e+05    43.853    0.42177    29.686    0.80818       0.1045     0.17948     0.008582     0.32763     0.012199     0      0.0057339     0.0043244     0.010924      0.010243    0.00059434     0.010585    0.0095601
+    2.1629     0.05869      2.4147     0.042095    14.833    4.6738e+05    44.916     1.2846    27.806    0.87009       0.1826     0.30264     0.011954     0.28481    0.0073226     0       0.008672     0.0059945    0.0046488     0.0031366    0.00039978     0.020434     0.012475
+    2.6361     0.06421     0.38082     0.015093    13.727    4.6737e+05      43.1    0.61988    50.934    0.71635     0.086511      0.1958       0.0114     0.22261     0.007164     0      0.0066597     0.0027548    0.0062931     0.0088466    6.8815e-05     0.010086    0.0069445
+    2.2255    0.052596      1.8015     0.040812    12.661    4.6737e+05    43.363     1.2196    51.586    0.79714      0.14028     0.28762    0.0076314     0.22784     0.013543     0       0.012592     0.0045877    0.0031369     0.0086007    0.00025728     0.011217    0.0061848
+     2.493     0.05017       1.462     0.098472    18.409    4.6738e+05    40.524     1.7886    29.983    0.93806      0.12451     0.36512    0.0096569     0.18557    0.0090777     0        0.01553      0.012106      0.01553       0.03016    0.00060082    0.0077211    0.0099067
+    2.1513    0.081092      4.0601      0.03098    16.428    4.6737e+05    43.938     1.7075    52.279    0.73791      0.31109     0.18815     0.010771     0.18885     0.016388     0      0.0065979      0.019377    0.0024147      0.017178    0.00020263     0.028904    0.0088504
+    1.3571    0.046469      2.0977     0.031155    10.598    4.6738e+05    43.394     1.3265    37.418    0.70807       0.1613     0.04252    0.0011609      0.1619    0.0049192     0       0.020303     0.0022126    0.0055565             0    0.00019768    0.0035061    0.0083091
+    2.1589    0.054387     0.26504     0.043578    14.269    4.6738e+05    38.627    0.31806    36.428     0.7331     0.089523     0.12274    0.0089315     0.16289     0.006022     0       0.017359     0.0011579    0.0085488       0.00373    0.00037583    0.0054511     0.004835
+     2.149    0.043534     0.75294     0.061515    14.723    4.6738e+05    36.611    0.76634    42.626    0.94598      0.13795     0.22864     0.014393     0.26399    0.0059582     0       0.016708     0.0016386    0.0074599     0.0028399    0.00033974    0.0083878    0.0089572
+    1.7487    0.046799     0.41857     0.058271    12.892    4.6738e+05    46.368    0.43414    46.064    0.75214      0.15567     0.12836     0.010951     0.17936    0.0039126     0      0.0079379    0.00092557    0.0065131     0.0036478    0.00094963    0.0043817    0.0086146
+         0           0           0            0         0             0         0          0         0          0            0           0            0           0            0     0              0             0            0             0             0            0            0
+    1.9634    0.040882     0.18368     0.048465    14.657    4.6738e+05    42.151    0.59787    35.519    0.81287     0.091179      0.1969    0.0069795     0.15952    0.0058542     0       0.012466     0.0011901    0.0043863     0.0015264    0.00046328    0.0035011     0.008871
+    1.8418    0.051803      14.554       1.2743    13.499    4.6735e+05    67.125     5.4762    54.273    0.81594     0.078659     0.28294     0.022945     0.76883     0.011323     0       0.020854       0.01888     0.013592     0.0024147      0.001469     0.026719    0.0070925
+    1.9183    0.054904     0.16226    0.0074201    14.127    4.6739e+05    36.374     1.0117    37.074    0.76866     0.050478     0.11693    0.0069399     0.27374    0.0046452     0      0.0082417    0.00034365    0.0040429    0.00089807    0.00016151    0.0078201      0.01531
+    1.8506    0.066878     0.91905     0.020256    13.419    4.6739e+05    40.706    0.43933    33.927    0.74795     0.093872     0.14681    0.0071952     0.14526    0.0062579     0       0.013066     0.0021021    0.0076318      0.003082     0.0005312     0.011669    0.0062922
+    1.9507    0.053143     0.19551      0.12908    13.866    4.6738e+05    39.258    0.06131    48.194    0.74291     0.099074     0.15818     0.010337     0.12494    0.0043773     0       0.009227     0.0012314    0.0029941     0.0038566    0.00022307    0.0079977    0.0084167
+    2.0254    0.049959     0.99538     0.019915    13.797     4.674e+05    36.886    0.49313    21.263    0.88721      0.22753     0.13563    0.0086054      0.1494    0.0037241     0      0.0081789     0.0013103    0.0050284             0    0.00037134    0.0031498    0.0068396
+    2.1995    0.041718    0.097525     0.037301    15.237     4.674e+05    38.503    0.35352    16.304    0.88397     0.086802     0.05704    0.0068266      0.1152    0.0098542     0        0.00532    0.00092194    0.0096144      0.002601    0.00049947    0.0040119    0.0067958
+    2.0795    0.032438       1.125     0.014665    14.502    4.6739e+05     38.87    0.35161    26.186    0.86521      0.20574     0.34622     0.013369     0.11233    0.0051582     0      0.0053878     0.0019362    0.0013231             0    0.00039952    0.0065782    0.0059625
+    1.8877    0.049531     0.10071     0.042072    14.473    4.6738e+05    35.901     0.4623    44.222    0.85741     0.099162     0.26026     0.017015    0.091438    0.0069089     0       0.012058    0.00041988    0.0072186             0    0.00051069    0.0034257    0.0072654
+    1.9353     0.05476     0.66466      0.02108     14.83    4.6739e+05    32.507    0.98542    37.811    0.80099    0.0057923    0.084896     0.013917     0.23595    0.0042678     0      0.0051325     0.0021197    0.0041057     0.0030007    0.00022634    0.0097871     0.010667
+    2.1404    0.049419    0.066057     0.014574    14.876    4.6739e+05    30.143    0.41156     26.96    0.94015     0.044273     0.17263    0.0076197      0.2049    0.0029484     0      0.0030313    0.00082118    0.0028279             0    0.00027013    0.0067533     0.017242
+         0           0           0            0         0             0         0          0         0          0            0           0            0           0            0     0              0             0            0             0             0            0            0
+         0           0           0            0         0             0         0          0         0          0            0           0            0           0            0     0              0             0            0             0             0            0            0
+         0           0           0            0         0             0         0          0         0          0            0           0            0           0            0     0              0             0            0             0             0            0            0
+         0           0           0            0         0             0         0          0         0          0            0           0            0           0            0     0              0             0            0             0             0            0            0
+         0           0           0            0         0             0         0          0         0          0            0           0            0           0            0     0              0             0            0             0             0            0            0
+         0           0           0            0         0             0         0          0         0          0            0           0            0           0            0     0              0             0            0             0             0            0            0
+
+dbquit
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2596,1)">2596 </a>                                message = {['The limits of detection for spot #' num2str(unk) ' for primary reference material ' char(unique_PRMs(prm_idx)) ' could not be calculated. Make sure that the host for this spot is quantified.']};
+dbstep
+dbstep
+dbstep
+dbstep
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2596,1)">2596 </a>                                message = {['The limits of detection for spot #' num2str(unk) ' for primary reference material ' char(unique_PRMs(prm_idx)) ' could not be calculated. Make sure that the host for this spot is quantified.']};
+dbcont
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2601,1)">2601 </a>                                continue
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbstep
+dbquit
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',2769,1)">2769 </a>            get_oxides_from_file(app)
+dbstep
+dbcont
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+load('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Manuscripts\ICP-Base Software\Example Data\Tobias Arnold FI\Arnold-Tobias\Flincs_LA-ICP-MS\SILLS_Flinc-bloc\Arnold-Flincs-GSD.mat')
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',187,1)">187 </a>                            if isfield(app.base.project.session.spot, 'inclusion_composition')
+                       if isfield(app.base.project.session.spot, 'mixing_ratio')
+                                app.base.project.session.spot = rmfield(app.base.project.session.spot, 'mixing_ratio');
+                            end
+                            if isfield(app.base.project.session.spot, 'mix_composition')
+                                app.base.project.session.spot = rmfield(app.base.project.session.spot, 'mix_composition');
+                            end
+                            if isfield(app.base.project.session.spot, 'Fe_2_3_incl')
+                                app.base.project.session.spot = rmfield(app.base.project.session.spot, 'Fe_2_3_incl');
+                            end
+            if isfield(app.base.project.session.spot, 'bkgd_corrected_cps_mix')
+                                app.base.project.session.spot = rmfield(app.base.project.session.spot, 'bkgd_corrected_cps_mix');
+                            end   
+dbquit
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\Modules\Quantification_Module.mlapp',1838,1)">1838 </a>            app.base.project.session.oxides.conversion_factors = oxide_factors;
+dbcont
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+calcSALT
+{Unrecognized function or variable 'c'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('calcSALT', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Programs\SILLS_132\calcSALT.m', 13)" style="font-weight:bold">calcSALT</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Programs\SILLS_132\calcSALT.m',13,0)">line 13</a>)
+UNK(c).salt_index = find(UNK(c).SALT == 1); %position index of chosen isotopes for salt correction
+} 
+calcSALT
+{Unrecognized function or variable 'c'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('calcSALT', 'C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Programs\SILLS_132\calcSALT.m', 13)" style="font-weight:bold">calcSALT</a> (<a href="matlab: opentoline('C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\Programs\SILLS_132\calcSALT.m',13,0)">line 13</a>)
+UNK(c).salt_index = find(UNK(c).SALT == 1); %position index of chosen isotopes for salt correction
+} 
+calcSALT
+
+c =
+
+     1
+
+UNK(c).SAMP_CONC_ratio_condensed(b)
+
+ans =
+
+    0.1681
+
+A.Chlorides_mol_wts(UNK(c).chloride_index(b),2)
+
+ans =
+
+  110.9800
+
+MWXCl
+
+MWXCl =
+
+  110.9800
+
+MWX
+
+MWX =
+
+   40.0800
+
+UNK(c).salt_num
+
+ans =
+
+     3
+
+UNK.salt_num
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+
+ans =
+
+     3
+
+dbstep
+UNK(c).SIGsalinity
+
+ans =
+
+   14.2500
+
+UNK(c).SALT_mass_balance_factor
+
+ans =
+
+    0.5000
+
+UNK(c).SIG_ChlorideCONC_ratio
+
+ans =
+
+    0.3069    0.1831
+
+dbstep
+dbstep
+dbstep
+ UNK(c).SAMP_CONC
+
+ans =
+
+   1.0e+04 *
+
+  Columns 1 through 15
+
+    0.0406    0.0266    4.5028    0.0017    0.0114    0.0000       NaN    1.8424    0.7567    0.0004    0.0427    0.0767    0.0098    0.0120    0.0059
+
+  Columns 16 through 23
+
+       NaN    0.0089    0.0134    0.0019    0.0139    0.0000    0.0230   -0.0000
+
+A.Chlorides
+
+ans =
+
+  69×2 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Li'}    {'LiCl' }
+    {'Be'}    {'BeCl2'}
+    {'B' }    {'BCl3' }
+    {'Na'}    {'NaCl' }
+    {'Mg'}    {'MgCl2'}
+    {'Al'}    {'AlCl3'}
+    {'Si'}    {'SiCl4'}
+    {'P' }    {'PCl5' }
+    {'K' }    {'KCl'  }
+    {'Ca'}    {'CaCl2'}
+    {'Sc'}    {'ScCl3'}
+    {'Ti'}    {'TiCl4'}
+    {'V' }    {'VCl4' }
+    {'Cr'}    {'CrCl3'}
+    {'Mn'}    {'MnCl2'}
+    {'Fe'}    {'FeCl2'}
+    {'Co'}    {'CoCl2'}
+    {'Ni'}    {'NiCl2'}
+    {'Cu'}    {'CuCl' }
+    {'Zn'}    {'ZnCl2'}
+    {'Ga'}    {'GaCl3'}
+    {'Ge'}    {'GeCl2'}
+    {'As'}    {'AsCl3'}
+    {'Rb'}    {'RbCl' }
+    {'Sr'}    {'SrCl2'}
+    {'Y' }    {'YCl3' }
+    {'Zr'}    {'ZrCl4'}
+    {'Nb'}    {'NbCl5'}
+    {'Mo'}    {'MoCl6'}
+    {'Tc'}    {'TcCl2'}
+    {'Ru'}    {'RuCl3'}
+    {'Rh'}    {'RhCl3'}
+    {'Pd'}    {'PdCl2'}
+    {'Ag'}    {'AgCl' }
+    {'Cd'}    {'CdCl2'}
+    {'In'}    {'InCl3'}
+    {'Sn'}    {'SnCl2'}
+    {'Sb'}    {'SbCl3'}
+    {'Cs'}    {'CsCl' }
+    {'Ba'}    {'BaCl2'}
+    {'La'}    {'LaCl3'}
+    {'Ce'}    {'CeCl3'}
+    {'Pr'}    {'PrCl3'}
+    {'Nd'}    {'NdCl3'}
+    {'Pm'}    {'PmCl3'}
+    {'Sm'}    {'SmCl3'}
+    {'Eu'}    {'EuCl3'}
+    {'Gd'}    {'GdCl2'}
+    {'Tb'}    {'TbCl3'}
+    {'Dy'}    {'DyCl3'}
+    {'Ho'}    {'HoCl3'}
+    {'Er'}    {'ErCl3'}
+    {'Tm'}    {'TmCl3'}
+    {'Yb'}    {'YbCl3'}
+    {'Lu'}    {'LuCl3'}
+    {'Hf'}    {'HfCl4'}
+    {'Ta'}    {'TaCl5'}
+    {'W' }    {'WCl6' }
+    {'Re'}    {'ReCl4'}
+    {'Os'}    {'OsCl4'}
+    {'Ir'}    {'IrCl4'}
+    {'Pt'}    {'PtCl4'}
+    {'Au'}    {'AuCl' }
+    {'Hg'}    {'HgCl' }
+    {'Tl'}    {'TlCl' }
+    {'Pb'}    {'PbCl2'}
+    {'Bi'}    {'BiCl3'}
+    {'Th'}    {'ThCl4'}
+    {'U' }    {'UCl4' }
+
+A.Chlorides_mol_wts
+
+ans =
+
+    6.9400   42.3900    1.0000
+    9.0100   79.9100    2.0000
+   10.8100  117.1600    3.0000
+   22.9900   58.4400    1.0000
+   24.3000   95.2000    2.0000
+   26.9800  133.3300    3.0000
+   28.0900  169.8900    4.0000
+   30.9700  208.2200    5.0000
+   39.1000   74.5500    1.0000
+   40.0800  110.9800    2.0000
+   44.9600  151.3100    3.0000
+   47.8700  189.6700    4.0000
+   50.9400  192.7400    4.0000
+   52.0000  158.3500    3.0000
+   54.9400  125.8400    2.0000
+   55.8500  126.7500    2.0000
+   58.9300  129.8300    2.0000
+   58.6900  129.5900    2.0000
+   63.5500   99.0000    1.0000
+   65.3900  136.2900    2.0000
+   69.7200  176.0700    3.0000
+   72.6100  143.5100    2.0000
+   74.9200  181.2700    3.0000
+   85.4700  120.9200    1.0000
+   87.6200  158.5200    2.0000
+   88.9100  195.2600    3.0000
+   91.2200  233.0200    4.0000
+   92.9100  270.1600    5.0000
+   95.9400  308.6400    6.0000
+   98.9100  169.8100    2.0000
+  101.1000  207.4500    3.0000
+  102.9000  209.2500    3.0000
+  106.4000  177.3000    2.0000
+  107.9000  143.3500    1.0000
+  112.4000  183.3000    2.0000
+  114.8000  221.1500    3.0000
+  118.7000  189.6000    2.0000
+  121.8000  228.1500    3.0000
+  132.9000  168.3500    1.0000
+  137.3000  208.2000    2.0000
+  138.9000  245.2500    3.0000
+  140.1000  246.4500    3.0000
+  140.9000  247.2500    3.0000
+  144.2000  250.5500    3.0000
+  146.9000  253.2500    3.0000
+  150.4000  256.7500    3.0000
+  152.0000  258.3500    3.0000
+  157.2000  228.1000    2.0000
+  158.9000  265.2500    3.0000
+  162.5000  268.8500    3.0000
+  164.9000  271.2500    3.0000
+  167.3000  273.6500    3.0000
+  168.9000  275.2500    3.0000
+  173.0000  279.3500    3.0000
+  175.0000  281.3500    3.0000
+  178.5000  320.3000    4.0000
+  180.9000  358.1500    5.0000
+  183.8000  396.5000    6.0000
+  186.2000  328.0000    4.0000
+  190.2000  332.0000    4.0000
+  192.2000  334.0000    4.0000
+  195.1000  336.9000    4.0000
+  197.0000  232.4500    1.0000
+  200.6000  236.0500    1.0000
+  204.4000  239.8500    1.0000
+  207.2000  278.1000    2.0000
+  209.0000  315.3500    3.0000
+  232.0000  373.8000    4.0000
+  238.0000  379.8000    4.0000
+
+5.609
+
+ans =
+
+    5.6090
+
+if system_dependent('IsDebugMode')==1, dbquit all; end
+calcSALT
+
+c =
+
+     1
+
+UNK(c).SIG_ChlorideCONC_ratio
+
+ans =
+
+    0.3069    0.1831
+
+dbquit
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 
+[Warning: Column headers from the file were modified to make them valid MATLAB identifiers before creating variable names for the table. The original column
+headers are saved in the VariableDescriptions property.
+Set 'VariableNamingRule' to 'preserve' to use the original column headers as table variable names.] 

@@ -1,5 +1,5 @@
 Analytes,Color,LineWidth,Linestyle,Marker,MarkerSize,MarkerFaceColor,MarkerEdgeColor
-Mg25,black,2,-,o,10,red,red
+Mg25,black,2,-,o,2,red,red
 Si29,black,2,-.,none,0,none,none
 Ca43,blue,2,-,o,2,magenta,magenta
 Fe57,black,2,:,none,0,none,none
