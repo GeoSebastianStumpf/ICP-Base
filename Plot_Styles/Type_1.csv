@@ -1,0 +1,11 @@
+Analytes,Color,LineWidth,Linestyle,Marker,MarkerSize,MarkerFaceColor,MarkerEdgeColor
+Na23,#1F77B4,2,-,none,0,none,none
+K39,#FF7F0E,2,-,none,0,none,none
+Ca43,#2CA02C,2,-,none,0,none,none
+Ce140,#D62728,2,-,none,0,none,none
+Fe57,#9467BD,2,-,none,0,none,none
+Rb85,#8C564B,2,-,none,0,none,none
+Ba137,#E377C2,2,-,none,0,none,none
+Co59,#BCBD22,2,-,none,0,none,none
+Cl35,#17BECF,2,-,none,0,none,none
+S34,#003F5C,2,-,none,0,none,none
