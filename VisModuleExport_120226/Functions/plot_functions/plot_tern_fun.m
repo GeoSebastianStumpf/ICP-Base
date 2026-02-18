@@ -27,6 +27,8 @@ options_definition.type.options={'none';
     'tern_grt_half'; 
     'tern_grtoct';
     'tern_grtTi';
+    'tern_mtl_grt1'% added 24.01.2026;
+  %  'tern_mtl_grt2'% added 24.01.2026;
     'tern_mscelprl';
     'tern_mica_FOHCl';
     'tern_ctd';
@@ -39,7 +41,7 @@ options_definition.type.options={'none';
     'tern_lws'%;
     %'tern_carbonate_Ca_Mg_Fe;
     %'tern_carbonate_Ca_Mg_Mn;
-    %'tern_ep_cz_pm'% added 08.01.2026;
+    'tern_ep_cz_pm'% added 08.01.2026;
 
     };
 options_definition.type.description={'none';
@@ -55,6 +57,8 @@ options_definition.type.description={'none';
     'garnet: Alm+Sps-Prp-Grs ternary half';
     'garnet: Al-Fe3+-Ti on the octahedral site';
     'garnet: andradite-morimotoite-schorlomite ternary';
+    'garnet: majorite-pyrope-knorringite ternary';
+    %'garnet: Grs+Adr+;Uv+Sch-Prp+Knr-Alm ternary';
     'mica: muscovite- aluminoceladonite-pyrophyllite ternary';
     'mica: mica hydroxyl site ternary';
     'chloritoid: Fe2-Mg-Mn';
@@ -67,7 +71,7 @@ options_definition.type.description={'none';
     'lawsonite: 4Ti-Cr-Fe ternary'%;
     %'carbonate: Ca-Mg-Fe;
     % carbonate: Ca-Mg-Mn
-    %'epidote: Al-Fe^{3+}-Mn^{3+}'
+    'epidote: Al-Fe^{3+}-Mn^{3+}'
     };
 
 options_definition.custom.Value=false; %endmember text labels
@@ -516,6 +520,47 @@ elseif not(isempty(options)) && isfield(options,'type') && strcmp(options.type.V
     %plot field boundaries
     plot(ax2plot,fld_grt1(:,1:2)', fld_grt1(:,3:4)','k','linewidth',1.5,'HandleVisibility','off')
 
+elseif not(isempty(options)) && isfield(options,'type') && strcmp(options.type.Value,'tern_mtl_grt1')
+
+ %% pyrope-majorite-knorringite ternary
+
+    str_grt1={'Pyrope';'Majorite';'Knorringite'}; %endmember text labels
+    
+    %positions for endmember text labels
+    pos_grt1=[-0.24,0.0;
+        0.50,0.94;
+        1.02,-0.04];
+
+   
+
+    text(ax2plot,pos_grt1(:,1),pos_grt1(:,2),str_grt1,'FontSize',options.FontSize.Value*1.1667) %endmembers
+
+
+    elseif not(isempty(options)) && isfield(options,'type') && strcmp(options.type.Value,'tern_mtl_grt2')
+
+ %% Grs+Adr+;Uv+Sch';'Prp+Knr';'Alm ternary
+
+    str_grt1={'Grs+Adr+;Uv+Sch';'Prp+Knr';'Alm'}; %endmember text labels
+
+
+    %positions for endmember text labels
+    pos_grt1=[-0.14,0.0;
+        0.50,0.94;
+        1.02,-0.04];
+
+   
+
+    text(ax2plot,pos_grt1(:,1),pos_grt1(:,2),str_grt1,'FontSize',options.FontSize.Value*1.1667) %endmembers
+
+
+
+     fld_grt1=[0.5 0.5 0 1/3*(cos(30*pi()/180));
+         0.25 0.5 1/2*(cos(30*pi()/180)) 1/3*(cos(30*pi()/180));
+         0.75 0.5 1/2*(cos(30*pi()/180)) 1/3*(cos(30*pi()/180));
+        ];
+
+    %plot field boundaries
+    plot(ax2plot,fld_grt1(:,1:2)', fld_grt1(:,3:4)','k','linewidth',1.5,'HandleVisibility','off')
 
 elseif not(isempty(options)) && isfield(options,'type') && strcmp(options.type.Value,'tern_mscelprl')
     %% mica muscovite-celadonite-pyrophyllite ternary
@@ -659,13 +704,13 @@ elseif not(isempty(options)) && isfield(options,'type') && strcmp(options.type.V
 
 
 
-     fld_grt1=[0.5 0.5 0 1/3*(cos(30*pi()/180));
+     fld_ep1=[0.5 0.5 0 1/3*(cos(30*pi()/180));
          0.25 0.5 1/2*(cos(30*pi()/180)) 1/3*(cos(30*pi()/180));
          0.75 0.5 1/2*(cos(30*pi()/180)) 1/3*(cos(30*pi()/180));
         ];
 
     %plot field boundaries
-    plot(ax2plot,fld_grt1(:,1:2)', fld_grt1(:,3:4)','k','linewidth',1.5,'HandleVisibility','off')
+    plot(ax2plot,fld_ep1(:,1:2)', fld_ep1(:,3:4)','k','linewidth',1.5,'HandleVisibility','off')
 
 
 elseif not(isempty(options)) && isfield(options,'type') && strcmp(options.type.Value,'custom_tern')

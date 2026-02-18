@@ -50,7 +50,7 @@ else
 end
 
 if  (isfield(options,'default') && options.default==true) || not(isfield(options,'FontSize')) || isempty(options.FontSize)
-    FontSize=12;
+    FontSize=16;
     options_definition.FontSize.Value=12;
 else
     FontSize=options.FontSize.Value;

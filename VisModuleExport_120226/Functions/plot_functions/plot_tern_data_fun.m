@@ -47,7 +47,7 @@ else
 end
 
 if  (isfield(options,'default') && options.default==true) || not(isfield(options,'plot_settings')) || isempty(options.plot_settings)  || not(isfield(options.plot_settings,'MarkerEdgeAlpha')) || isempty(options.plot_settings.MarkerEdgeAlpha)  || not(isfield(options.plot_settings.MarkerEdgeAlpha,'Value')) || isempty(options.plot_settings.MarkerEdgeAlpha.Value)
-    mea=4/8;
+    mea=6/8;
     options_definition.plot_settings.MarkerEdgeAlpha=mea;
 else
     mea=options.plot_settings.MarkerEdgeAlpha.Value;
@@ -134,6 +134,7 @@ switch options.type.Value
         X1=0.5.*(T.StrctFrm_XLrn)+(T.StrctFrm_XFa+T.StrctFrm_XTep);
         Y1=(T.StrctFrm_XLrn)*(cos(30*pi()/180));
     case 'tern_grt'
+        if ismember('StrctFrm_Xgrs',T.Properties.VariableNames) &&ismember('StrctFrm_Xprp',T.Properties.VariableNames) &&ismember('StrctFrm_Xalm',T.Properties.VariableNames)&&ismember('StrctFrm_Xsps',T.Properties.VariableNames)
 
         %Normalization of Xgrs + Xprp + Xalm + Xsps to 1
         Xgrs=T.StrctFrm_Xgrs./(T.StrctFrm_Xgrs+T.StrctFrm_Xprp+T.StrctFrm_Xalm+T.StrctFrm_Xsps);
@@ -142,7 +143,9 @@ switch options.type.Value
         %transforms the data to ternary space
         X1=0.5.*(Xgrs)+(Xprp);
         Y1=(Xgrs)*(cos(30*pi()/180));
+        end
     case 'tern_grt_half'
+        if ismember('StrctFrm_Xgrs',T.Properties.VariableNames) &&ismember('StrctFrm_Xprp',T.Properties.VariableNames) &&ismember('StrctFrm_Xalm',T.Properties.VariableNames)&&ismember('StrctFrm_Xsps',T.Properties.VariableNames)
 
         %Normalization of Xgrs + Xprp + Xalm + Xsps to 1
         Xgrs=T.StrctFrm_Xgrs./(T.StrctFrm_Xgrs+T.StrctFrm_Xprp+T.StrctFrm_Xalm+T.StrctFrm_Xsps);
@@ -154,10 +157,10 @@ switch options.type.Value
 
         X1(Y1>0.34)=nan;
         Y1(Y1>0.34)=nan;
-
+        end
     case 'tern_grtTi'
         %transforms the data to ternary space
-        if ismember('StrctFrm_Xmmt',T.Properties.VariableNames) &&ismember('StrctFrm_Xslo',T.Properties.VariableNames)
+        if ismember('StrctFrm_Xadr',T.Properties.VariableNames) &&ismember('StrctFrm_Xmmt',T.Properties.VariableNames) &&ismember('StrctFrm_Xslo',T.Properties.VariableNames)
 
 
             %Normalization of Xslo + Xmmt + Xadr to 1
@@ -175,6 +178,19 @@ switch options.type.Value
             %transforms the data to ternary space
             X1=0.5.*(Fe3)+(Cr);
             Y1=(Fe3)*(cos(30*pi()/180));
+        end
+         case 'tern_mtl_grt1'
+        %transforms the data to ternary space
+        if ismember('StrctFrm_Xprp',T.Properties.VariableNames) &&ismember('StrctFrm_Xmaj',T.Properties.VariableNames)&&ismember('StrctFrm_Xknr',T.Properties.VariableNames)
+
+
+             %Normalization of Xgrs + Xprp + Xalm + Xsps to 1
+        Xmaj=T.StrctFrm_Xmaj./(T.StrctFrm_Xprp+T.StrctFrm_Xprp+T.StrctFrm_Xmaj+T.StrctFrm_Xknr);
+        Xknr=T.StrctFrm_Xknr./(T.StrctFrm_Xprp+T.StrctFrm_Xprp+T.StrctFrm_Xmaj+T.StrctFrm_Xknr);
+
+        %transforms the data to ternary space
+        X1=0.5.*(Xmaj)+(Xknr);
+        Y1=(Xmaj)*(cos(30*pi()/180));
         end
     case 'tern_mscelprl'
 

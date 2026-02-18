@@ -20,7 +20,7 @@ else
 end
 
 if  (isfield(options,'default') && options.default==true)|| not(isfield(options,'plot_settings')) || isempty(options.plot_settings)  || not(isfield(options.plot_settings,'MarkerFaceAlpha')) || isempty(options.plot_settings.MarkerFaceAlpha) || not(isfield(options.plot_settings.MarkerFaceAlpha,'Value')) || isempty(options.plot_settings.MarkerFaceAlpha.Value)
-    mfa=3/8;
+    mfa=7/8;
     options_definition.plot_settings.MarkerFaceAlpha=mfa;
 else
     mfa=options.plot_settings.MarkerFaceAlpha.Value;
