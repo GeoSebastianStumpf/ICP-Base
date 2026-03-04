@@ -194,6 +194,7 @@ if  exist('X1','var') &&  exist('Y1','var') &&  exist('Z1','var') %&&any(not(any
         s=  scatter3(ax2plot,X1(not(any(isnan([X1 Y1 Z1]),2))),Y1(not(any(isnan([X1 Y1 Z1]),2))),Z1(not(any(isnan([X1 Y1 Z1]),2))),symbsize,C1(not(any(isnan([X1 Y1 Z1]),2))),symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'LineWidth',mlw);
         cbar= colorbar;
         cbar.Label.String=cbar_str;
+cbar.Label.Interpreter=ax2plot.XAxis.Label.Interpreter;
 
      
     else

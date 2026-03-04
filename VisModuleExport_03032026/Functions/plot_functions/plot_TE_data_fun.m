@@ -114,6 +114,13 @@ else
     plot_DL=false;
 end
 
+        if isfield(options,'DetectionLimits')&&isfield(options.DetectionLimits,'Color') && ~isempty(options.DetectionLimits.Color)
+        dl_color=options.DetectionLimits.Color;
+        else
+                    dl_color=[0.8 0.8 0.8];
+
+        
+        end
 %    plot_DL=true;
 
 
@@ -239,8 +246,7 @@ for n=1:numel(Element_Names)
         end
 
     catch ME
-     %   keyboard
-        ME.stack.line
+ME.stack.line
     end
 end
 
@@ -266,6 +272,16 @@ if isfield(options,'custom') && isfield(options.custom,'Annotation')&& options.c
     end
 end
 
+if isfield(options,'DetectionLimits') && isfield(options.DetectionLimits,'Annotation')&& options.DetectionLimits.Annotation==true && isfield(options.DetectionLimits,'AnnotationColumn')
+    label_list_dl=cell(1,numel(options.DetectionLimits.AnnotationColumn));
+    for anl=1:numel(options.DetectionLimits.AnnotationColumn)
+        if isnumeric(T_in.(options.DetectionLimits.AnnotationColumn{anl}))
+            label_list_dl{anl}=num2cell(T_in.(options.DetectionLimits.AnnotationColumn{anl}));
+        else
+            label_list_dl{anl}=T_in.(options.DetectionLimits.AnnotationColumn{anl});
+        end
+    end
+end
 
 if strcmpi(options.type.Value,'Custom') || startsWith(options.type.Value,'custom')
     if isfield(options,'TENorm') && isfield(options.TENorm,'NormState') && options.TENorm.NormState==true
@@ -289,10 +305,10 @@ if strcmpi(options.type.Value,'Custom') || startsWith(options.type.Value,'custom
     if plot_DL==true
         if isfield(options,'legend') && isfield(options.legend,'String')
             %p = plot(ax2plot,x,D,'-','Color',[fil,la],'Marker',symb,'LineWidth',mlw,'HandleVisibility','on','Tag',options.legend.String,'UserData',UserData);
-            p_dl = plot(x,D_DL,'linestyle','none','Color',[0.8 0.8 0.8],'Marker','_','LineWidth',2,'HandleVisibility','on','Tag',[options.legend.String '_LOD'],'UserData',UserData);
+            p_dl = plot(x,D_DL,'linestyle','none','Color',dl_color,'Marker','_','LineWidth',2,'HandleVisibility','on','Tag',[options.legend.String '_LOD'],'UserData',UserData);
         else
             %  p = plot(ax2plot,x,D,'-','Color',[fil,la],'Marker',symb,'LineWidth',mlw,'HandleVisibility','on','Tag',num2str(numel([ax2plot.Children])),'UserData',UserData);
-            p_dl = plot(x,D_DL,'linestyle','none','Color',[0.8 0.8 0.8],'Marker','_','LineWidth',2,'HandleVisibility','on','Tag',[num2str(numel([ax2plot.Children])) '_LOD'],'UserData',UserData);
+            p_dl = plot(x,D_DL,'linestyle','none','Color',dl_color,'Marker','_','LineWidth',2,'HandleVisibility','on','Tag',[num2str(numel([ax2plot.Children])) '_LOD'],'UserData',UserData);
         end
 
  end
@@ -305,27 +321,41 @@ else
 
     if plot_DL==true
         % scatter(ax2plot,x,D_DL,100,'_','filled','MarkerFaceAlpha',0.5,'MarkerEdgeAlpha',0.5,'MarkerEdgeColor',[0.4 0.4 0.4],'MarkerFaceColor',[0.4 0.4 0.4],'LineWidth',2,'HandleVisibility','off');
-        p_dl = plot(x,D_DL,'linestyle','none','Color',[0.8 0.8 0.8],'Marker','_','LineWidth',2,'HandleVisibility','on','UserData',UserData);
+        p_dl = plot(x,D_DL,'linestyle','none','Color',dl_color,'Marker','_','LineWidth',2,'HandleVisibility','on','UserData',UserData);
     end
 
 end
 
 
 try
-if exist("label_list","var")
-    for nnn=1:(numel(p))
+    if exist("label_list","var")
+        for nnn=1:(numel(p))
 
-        p(nnn).DataTipTemplate.Interpreter='none';
+            p(nnn).DataTipTemplate.Interpreter='none';
 
-        p(nnn).DataTipTemplate.DataTipRows(1)= dataTipTextRow(string(p(nnn).DataTipTemplate.DataTipRows(1).Label), ax2plot.XTickLabel);
-        for anl=1:numel(options.custom.AnnotationColumn)
-            p(nnn).DataTipTemplate.DataTipRows(end+1) = dataTipTextRow(string(options.custom.AnnotationColumn{anl}), repmat(string(label_list{anl}{nnn}),numel(p(nnn).XData),1));
+            p(nnn).DataTipTemplate.DataTipRows(1)= dataTipTextRow(string(p(nnn).DataTipTemplate.DataTipRows(1).Label), ax2plot.XTickLabel);
+            for anl=1:numel(options.custom.AnnotationColumn)
+                p(nnn).DataTipTemplate.DataTipRows(end+1) = dataTipTextRow(string(options.custom.AnnotationColumn{anl}), repmat(string(label_list{anl}{nnn}),numel(p(nnn).XData),1));
+            end
         end
     end
-end
-catch
-        keyboard
+
+    if exist("label_list_dl","var")
+        for nnn=1:(numel(p_dl))
+
+            p_dl(nnn).DataTipTemplate.Interpreter='none';
+
+            p_dl(nnn).DataTipTemplate.DataTipRows(1)= dataTipTextRow(string(p_dl(nnn).DataTipTemplate.DataTipRows(1).Label), ax2plot.XTickLabel);
+            for anl=1:numel(options.custom.AnnotationColumn)
+                p_dl(nnn).DataTipTemplate.DataTipRows(end+1) = dataTipTextRow(string(options.custom.AnnotationColumn{anl}), repmat(string(label_list{anl}{nnn}),numel(p_dl(nnn).XData),1));
+            end
+        end
     end
+
+
+catch
+    keyboard
+end
 
 
 ax2plot.XGrid=true;

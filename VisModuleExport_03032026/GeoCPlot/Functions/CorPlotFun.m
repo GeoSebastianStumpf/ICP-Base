@@ -372,15 +372,21 @@ try
     
     if link_set==true
         for k=1:n
+           
             if k<=size(tc,1)
-                mask=false(size(tc(k,:))));
-                for nn=1:numel(tc{k,:})
+                  mask=false(size(tc(k,:)));
+                for nn=1:numel(tc(k,:))
                     mask(nn)=tc{k,nn}.Visible;
                 end
-                linkaxes([tc{k,mask}],'y')
+                 linkaxes([tc{k,mask}],'y')
             end
+             
             if k<=size(tc,2)
-                linkaxes([tc{:,k}],'x')
+                 mask=false(size(tc(:,k)));
+                for nn=1:numel(tc(:,k))
+                    mask(nn)=tc{nn,k}.Visible;
+                end
+                linkaxes([tc{mask,k}],'x')
             end
 
         end
@@ -417,7 +423,7 @@ newAx.XLabel.String=ax.XLabel.String;
 newAx.YLabel.String=ax.YLabel.String;
 newAx.FontSize=18;
 
-newAx.YScale=ax.XScale;
+newAx.XScale=ax.XScale;
 newAx.YScale=ax.YScale;
 
 newAx.XGrid='on';
@@ -428,7 +434,7 @@ legend(newAx,unique({newAx.Children.Tag}))
 end
 
 function AxisToEasyPlot(ax)
-f = figure;
+hfig = figure;
 %newAx = copyobj(ax,f);
 newAx=nexttile;
 copyobj(ax.Children,newAx)
@@ -452,14 +458,23 @@ legend(newAx,unique({newAx.Children.Tag}))
 %app.MinPlotX.MinPlotXFigures.hFig(hFig_id).options=options;
         EPM=EasyPlotModule([]);
         app.MinPlotX=EPM.MinPlotX;
-hFig_id=numel(app.MinPlotX.MinPlotXFigures.hFig)+1;
+        if isempty(app.MinPlotX)
+       hFig_id=1;
+       app.MinPlotX.MinPlotXFigures.hFig_type{hFig_id}=matlab.lang.makeValidName(['Scatter_' newAx.XLabel.String '_' newAx.YLabel.String]);
+        else
+            hFig_id=numel(app.MinPlotX.MinPlotXFigures.hFig)+1;
+        
 
 thx=[app.MinPlotX.MinPlotXFigures.hFig_type matlab.lang.makeUniqueStrings(matlab.lang.makeValidName(['Scatter_' newAx.XLabel.String '_' newAx.YLabel.String]))];
 app.MinPlotX.MinPlotXFigures.hFig_type{hFig_id}=thx{end};
+        end
 app.MinPlotX.MinPlotXFigures.hFig_description{hFig_id}=['GeoCPlot Scatter ' newAx.XLabel.String ' / ' newAx.YLabel.String];
 
 app.MinPlotX.MinPlotXFigures.hFig(hFig_id).ax2plot=newAx;
 app.MinPlotX.MinPlotXFigures.hFig(hFig_id).options.type.Value='XY';
+    
+setappdata(hfig,'mainapp',[]);
+hfig.CloseRequestFcn = @(src,event) EasyPlotCloseRequestFcn(src,event);
 
 %CenterFig_fun(hfig)
   try

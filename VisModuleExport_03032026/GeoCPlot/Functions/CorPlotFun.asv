@@ -458,6 +458,9 @@ legend(newAx,unique({newAx.Children.Tag}))
 %app.MinPlotX.MinPlotXFigures.hFig(hFig_id).options=options;
         EPM=EasyPlotModule([]);
         app.MinPlotX=EPM.MinPlotX;
+        if isempty(app.MinPlotX)
+
+        end
 hFig_id=numel(app.MinPlotX.MinPlotXFigures.hFig)+1;
 
 thx=[app.MinPlotX.MinPlotXFigures.hFig_type matlab.lang.makeUniqueStrings(matlab.lang.makeValidName(['Scatter_' newAx.XLabel.String '_' newAx.YLabel.String]))];

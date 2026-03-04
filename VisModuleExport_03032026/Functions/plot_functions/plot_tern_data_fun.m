@@ -21,7 +21,7 @@ else
 end
 
 if  (isfield(options,'default') && options.default==true) || not(isfield(options,'plot_settings')) || isempty(options.plot_settings)  || not(isfield(options.plot_settings,'MarkerFaceAlpha')) || isempty(options.plot_settings.MarkerFaceAlpha)  ||  not(isfield(options.plot_settings.MarkerFaceAlpha,'Value')) || isempty(options.plot_settings.MarkerFaceAlpha.Value)
-    mfa=3/8;
+    mfa=6/8;
     options_definition.plot_settings.MarkerFaceAlpha=mfa;
 else
     mfa=options.plot_settings.MarkerFaceAlpha.Value;
@@ -342,6 +342,7 @@ if  exist('X1','var') &&  exist('Y1','var') &&any(not(any((isnan([X1 Y1])),2)))
         s= scatter(ax2plot,X1(:),Y1(:),symbsize,C1(:),symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'LineWidth',mlw);
         cbar= colorbar;
         cbar.Label.String=cbar_str;
+cbar.Label.Interpreter=ax2plot.XAxis.Label.Interpreter;
 
     else
         s=  scatter(ax2plot,X1(:),Y1(:),symbsize,symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'MarkerFaceColor',fil,'LineWidth',mlw);

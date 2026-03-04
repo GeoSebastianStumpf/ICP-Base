@@ -308,17 +308,20 @@ if  exist('X1','var') &&  exist('Y1','var') %% && any(not(any((isnan([X1 Y1])),2
         s=scatter(ax2plot,X1(:),Y1(:),symbsize,C1(:),symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'LineWidth',mlw);
         cbar= colorbar;
         cbar.Label.String=cbar_str;
-
+cbar.Label.Interpreter=ax2plot.XAxis.Label.Interpreter;
 
 
     else
-        if isfield(options,'plot_settings') && isfield(options.plot_settings,'plot_mean_error')&& isfield(options.plot_settings.plot_mean_error,'Value') && options.plot_settings.plot_mean_error.Value==true
+
+
+if isfield(options,'plot_settings') && isfield(options.plot_settings,'plot_mean_error')&& isfield(options.plot_settings.plot_mean_error,'Value') && options.plot_settings.plot_mean_error.Value==true
             x_plot_error= std(X1)./sqrt(length(X1));
             y_plot_error=std(Y1)./sqrt(length(Y1));
             errorbar(ax2plot,mean(X1),mean(Y1),y_plot_error,y_plot_error,x_plot_error,x_plot_error,'')
             scatter(ax2plot,mean(X1),mean(Y1),symbsize,symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'MarkerFaceColor',fil,'LineWidth',mlw)
-        end
+  else
         s=scatter(ax2plot,(X1),(Y1),symbsize,symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'MarkerFaceColor',fil,'LineWidth',mlw);
+  end
 
 
     end
