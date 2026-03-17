@@ -1,5 +1,5 @@
 <img width="2199" height="583" alt="ICP-Base Logo" src="https://github.com/user-attachments/assets/d7ae505b-db7a-49c7-8a41-05478658ed43" />
-##
+ 
 
 [The latest stable version and up-to-date manuals can be downloaded here](https://github.com/GeoSebastianStumpf/ICP-Base/releases)
 
