@@ -1,6 +1,8 @@
 
 Analytes in the .csv files that are were not measured are automatically dismissed.
 
+The use of hex code is possible
+
 As soon as there is a missing value in a row, the whole row gets dismissed
 if no markers are wanted, it has to be done like e.g.
 Ratios:
