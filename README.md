@@ -33,7 +33,7 @@ We recommend that you use the following citations in your publications or presen
 
 Stumpf S., Pettke T., Gies N.B., Guillong M. (2025).  ICP-Base: A new approach to LA-ICP-MS data reduction. Goldschmidt 2025 Conference. https://doi.org/10.7185/gold2025.30834
 
-If the VisModule from MinPlotX was used to visualize the data we recommend e.g., data were processed using ICP-Base (Stumpf et al. 2025) and visualized using the integrated VisModule (Walters and Gies 2025).
+If the VisModule from MinPlotX was used to visualize the data we recommend e.g., data were processed using ICP-Base (Stumpf et al. 2025) and visualized using the integrated VisModule ([Walters and Gies 2025](https://doi.org/10.2478/mipo-2025-0003)).
 
 It is not recommended to cite ICP-Base only in the supplementary material, as these citations are not taken into account by citation statistics platforms.
 
