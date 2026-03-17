@@ -4,7 +4,7 @@ Release Link (will come in future)
 
 Manual Link (will come in the future)
 
-Paper Link (will come in future)
+[Download the abstract here (Manuscript is submitted to Computers & Geosciences)](https://doi.org/10.7185/gold2025.30834)
 
 ## Welcome to ICP-Base
 
