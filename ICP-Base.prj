@@ -84,6 +84,7 @@
       <file>${PROJECT_ROOT}\Example Data</file>
       <file>${PROJECT_ROOT}\Functions</file>
       <file>${PROJECT_ROOT}\LICENSE</file>
+      <file>${PROJECT_ROOT}\Manual</file>
       <file>${PROJECT_ROOT}\Plot_Styles</file>
       <file>${PROJECT_ROOT}\RM_Files</file>
       <file>${PROJECT_ROOT}\Total_Oxide_Calculations</file>
