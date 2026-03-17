@@ -21,7 +21,11 @@ ICP-Base is downloaded and installed as an application and compiled versions are
 
 ## Feedback, Features and Bugs
 
-Possibly make Discord and add email adress
+If you are using an LA or ICP-MS system for which file import is not yet supported, please send an example data file along with the brand and model name of your LA or ICP-MS system to sebastian.stumpf@unibe.ch.
+
+ICP-Base was programmed within a relatively short timeframe by S. Stumpf, without formal training in software engineering. While every effort has been made to thoroughly test the software and ensure it is as stable and reliable as possible, some edge cases may still result in unexpected behavior. If you encounter a bug or any unexpected issue, we would greatly appreciate your feedback. Please send a clear description of the problem along with an example dataset, if possible, to sebastian.stumpf@unibe.ch so we can investigate and continue improving the software.
+
+Constructive and positive feedback is always welcome!
 
 ## Citation Guidelines
 
