@@ -17,7 +17,7 @@ ICP-Base is licensed under GPL-3.0
 
 ## Getting started
 
-ICP-Base is downloaded and installed as an application and compiled versions are available for Windows, Mac, and Linux users. You can download the file that is suitable for your operating system [here](https://github.com/GeoSebastianStumpf/ICP-Base/releases). Detailed instructions on how to install ICP-Base can be found in the manual.
+ICP-Base is downloaded and installed as an application and compiled versions are available for Windows, Mac, and Linux users. You can download the file that is suitable for your operating system [here](https://github.com/GeoSebastianStumpf/ICP-Base/releases). Detailed instructions on how to install ICP-Base can be found in "How to get ICP-Base running.docx" which is found in the release files.
 
 ## Feedback, Features and Bugs
 
