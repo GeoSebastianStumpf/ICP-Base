@@ -1,8 +1,6 @@
 <img width="2199" height="583" alt="ICP-Base Logo" src="https://github.com/user-attachments/assets/d7ae505b-db7a-49c7-8a41-05478658ed43" />
 
-Release Link (will come in future)
-
-Manual Link (will come in the future)
+[The latest stable version and up-to-date manuals can be downloaded here](https://github.com/GeoSebastianStumpf/ICP-Base/releases)
 
 [Download the abstract here (Manuscript is submitted to Computers & Geosciences)](https://doi.org/10.7185/gold2025.30834)
 
@@ -18,7 +16,7 @@ ICP-Base is licensed under GPL-3.0
 
 ## Getting started
 
-ICP-Base is downloaded and installed as an application and compiled versions are available for Windows, Mac, and Linux users. You can download the file that is suitable for your operating system here. Detailed instructions on how to install ICP-Base can be found in the manual.
+ICP-Base is downloaded and installed as an application and compiled versions are available for Windows, Mac, and Linux users. You can download the file that is suitable for your operating system [here](https://github.com/GeoSebastianStumpf/ICP-Base/releases). Detailed instructions on how to install ICP-Base can be found in the manual.
 
 ## Citation Guidelines
 
