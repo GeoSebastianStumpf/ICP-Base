@@ -8,7 +8,7 @@
       <file>${PROJECT_ROOT}\ICP-Base_resources\icon_24.png</file>
       <file>${PROJECT_ROOT}\ICP-Base_resources\icon_16.png</file>
     </param.icons>
-    <param.version>1.00.02</param.version>
+    <param.version>1.00</param.version>
     <param.authnamewatermark>Sebastian Stumpf</param.authnamewatermark>
     <param.email>sebastian.stumpf@unibe.ch</param.email>
     <param.company>University of Bern</param.company>
@@ -81,9 +81,9 @@
       <file>${PROJECT_ROOT}\Modules</file>
     </fileset.resources>
     <fileset.package>
-      <file>${PROJECT_ROOT}\Add_Metadata</file>
       <file>${PROJECT_ROOT}\Example Data</file>
       <file>${PROJECT_ROOT}\Functions</file>
+      <file>${PROJECT_ROOT}\LICENSE</file>
       <file>${PROJECT_ROOT}\Plot_Styles</file>
       <file>${PROJECT_ROOT}\RM_Files</file>
       <file>${PROJECT_ROOT}\Total_Oxide_Calculations</file>
