@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="786726060" file="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base.prj" location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev" name="ICP-Base" preferred-package-location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="4161206343" file="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base.prj" location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev" name="ICP-Base" preferred-package-location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>ICP_Base</param.appname>
     <param.icon>${PROJECT_ROOT}\ICP-Base_resources\icon.ico</param.icon>
     <param.icons>
@@ -14,11 +14,11 @@
     <param.company>University of Bern</param.company>
     <param.summary />
     <param.description />
-    <param.screenshot>${PROJECT_ROOT}\Dev\ICP-Base Splash.png</param.screenshot>
+    <param.screenshot>${PROJECT_ROOT}\ICP-Base_resources\ICP-Base Splash.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\ICP_Base\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
-    <param.logo>${PROJECT_ROOT}\Dev\ICP-Base Install.png</param.logo>
+    <param.logo>${PROJECT_ROOT}\ICP-Base_resources\ICP-Base Install.png</param.logo>
     <param.install.notes />
     <param.target.install.notes />
     <param.intermediate>${PROJECT_ROOT}\ICP-Base\for_testing</param.intermediate>
@@ -32,7 +32,7 @@
     <param.web.mcr>true</param.web.mcr>
     <param.package.mcr>false</param.package.mcr>
     <param.no.mcr>false</param.no.mcr>
-    <param.web.mcr.name>ICP_Base_v_1_00_02_win</param.web.mcr.name>
+    <param.web.mcr.name>ICP_Base_v_1_00_00_win</param.web.mcr.name>
     <param.package.mcr.name>ICP_Base_v_1_00_60306_win_mcr</param.package.mcr.name>
     <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
     <param.windows.command.prompt>true</param.windows.command.prompt>
@@ -48,6 +48,9 @@
 	 -?  print help on how to use the application 
 	 input arguments</param.help.text>
     <unset>
+      <param.authnamewatermark />
+      <param.email />
+      <param.company />
       <param.summary />
       <param.description />
       <param.guid />
@@ -77,12 +80,11 @@
       <file>${PROJECT_ROOT}\ICP_Base.mlapp</file>
     </fileset.main>
     <fileset.resources>
-      <file>${PROJECT_ROOT}\Dev\icon.ico</file>
       <file>${PROJECT_ROOT}\Modules</file>
+      <file>${PROJECT_ROOT}\VisModuleExport_03032026</file>
     </fileset.resources>
     <fileset.package>
       <file>${PROJECT_ROOT}\Example Data</file>
-      <file>${PROJECT_ROOT}\Functions</file>
       <file>${PROJECT_ROOT}\LICENSE</file>
       <file>${PROJECT_ROOT}\Manual</file>
       <file>${PROJECT_ROOT}\Plot_Styles</file>
@@ -91,51 +93,7 @@
     </fileset.package>
     <fileset.depfun>
       <file>${MATLAB_ROOT}\toolbox\local\userpath.m</file>
-      <file>${PROJECT_ROOT}\Dev\ICP-Base Icon.png</file>
-      <file>${PROJECT_ROOT}\Functions\DisplayError.m</file>
       <file>${PROJECT_ROOT}\ICP-Base_resources\icon_48.png</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\CombineColHelper.mlapp</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\Delete.png</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\EasyPlotCloseRequestFcn.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\EasyPlotModule.mlapp</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\Functions\plot_functions\CenterFig_fun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\Functions\plot_functions\plot_ratio_XY_data_fun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\Functions\plot_functions\plot_ratio_XYZ_data_fun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\Functions\plot_functions\plot_TE_data_fun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\Functions\plot_functions\plot_TE_fun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\Functions\plot_functions\plot_tern_data_fun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\Functions\plot_functions\plot_tern_fun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\Functions\plot_functions\plot_tetra_data_fun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\Functions\plot_functions\plot_tetra_fun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\Functions\plot_functions\plot_XY_data_fun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\Functions\plot_functions\plot_XY_fun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\Functions\plot_functions\plot_XYZ_data_fun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\Functions\plot_functions\plot_XYZ_fun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Dev\Symbols\symbols_1_Delete Column-33.png</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Dev\Symbols\symbols_1_GeoCPlot.png</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Functions\clr.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Functions\CorPlotFun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Functions\deg2rad.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Functions\extractpositional.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Functions\fcnCorrMatrixPlot_NG.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Functions\fractions.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Functions\kde2d.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Functions\PlotTernFun.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Functions\ReadColorMaps.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Functions\split_label_lines.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Functions\ternaxes.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Functions\terncoords.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Functions\ternlabel.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\Functions\ternplot.m</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\GeoCPlot\GeoCPlot.mlapp</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\HistogramFilterModule.mlapp</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\MinPlotX_logo.png</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\symbols_1_Clear Mask.png</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\symbols_1_Invert Mask.png</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\symbols_1_Mask Selection.png</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\symbols_1_Substract from Mask.png</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\VisModule.mlapp</file>
-      <file>${PROJECT_ROOT}\VisModuleExport_03032026\XMap_ColorMaps.txt</file>
     </fileset.depfun>
     <build-deliverables>
       <file location="${PROJECT_ROOT}\ICP-Base\for_testing" name="readme.txt" optional="true">C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base\for_testing\readme.txt</file>

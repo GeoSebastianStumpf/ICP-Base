@@ -1,0 +1,11 @@
+Analytes,Color,LineWidth,Linestyle,Marker,MarkerSize,MarkerFaceColor,MarkerEdgeColor
+Mg25,black,2,-,o,2,red,red
+Si29,black,2,-.,none,0,none,none
+Ca43,blue,2,-,o,2,magenta,magenta
+Fe57,black,2,:,none,0,none,none
+Ba137,green,2,-,none,0,none,none
+Cl35,cyan,2,-,*,2,magenta,magenta
+S34,#FFB442,2,-,none,0,none,none
+K39,blue,2,-,s,2,blue,black
+Na23,blue,2,-,d,2,green,green
+Br79,cyan,2,-,*,2,black,black
