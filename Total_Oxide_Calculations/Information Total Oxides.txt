@@ -1,5 +1,10 @@
 In the Oxides.xlsx file the user can define the elements that should be considered as Oxides to normalize to for quantification.
-ICP-Base always searches for an .xlsx file that lies in the Oxides folder. Renaming the folder or saving the file with a different filetype will make it fail.
+ICP-Base always searches for the Oxides.xlsx file that lies in the Total_Oxide_Calculations folder (or another folder if chosen). Renaming the folder or saving the file with a different filetype will make it fail.
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+If you want to change the oxides that should be used for quantification and you use a compiled version you have to choose a different folder. The compiled version has the original Oxides.xlsx (found in ProgramFiles/ICP_Base/application/Total_Oxide_Calculations) locked in. Even if you change the values it will not actually change it in the software.
+You can copy the original Total_Oxide_Calculations folder, store it somewhere that is not the ProgramFiles and then you can change anything you want.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 The first column holds the element name
 The second column holds the element oxide names
@@ -13,5 +18,5 @@ The fourth column holds the preferred isotopes.
 	If e.g. Si29 and Si30 or Ni61 and Ni62 were measured they cannot be used both for quantification because Si or Ni would be considered twice 	in the normalization to the total mass value (e.g. 100%). So one preferred isotope has to be chosen that is used to normalize, the other 	one is disregarded in the normalization but is then quantified later anyways be means of an internal standard that comes from the preceding 	total mass calculation.
 
 The fifth column holds the elements that should be considered as majors.
-	This has nothing to do with the quantification. This is just for the output table in the results module. Pure cosmetics. The quantification itself takes all the oxides that are found in the oxides .xlsx and are measured and normalizes all of them.
+	This has nothing to do with the quantification. This is just for the output table in the results module. Pure cosmetics. The quantification itself takes all the oxides that are found in the Oxides.xlsx and are measured and normalizes all of them.
 

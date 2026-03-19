@@ -1,0 +1,11 @@
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+If you want to change the RM files/values and you use a compiled version you have to change the reference material folder. The compiled version has the original RM files (found in ProgramFiles/ICP_Base/application/RM_Files) locked in. Even if you change the values in ProgramFiles/ICP_Base/application/RM_Files/XY.csv it will not actually change it in the software. 
+You can copy the original RM_Files folder, store it somewhere that is not the ProgramFiles and then you can change anything you want.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+The first column holds the element name
+The second column holds the element mass fraction in µg/g
+The third column holds the uncertainty in µg/g
+
+

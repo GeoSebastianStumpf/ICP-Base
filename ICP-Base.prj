@@ -8,12 +8,12 @@
       <file>${PROJECT_ROOT}\ICP-Base_resources\icon_24.png</file>
       <file>${PROJECT_ROOT}\ICP-Base_resources\icon_16.png</file>
     </param.icons>
-    <param.version>1.00</param.version>
+    <param.version>1.00.00</param.version>
     <param.authnamewatermark>Sebastian Stumpf</param.authnamewatermark>
     <param.email>sebastian.stumpf@unibe.ch</param.email>
     <param.company>University of Bern</param.company>
-    <param.summary />
-    <param.description />
+    <param.summary>This software is licensed under the GNU General Public License 3</param.summary>
+    <param.description>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.</param.description>
     <param.screenshot>${PROJECT_ROOT}\ICP-Base_resources\ICP-Base Splash.png</param.screenshot>
     <param.guid />
     <param.installpath.string>\ICP_Base\</param.installpath.string>
@@ -46,13 +46,13 @@
 	 
  Input Arguments 
 	 -?  print help on how to use the application 
-	 input arguments</param.help.text>
+	 input arguments 
+ Description 
+ 	 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.</param.help.text>
     <unset>
       <param.authnamewatermark />
       <param.email />
       <param.company />
-      <param.summary />
-      <param.description />
       <param.guid />
       <param.installpath.combo />
       <param.install.notes />
