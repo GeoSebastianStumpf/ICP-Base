@@ -1,10 +1,6 @@
-In the Oxides.xlsx file the user can define the elements that should be considered as Oxides to normalize to for quantification.
-ICP-Base always searches for the Oxides.xlsx file that lies in the Total_Oxide_Calculations folder (or another folder if chosen). Renaming the folder or saving the file with a different filetype will make it fail.
+In the Oxides.csv file the user can define the elements that should be considered as Oxides to normalize to for quantification.
+ICP-Base always searches for the Oxides.csv file that lies in the Total_Oxide_Calculations folder (or another folder if chosen) which is probably in Documents/ICP-Base. Renaming the folder or saving the file with a different filetype will make it fail.
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-If you want to change the oxides that should be used for quantification and you use a compiled version you have to choose a different folder. The compiled version has the original Oxides.xlsx (found in ProgramFiles/ICP_Base/application/Total_Oxide_Calculations) locked in. Even if you change the values it will not actually change it in the software.
-You can copy the original Total_Oxide_Calculations folder, store it somewhere that is not the ProgramFiles and then you can change anything you want.
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 The first column holds the element name
 The second column holds the element oxide names
