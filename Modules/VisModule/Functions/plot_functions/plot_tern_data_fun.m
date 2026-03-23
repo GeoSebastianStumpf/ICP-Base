@@ -238,6 +238,34 @@ switch options.type.Value
         F = T.apfu_F./T.(char('StrctFrm_Anion_Sum')); %F
         X1=0.5.*(F)+(OH);
         Y1=(F)*(cos(30*pi()/180));
+
+    case 'tern_ap2'
+             %  'apatite: Ca+Sr+Ba-REE^{3+}-Na+K ternary';2
+     %variables for the ternary plot
+
+ 
+     REE = T.apfu_Ce + T.apfu_La ; %add Pr and Nd
+        Na_K = T.apfu_Na+T.apfu_K;
+        X1=0.5.*(Na_K)+(REE);
+        Y1=(Na_K)*(cos(30*pi()/180));
+
+
+            
+
+
+    case 'tern_ap3'
+       % 'apatite: Ca-Sr+Ba-Na+K+REE';3
+    %variables for the ternary plot
+  %  if T.apfu_Na+T.apfu_K<0.9 || T.apfu_Na+T.apfu_K>1.1
+
+
+        Sr = (T.apfu_Sr + T.apfu_Ba);
+        Na_K_REE = T.apfu_Na+T.apfu_K+T.apfu_Ce+T.apfu_La;
+        X1=0.5.*(Na_K_REE)+(Sr);
+        Y1=(Na_K_REE)*(cos(30*pi()/180));
+ %   end
+
+
     case 'tern_scap'
         Cl=T.apfu_Cl./(T.apfu_Cl+T.apfu_S+T.apfu_C);
         Sulfate=T.apfu_S./(T.apfu_Cl+T.apfu_S+T.apfu_C);

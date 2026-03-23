@@ -108,7 +108,7 @@ end
 if isfield(options,'DetectionLimits') && isfield(options.DetectionLimits,'PlotDetectionLimits') && options.DetectionLimits.PlotDetectionLimits==true && isfield(options.DetectionLimits,'DetectionLimitsTable') && istable(options.DetectionLimits.DetectionLimitsTable)
     T_DL=options.DetectionLimits.DetectionLimitsTable;
     plot_DL=true;
-elseif isfield(options,'DetectionLimits') && isfield(options.DetectionLimits,'DetectionLimits') && options.DetectionLimits.DetectionLimits==true
+elseif isfield(options,'DetectionLimits') && isfield(options.DetectionLimits,'PlotDetectionLimits') && options.DetectionLimits.PlotDetectionLimits==true
     plot_DL=true;
 else
     plot_DL=false;

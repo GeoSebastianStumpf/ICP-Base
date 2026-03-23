@@ -71,35 +71,35 @@ end
 if isfield(options,'X1')&& not(isempty(options.X1))
     A0=T.(char(options.X1));
 else
-    A0=1';
+    A0=ones(size(T,1),1);
 end
 if isfield(options,'Y1')&& not(isempty(options.Y1))
     B0=T.(char(options.Y1));
 else
-    B0=1';
+    B0=ones(size(T,1),1);
 end
 if isfield(options,'Z1')&& not(isempty(options.Z1))
     C0=T.(char(options.Z1));
 else
-    C0=1';
+    C0=ones(size(T,1),1);
 end
 
 if isfield(options,'D1')&& not(isempty(options.D1))
     D0=T.(char(options.D1));
 else
-    D0=1';
+    D0=ones(size(T,1),1);
 end
 
 if isfield(options,'E1')&& not(isempty(options.E1))
     E0=T.(char(options.E1));
 else
-    E0=1';
+    E0=ones(size(T,1),1);
 end
 
 if isfield(options,'F1')&& not(isempty(options.F1))
     F0=T.(char(options.F1));
 else
-    F0=1';
+    F0=ones(size(T,1),1);
 end
 
 

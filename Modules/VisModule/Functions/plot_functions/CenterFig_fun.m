@@ -9,6 +9,7 @@ try
     newY = (screenSize(4) - figHeight) / 2;
     hfig.Position=[newX, newY, figWidth, figHeight];
     figure(hfig)
+    drawnow;
 catch ME
     disp('CenterFig_fun failed!')
     disp(ME.message)

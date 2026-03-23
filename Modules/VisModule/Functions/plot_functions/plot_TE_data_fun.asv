@@ -115,7 +115,10 @@ else
 end
 
         if isfield(options,'DetectionLimits')&&isfield(options.DetectionLimits,'Color') && ~isempty(options.DetectionLimits.Color)
-        dl_coöpr
+        dl_color=options.DetectionLimits.Color;
+        else
+                    dl_color=[0.8 0.8 0.8];
+
         
         end
 %    plot_DL=true;
@@ -243,8 +246,7 @@ for n=1:numel(Element_Names)
         end
 
     catch ME
-     %   keyboard
-        ME.stack.line
+ME.stack.line
     end
 end
 
@@ -303,10 +305,10 @@ if strcmpi(options.type.Value,'Custom') || startsWith(options.type.Value,'custom
     if plot_DL==true
         if isfield(options,'legend') && isfield(options.legend,'String')
             %p = plot(ax2plot,x,D,'-','Color',[fil,la],'Marker',symb,'LineWidth',mlw,'HandleVisibility','on','Tag',options.legend.String,'UserData',UserData);
-            p_dl = plot(x,D_DL,'linestyle','none','Color',[0.8 0.8 0.8],'Marker','_','LineWidth',2,'HandleVisibility','on','Tag',[options.legend.String '_LOD'],'UserData',UserData);
+            p_dl = plot(x,D_DL,'linestyle','none','Color',dl_color,'Marker','_','LineWidth',2,'HandleVisibility','on','Tag',[options.legend.String '_LOD'],'UserData',UserData);
         else
             %  p = plot(ax2plot,x,D,'-','Color',[fil,la],'Marker',symb,'LineWidth',mlw,'HandleVisibility','on','Tag',num2str(numel([ax2plot.Children])),'UserData',UserData);
-            p_dl = plot(x,D_DL,'linestyle','none','Color',[0.8 0.8 0.8],'Marker','_','LineWidth',2,'HandleVisibility','on','Tag',[num2str(numel([ax2plot.Children])) '_LOD'],'UserData',UserData);
+            p_dl = plot(x,D_DL,'linestyle','none','Color',dl_color,'Marker','_','LineWidth',2,'HandleVisibility','on','Tag',[num2str(numel([ax2plot.Children])) '_LOD'],'UserData',UserData);
         end
 
  end
@@ -319,7 +321,7 @@ else
 
     if plot_DL==true
         % scatter(ax2plot,x,D_DL,100,'_','filled','MarkerFaceAlpha',0.5,'MarkerEdgeAlpha',0.5,'MarkerEdgeColor',[0.4 0.4 0.4],'MarkerFaceColor',[0.4 0.4 0.4],'LineWidth',2,'HandleVisibility','off');
-        p_dl = plot(x,D_DL,'linestyle','none','Color',[0.8 0.8 0.8],'Marker','_','LineWidth',2,'HandleVisibility','on','UserData',UserData);
+        p_dl = plot(x,D_DL,'linestyle','none','Color',dl_color,'Marker','_','LineWidth',2,'HandleVisibility','on','UserData',UserData);
     end
 
 end

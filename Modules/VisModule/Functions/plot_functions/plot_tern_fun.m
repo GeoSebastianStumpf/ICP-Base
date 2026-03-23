@@ -37,6 +37,8 @@ options_definition.type.options={'none';
     'tern_sp1';
     'tern_sp2';
     'tern_ap';
+    'tern_ap2';
+    'tern_ap3';
     'tern_scap';
     'tern_lws'%;
     %'tern_carbonate_Ca_Mg_Fe;
@@ -67,6 +69,8 @@ options_definition.type.description={'none';
     'spinel: Cr-Fe3 + 2Ti-Al ternary';
     'spinel: Mn+Zn+Ni-Fe2-Mg ternary';
     'apatite: F-OH + S-Cl ternary';
+    'apatite: Ca+Sr+Ba-REE^{3+}-Na+K ternary';
+    'apatite: Ca-Sr+Ba-Na+K+REE';
     'scapolite: CO3-Cl-SO4 ternary';
     'lawsonite: 4Ti-Cr-Fe ternary'%;
     %'carbonate: Ca-Mg-Fe;
@@ -634,6 +638,29 @@ elseif not(isempty(options)) && isfield(options,'type') && strcmp(options.type.V
         1.02,-0.04];
 
     text(ax2plot,pos_ap1(:,1),pos_ap1(:,2),str_ap1,'FontSize',options.FontSize.Value*1.1667) %endmembers
+elseif not(isempty(options)) && isfield(options,'type') && strcmp(options.type.Value,'tern_ap2')
+    %% apatite Ca+Sr+Ba-REE^{3+}-Na+K ternary
+
+    'apatite: Ca-Sr+Ba-Na+K+REE';
+    str_ap2={'Ca+Sr+Ba';'Na+K';'REE^{3+}'}; %endmember text labels
+
+    %positions for endmember text labels
+    pos_ap1=[-0.30,0.0;
+        0.50,0.92;
+        1.02,-0.04];
+
+    text(ax2plot,pos_ap1(:,1),pos_ap1(:,2),str_ap2,'FontSize',options.FontSize.Value*1.1667) %endmembers
+elseif not(isempty(options)) && isfield(options,'type') && strcmp(options.type.Value,'tern_ap3')
+    %% apatite Ca-Sr+Ba-Na+K+REE ternary
+
+    str_ap3={'Ca';'Sr+Ba';'Na+K+REE'}; %endmember text labels
+
+    %positions for endmember text labels
+    pos_ap1=[-0.10,0.0;
+        0.50,0.92;
+        1.02,-0.04];
+
+    text(ax2plot,pos_ap1(:,1),pos_ap1(:,2),str_ap3,'FontSize',options.FontSize.Value*1.1667) %endmembers
 
 
 elseif not(isempty(options)) && isfield(options,'type') && strcmp(options.type.Value,'tern_scap')
