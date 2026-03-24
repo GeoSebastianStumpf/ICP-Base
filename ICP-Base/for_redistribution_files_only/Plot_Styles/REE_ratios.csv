@@ -1,8 +1,0 @@
-Nominator,Denominator,Color,LineWidth,Linestyle,Marker,MarkerSize,MarkerFaceColor,MarkerEdgeColor
-La139,Lu175,green,2,-,s,3,magenta,magenta
-Ce140,Lu175,blue,2,-,o,3,red,red
-Ba137,Lu175,red,2,-,+,3,blue,blue
-Sr88,Lu175,magenta,2,-,*,3,green,green
-Ca43,Lu175,cyan,2,-,s,3,black,black
-Yb173,Lu175,black,2,-,o,3,red,black
-Tm169,Lu175,cyan,2,-,none,0,none,none

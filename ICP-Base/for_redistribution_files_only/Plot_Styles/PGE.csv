@@ -1,7 +1,0 @@
-Analytes,Color,LineWidth,Linestyle,Marker,MarkerSize,MarkerFaceColor,MarkerEdgeColor
-Ru99,blue,2,-,o,2,blue,black
-Rh103,cyan,2,-,o,2,blue,black
-Pd105,green,2,-,o,2,blue,black
-Os189,red,2,--,+,2,red,black
-Ir193,red,2,--,+,2,red,black
-Pt195,cyan,2,-,d,2,green,red
