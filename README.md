@@ -16,7 +16,7 @@ ICP-Base is licensed under GPL-3.0
 ## Getting started
 
 Standalone application:
-ICP-Base is downloaded and installed as an application. Standalone versions are available for Windows, Mac, and Linux operating systems. You can download the installer executable that is suitable for your operating system [here](https://github.com/GeoSebastianStumpf/ICP-Base/releases). Detailed instructions on how to install ICP-Base can be found in "How to get ICP-Base running.docx" which is found in the release files.
+ICP-Base is downloaded and installed as an application. Standalone versions are available for Windows, Mac, and Linux operating systems. You can download the installer executable that is suitable for your operating system [here](https://github.com/GeoSebastianStumpf/ICP-Base/releases). Detailed instructions on how to install ICP-Base can be found in "How to get ICP-Base running.pdf" which is found in the release files.
 
 Source Code:
 The software is best executed in MATLAB 2021b, the version in which it was originally developed, and one that still maintains compatibility with Windows 7 environments.
