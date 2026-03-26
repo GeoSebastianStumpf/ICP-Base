@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="2105258777" file="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base.prj" location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev" name="ICP-Base" preferred-package-location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration build-checksum="1979488204" file="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base.prj" location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev" name="ICP-Base" preferred-package-location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>ICP_Base</param.appname>
     <param.icon>${PROJECT_ROOT}\ICP-Base_resources\icon.ico</param.icon>
     <param.icons>
@@ -46,9 +46,7 @@
 	 
  Input Arguments 
 	 -?  print help on how to use the application 
-	 input arguments 
- Description 
- 	 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.</param.help.text>
+	 input arguments</param.help.text>
     <unset>
       <param.authnamewatermark />
       <param.email />
