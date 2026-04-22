@@ -111,8 +111,12 @@ end
 
 if isfield(options,'C1')&& not(isempty(options.C1)) && ismember(options.C1,T.Properties.VariableNames)
     C1=T.(char(options.C1));
-    if ~ isnumeric(C1) && iscell(C1)
-        C1 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), C1);
+    if ~isnumeric(C1) && iscell(C1)
+        cens      = cellfun(@(x) ischar(x) && startsWith(x, '<'), C1);
+        str       = cellfun(@ischar, C1) & ~cens;
+        C1(cens)  = {NaN};
+        C1(str)   = num2cell(cellfun(@str2double, C1(str)));
+        C1        = cell2mat(C1);
     end
 
 elseif isfield(options,'C1')&& not(isempty(options.C1)) && strcmp(options.C1,'1:n')

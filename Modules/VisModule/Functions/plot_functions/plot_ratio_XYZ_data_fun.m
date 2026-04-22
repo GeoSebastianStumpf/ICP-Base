@@ -67,65 +67,83 @@ else
     symbsize= options.plot_settings.symbol_size;
 end
 
-
-if isfield(options,'X1')&& not(isempty(options.X1))
-    A0=T.(char(options.X1));
-    if ~ isnumeric(A0) && iscell(A0)
-        A0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), A0);
+if isfield(options,'X1') && not(isempty(options.X1))
+    A0 = T.(char(options.X1));
+    if ~isnumeric(A0) && iscell(A0)
+        cens      = cellfun(@(x) ischar(x) && startsWith(x, '<'), A0);
+        str       = cellfun(@ischar, A0) & ~cens;
+        A0(cens)  = {NaN};
+        A0(str)   = num2cell(cellfun(@str2double, A0(str)));
+        A0        = cell2mat(A0);
     end
-
 else
-    A0=ones(size(T,1),1);
-end
-if isfield(options,'Y1')&& not(isempty(options.Y1))
-    B0=T.(char(options.Y1));
-    if ~ isnumeric(B0) && iscell(B0)
-        B0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), B0);
-    end
-
-else
-    B0=ones(size(T,1),1);
-end
-if isfield(options,'Z1')&& not(isempty(options.Z1))
-    C0=T.(char(options.Z1));
-    if ~ isnumeric(C0) && iscell(C0)
-        C0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), C0);
-    end
-
-else
-    C0=ones(size(T,1),1);
+    A0 = ones(size(T,1),1);
 end
 
-if isfield(options,'D1')&& not(isempty(options.D1))
-    D0=T.(char(options.D1));
-    if ~ isnumeric(D0) && iscell(D0)
-        D0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), D0);
+if isfield(options,'Y1') && not(isempty(options.Y1))
+    B0 = T.(char(options.Y1));
+    if ~isnumeric(B0) && iscell(B0)
+        cens      = cellfun(@(x) ischar(x) && startsWith(x, '<'), B0);
+        str       = cellfun(@ischar, B0) & ~cens;
+        B0(cens)  = {NaN};
+        B0(str)   = num2cell(cellfun(@str2double, B0(str)));
+        B0        = cell2mat(B0);
     end
-
 else
-    D0=ones(size(T,1),1);
+    B0 = ones(size(T,1),1);
 end
 
-if isfield(options,'E1')&& not(isempty(options.E1))
-    E0=T.(char(options.E1));
-    if ~ isnumeric(E0) && iscell(E0)
-        E0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), E0);
+if isfield(options,'Z1') && not(isempty(options.Z1))
+    C0 = T.(char(options.Z1));
+    if ~isnumeric(C0) && iscell(C0)
+        cens      = cellfun(@(x) ischar(x) && startsWith(x, '<'), C0);
+        str       = cellfun(@ischar, C0) & ~cens;
+        C0(cens)  = {NaN};
+        C0(str)   = num2cell(cellfun(@str2double, C0(str)));
+        C0        = cell2mat(C0);
     end
-
 else
-    E0=ones(size(T,1),1);
+    C0 = ones(size(T,1),1);
 end
 
-if isfield(options,'F1')&& not(isempty(options.F1))
-    F0=T.(char(options.F1));
-    if ~ isnumeric(F0) && iscell(F0)
-        F0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), F0);
+if isfield(options,'D1') && not(isempty(options.D1))
+    D0 = T.(char(options.D1));
+    if ~isnumeric(D0) && iscell(D0)
+        cens      = cellfun(@(x) ischar(x) && startsWith(x, '<'), D0);
+        str       = cellfun(@ischar, D0) & ~cens;
+        D0(cens)  = {NaN};
+        D0(str)   = num2cell(cellfun(@str2double, D0(str)));
+        D0        = cell2mat(D0);
     end
-
 else
-    F0=ones(size(T,1),1);
+    D0 = ones(size(T,1),1);
 end
 
+if isfield(options,'E1') && not(isempty(options.E1))
+    E0 = T.(char(options.E1));
+    if ~isnumeric(E0) && iscell(E0)
+        cens      = cellfun(@(x) ischar(x) && startsWith(x, '<'), E0);
+        str       = cellfun(@ischar, E0) & ~cens;
+        E0(cens)  = {NaN};
+        E0(str)   = num2cell(cellfun(@str2double, E0(str)));
+        E0        = cell2mat(E0);
+    end
+else
+    E0 = ones(size(T,1),1);
+end
+
+if isfield(options,'F1') && not(isempty(options.F1))
+    F0 = T.(char(options.F1));
+    if ~isnumeric(F0) && iscell(F0)
+        cens      = cellfun(@(x) ischar(x) && startsWith(x, '<'), F0);
+        str       = cellfun(@ischar, F0) & ~cens;
+        F0(cens)  = {NaN};
+        F0(str)   = num2cell(cellfun(@str2double, F0(str)));
+        F0        = cell2mat(F0);
+    end
+else
+    F0 = ones(size(T,1),1);
+end
 
 
 
@@ -137,8 +155,12 @@ Z1=E0./F0;
 
 if isfield(options,'C1')&& not(isempty(options.C1)) && ismember(options.C1,T.Properties.VariableNames)
     C1=T.(char(options.C1));
-    if ~ isnumeric(C1) && iscell(C1)
-        C1 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), C1);
+    if ~isnumeric(C1) && iscell(C1)
+        cens      = cellfun(@(x) ischar(x) && startsWith(x, '<'), C1);
+        str       = cellfun(@ischar, C1) & ~cens;
+        C1(cens)  = {NaN};
+        C1(str)   = num2cell(cellfun(@str2double, C1(str)));
+        C1        = cell2mat(C1);
     end
 elseif isfield(options,'C1')&& not(isempty(options.C1)) && strcmp(options.C1,'1:n')
     C1=(1:size(T,1))';
