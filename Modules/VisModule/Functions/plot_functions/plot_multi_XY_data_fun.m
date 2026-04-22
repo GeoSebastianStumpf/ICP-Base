@@ -64,7 +64,7 @@ if  (isfield(options,'default') && options.default==true) || not(isfield(options
     symbsize=100;
     options_definition.plot_settings.symbol_size=symbsize;
 else
-    symbsize= options.plot_settings.symbol_size;
+    symbsize= options.plot_settings.symbol_size/2;
 end
 
 legend_str={};
@@ -225,44 +225,56 @@ switch options.type.Value
         Y1(1)=  {T.Na2O};
         Y1(2)=  {T.Cr2O3};
         Y1(3)=  {T.Al2O3};
-    case 'clinopyroxene_xMg_Endmember_HPT'
-        X1(1:10)=  {100.*T.apfu_Mg./(T.apfu_Mg+T.apfu_Fe2)};
-        % if ismember(T.Properties.VariableNames,))
-        Y1(1)=  {T.StrctFrm_Xjd};
-        Y1(2)=  {T.StrctFrm_Xaeg};
-        Y1(3)=  {T.StrctFrm_Xdihd};
-        Y1(4)=  {T.StrctFrm_Xks};
-        Y1(5)=  {T.StrctFrm_Xkos};
-        Y1(6)=  {T.StrctFrm_XKkos};
-        Y1(7)=  {T.StrctFrm_XKjd};
-        Y1(8)=  {T.StrctFrm_XTicpx};
-        Y1(9)=  {T.StrctFrm_XCaes};
-        Y1(10)=  {T.StrctFrm_Xopx};
     case 'clinopyroxene_xMg_Endmember'
-        X1(1:7)=  {100.*T.apfu_Mg./(T.apfu_Mg+T.apfu_Fe2)};
-        if ismember('HighPT_Endmembers',T.Properties.VariableNames) && any(T.HighPT_Endmembers)==1
-            return
-        end
+        X1(1:16)=  {100.*T.apfu_Mg./(T.apfu_Mg+T.apfu_Fe2)};
 
+        Y1(1)={T.StrctFrm_XCrAl};
+        Y1(2)={T.StrctFrm_XAlAl};
+        Y1(3)={T.StrctFrm_XFe3Al};
+        Y1(4)={T.StrctFrm_XTiAl};
+        Y1(5)={T.StrctFrm_Xtss};
+        Y1(6)={T.StrctFrm_Xdi};
+        Y1(7)={T.StrctFrm_Xhd};
+        Y1(8)={T.StrctFrm_Xjhn};
+        Y1(9)={T.StrctFrm_Xen};
+        Y1(10)={T.StrctFrm_Xfs};
+        Y1(11)={T.StrctFrm_Xrho};
+        Y1(12)={T.StrctFrm_XKcpx};
+        Y1(13)={T.StrctFrm_Xaeg};
+        Y1(14)={T.StrctFrm_Xkos};
+        Y1(15)={T.StrctFrm_Xjd};
+        Y1(16)={T.StrctFrm_XNaTi};
+
+    case 'clinopyroxene_xMg_Endmember_short'
+        X1(1:7)=  {100.*T.apfu_Mg./(T.apfu_Mg+T.apfu_Fe2)};
+        Xdihd=T.StrctFrm_Xdi+T.StrctFrm_Xhd;
+        Xopx=T.StrctFrm_Xen+T.StrctFrm_Xfs;
+        quad=Xdihd+Xopx;
+
+            Xwo=T.apfu_Ca./(T.apfu_Ca+T.apfu_Mg+T.apfu_Fe2+T.apfu_Mn2);
+
+
+        Y1(1)=  {Xwo};
         Y1(2)=  {T.StrctFrm_Xfs};
         Y1(3)=  {T.StrctFrm_Xen};
         Y1(4)=  {T.StrctFrm_Xjd};
         Y1(5)=  {T.StrctFrm_Xaeg};
         Y1(6)=  {T.StrctFrm_Xkos};
-        Y1(7)=  {T.StrctFrm_Xquad};
+        Y1(7)=  {quad};
     case 'clinopyroxene_multi_xMg'
         X1(1:4)=  {100.*T.apfu_Mg./(T.apfu_Mg+T.apfu_Fe2)};
 
 
         Y1(1)=  {T.apfu_Al};
 
-        if ismember('HighPT_Endmembers',T.Properties.VariableNames) && any(T.HighPT_Endmembers)
-            XCa=T.apfu_Ca./(T.apfu_Ca+T.apfu_Mg+T.apfu_Fe2+T.apfu_Mn2);
-            Xwo=(XCa.*(T.StrctFrm_Xdihd+T.StrctFrm_Xopx))./(T.StrctFrm_Xdihd+T.StrctFrm_Xopx);
-            Y1(2)={Xwo};
-        else
-            Y1(2)=  {T.StrctFrm_Xwo};
-        end
+        Xopx=T.StrctFrm_Xen+T.StrctFrm_Xfs;
+        Xdihd=T.StrctFrm_Xdi+T.StrctFrm_Xhd;
+
+        XCa=T.apfu_Ca./(T.apfu_Ca+T.apfu_Mg+T.apfu_Fe2+T.apfu_Mn2);
+        Xwo=(XCa.*(Xdihd+Xopx))./(Xdihd+Xopx);
+        Y1(2)={Xwo};
+
+
         % Y1(2)=  {T.apfu_Ca};
 
         Y1(3)=  {T.StrctFrm_Xjd};
@@ -282,7 +294,7 @@ switch options.type.Value
         % X1(4)=  {T.Integration3588_3605B+T.Integration3460_3530Li+T.Integration3340_3460Al};
         X1(4)=  {T.Al_FTIR+T.Li_FTIR+T.B_FTIR};
     case 'unknown_custom2'
-        %   y_label_str={'Ti [µg/g]','Al [µm]','Li [µg/g]','B [µg/g]','Temperature [C°]'};
+        %   y_label_str=Y1(n)=T.Ti [µg/g]','Al [µm]','Li [µg/g]','B [µg/g]','Temperature [C°]'};
         Y1(1)=  {T.Ti_ICP};
         X1(1)=  {T.DistanceFromRim__m_};
 
@@ -314,7 +326,12 @@ try
             legend_test=false(numel(X1),1);
             for n=1:numel(X1)
                 hold(ax2plot(n),'on');
-                s=  scatter(ax2plot(n),X1{n},Y1{n},symbsize,symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'MarkerFaceColor',fil,'LineWidth',mlw);
+                if isfield(options,'plot_settings') && isfield(options.plot_settings,'Tag')
+                    s=  scatter(ax2plot(n),X1{n},Y1{n},symbsize,symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'MarkerFaceColor',fil,'LineWidth',mlw,'Tag',options.plot_settings.Tag);
+                else
+                    s=  scatter(ax2plot(n),X1{n},Y1{n},symbsize,symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'MarkerFaceColor',fil,'LineWidth',mlw);
+                end
+
                 hold(ax2plot(n),'off');
                 if sum(not(any([isnan(X1{n}) isnan(Y1{n})],2)))>0 %sum(not(isnan(X1{n})))==numel(X1{n}) && sum(not(isnan(Y1{n})))==numel(Y1{n})
                     legend_test(n)=true;

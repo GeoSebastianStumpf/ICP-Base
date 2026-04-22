@@ -88,44 +88,28 @@ end
 
 switch options.type.Value
     case 'tern_woenfe'
-        if ismember('HighPT_Endmembers',T.Properties.VariableNames) && any(T.HighPT_Endmembers)==1
-
             XCa=T.apfu_Ca./(T.apfu_Ca+T.apfu_Mg+T.apfu_Fe2+T.apfu_Mn2);
             XFe=T.apfu_Fe2./(T.apfu_Ca+T.apfu_Mg+T.apfu_Fe2+T.apfu_Mn2);
 
-            Xfs=(XFe.*(T.StrctFrm_Xdihd+T.StrctFrm_Xopx))./(T.StrctFrm_Xdihd+T.StrctFrm_Xopx);
-            Xwo=(XCa.*(T.StrctFrm_Xdihd+T.StrctFrm_Xopx))./(T.StrctFrm_Xdihd+T.StrctFrm_Xopx);
+            Xopx=T.StrctFrm_Xen+T.StrctFrm_Xfs;
+            Xdihd=T.StrctFrm_Xdi+T.StrctFrm_Xhd;
+            Xfs=(XFe.*(Xdihd+Xopx))./(Xdihd+Xopx);
+            Xwo=(XCa.*(Xdihd+Xopx))./(Xdihd+Xopx);
             X1=0.5.*(Xwo)+(Xfs);
             Y1=(Xwo)*(cos(30*pi()/180));
-
-        elseif ismember('StrctFrm_Xfs',T.Properties.VariableNames) &&ismember('StrctFrm_Xwo',T.Properties.VariableNames)
-            %normalize Wo + En + Fs to 1
-            Xfs=T.StrctFrm_Xfs./T.StrctFrm_Xquad;
-            Xwo=T.StrctFrm_Xwo./T.StrctFrm_Xquad;
-            X1=0.5.*(Xwo)+(Xfs);
-            Y1=(Xwo)*(cos(30*pi()/180));
-        end
-
 
     case 'tern_qjdaeg'
-        if ismember('HighPT_Endmembers',T.Properties.VariableNames) && any(T.HighPT_Endmembers)==1
             %normalize quad + jd + aeg to 1
-            quad=T.StrctFrm_Xdihd+T.StrctFrm_Xopx;
+                        Xdihd=T.StrctFrm_Xdi+T.StrctFrm_Xhd;
+            Xopx=T.StrctFrm_Xen+T.StrctFrm_Xfs;
+            quad=Xdihd+Xopx;
 
             Xquad=quad./(quad+T.StrctFrm_Xjd+T.StrctFrm_Xaeg);
             Xaeg=T.StrctFrm_Xaeg./(quad+T.StrctFrm_Xjd+T.StrctFrm_Xaeg);
 
             X1=0.5.*(Xquad)+(Xaeg);
             Y1=(Xquad)*(cos(30*pi()/180));
-        elseif ismember('StrctFrm_Xquad',T.Properties.VariableNames) &&ismember('StrctFrm_Xaeg',T.Properties.VariableNames)
-
-            %normalize quad + jd + aeg to 1
-            Xquad=T.StrctFrm_Xquad./(T.StrctFrm_Xquad+T.StrctFrm_Xjd+T.StrctFrm_Xaeg);
-            Xaeg=T.StrctFrm_Xaeg./(T.StrctFrm_Xquad+T.StrctFrm_Xjd+T.StrctFrm_Xaeg);
-
-            X1=0.5.*(Xquad)+(Xaeg);
-            Y1=(Xquad)*(cos(30*pi()/180));
-        end
+       
     case {'tern_feldspar_simple','tern_feldspar_complex','tern_feldspar_complex2'}
         X1=0.5.*(T.StrctFrm_Xan)+(T.StrctFrm_Xor);
         Y1=(T.StrctFrm_Xan)*(cos(30*pi()/180));
@@ -136,39 +120,41 @@ switch options.type.Value
     case 'tern_grt'
         if ismember('StrctFrm_Xgrs',T.Properties.VariableNames) &&ismember('StrctFrm_Xprp',T.Properties.VariableNames) &&ismember('StrctFrm_Xalm',T.Properties.VariableNames)&&ismember('StrctFrm_Xsps',T.Properties.VariableNames)
 
-        %Normalization of Xgrs + Xprp + Xalm + Xsps to 1
-        Xgrs=T.StrctFrm_Xgrs./(T.StrctFrm_Xgrs+T.StrctFrm_Xprp+T.StrctFrm_Xalm+T.StrctFrm_Xsps);
-        Xprp=T.StrctFrm_Xprp./(T.StrctFrm_Xgrs+T.StrctFrm_Xprp+T.StrctFrm_Xalm+T.StrctFrm_Xsps);
+            %Normalization of Xgrs + Xprp + Xalm + Xsps to 1
+            Xgrs=T.StrctFrm_Xgrs./(T.StrctFrm_Xgrs+T.StrctFrm_Xprp+T.StrctFrm_Xalm+T.StrctFrm_Xsps);
+            Xprp=T.StrctFrm_Xprp./(T.StrctFrm_Xgrs+T.StrctFrm_Xprp+T.StrctFrm_Xalm+T.StrctFrm_Xsps);
 
-        %transforms the data to ternary space
-        X1=0.5.*(Xgrs)+(Xprp);
-        Y1=(Xgrs)*(cos(30*pi()/180));
+            %transforms the data to ternary space
+            X1=0.5.*(Xgrs)+(Xprp);
+            Y1=(Xgrs)*(cos(30*pi()/180));
         end
     case 'tern_grt_half'
         if ismember('StrctFrm_Xgrs',T.Properties.VariableNames) &&ismember('StrctFrm_Xprp',T.Properties.VariableNames) &&ismember('StrctFrm_Xalm',T.Properties.VariableNames)&&ismember('StrctFrm_Xsps',T.Properties.VariableNames)
 
-        %Normalization of Xgrs + Xprp + Xalm + Xsps to 1
-        Xgrs=T.StrctFrm_Xgrs./(T.StrctFrm_Xgrs+T.StrctFrm_Xprp+T.StrctFrm_Xalm+T.StrctFrm_Xsps);
-        Xprp=T.StrctFrm_Xprp./(T.StrctFrm_Xgrs+T.StrctFrm_Xprp+T.StrctFrm_Xalm+T.StrctFrm_Xsps);
+            %Normalization of Xgrs + Xprp + Xalm + Xsps to 1
+            Xgrs=T.StrctFrm_Xgrs./(T.StrctFrm_Xgrs+T.StrctFrm_Xprp+T.StrctFrm_Xalm+T.StrctFrm_Xsps);
+            Xprp=T.StrctFrm_Xprp./(T.StrctFrm_Xgrs+T.StrctFrm_Xprp+T.StrctFrm_Xalm+T.StrctFrm_Xsps);
 
-        %transforms the data to ternary space
-        X1=0.5.*(Xgrs)+(Xprp);
-        Y1=(Xgrs)*(cos(30*pi()/180));
+            %transforms the data to ternary space
+            X1=0.5.*(Xgrs)+(Xprp);
+            Y1=(Xgrs)*(cos(30*pi()/180));
 
-        X1(Y1>0.34)=nan;
-        Y1(Y1>0.34)=nan;
+            X1(Y1>0.34)=nan;
+            Y1(Y1>0.34)=nan;
         end
     case 'tern_grtTi'
         %transforms the data to ternary space
-        if ismember('StrctFrm_Xadr',T.Properties.VariableNames) &&ismember('StrctFrm_Xmmt',T.Properties.VariableNames) &&ismember('StrctFrm_Xslo',T.Properties.VariableNames)
-
-
+        if ismember('StrctFrm_Xadr',T.Properties.VariableNames) &&ismember('StrctFrm_Xmmt',T.Properties.VariableNames) &&ismember('StrctFrm_Xslo',T.Properties.VariableNames) && any((T.StrctFrm_Xslo+T.StrctFrm_Xmmt+T.StrctFrm_Xadr))>0.01
+            
             %Normalization of Xslo + Xmmt + Xadr to 1
             Xslo=T.StrctFrm_Xslo./(T.StrctFrm_Xslo+T.StrctFrm_Xmmt+T.StrctFrm_Xadr);
             Xmmt=T.StrctFrm_Xmmt./(T.StrctFrm_Xslo+T.StrctFrm_Xmmt+T.StrctFrm_Xadr);
 
             X1=0.5.*(Xmmt)+(Xslo);
             Y1=(Xmmt)*(cos(30*pi()/180));
+
+            X1((T.StrctFrm_Xslo+T.StrctFrm_Xmmt+T.StrctFrm_Xadr)<0.01)=nan;
+            Y1((T.StrctFrm_Xslo+T.StrctFrm_Xmmt+T.StrctFrm_Xadr)<0.01)=nan;
         end
     case 'tern_grtoct'
         if ismember('StrctFrm_Fe3_Oct',T.Properties.VariableNames) && ismember('StrctFrm_Al_Oct',T.Properties.VariableNames) && ismember('StrctFrm_Cr_Oct',T.Properties.VariableNames)
@@ -179,18 +165,19 @@ switch options.type.Value
             X1=0.5.*(Fe3)+(Cr);
             Y1=(Fe3)*(cos(30*pi()/180));
         end
-         case 'tern_mtl_grt1'
+    case 'tern_mtl_grt1'
         %transforms the data to ternary space
-        if ismember('StrctFrm_Xprp',T.Properties.VariableNames) &&ismember('StrctFrm_Xmaj',T.Properties.VariableNames)&&ismember('StrctFrm_Xknr',T.Properties.VariableNames)
+        if ismember('StrctFrm_Xprp',T.Properties.VariableNames) &&ismember('StrctFrm_Xmaj',T.Properties.VariableNames)&&ismember('StrctFrm_Xkor',T.Properties.VariableNames) && any((T.StrctFrm_Xprp+T.StrctFrm_Xprp+T.StrctFrm_Xmaj+T.StrctFrm_Xkor)>0.01)
 
 
-             %Normalization of Xgrs + Xprp + Xalm + Xsps to 1
-        Xmaj=T.StrctFrm_Xmaj./(T.StrctFrm_Xprp+T.StrctFrm_Xprp+T.StrctFrm_Xmaj+T.StrctFrm_Xknr);
-        Xknr=T.StrctFrm_Xknr./(T.StrctFrm_Xprp+T.StrctFrm_Xprp+T.StrctFrm_Xmaj+T.StrctFrm_Xknr);
-
-        %transforms the data to ternary space
-        X1=0.5.*(Xmaj)+(Xknr);
-        Y1=(Xmaj)*(cos(30*pi()/180));
+            %Normalization of Xgrs + Xprp + Xalm + Xsps to 1
+            Xmaj=T.StrctFrm_Xmaj./(T.StrctFrm_Xgrs+T.StrctFrm_Xprp+T.StrctFrm_Xmaj+T.StrctFrm_Xkor);
+            Xkor=T.StrctFrm_Xkor./(T.StrctFrm_Xgrs+T.StrctFrm_Xprp+T.StrctFrm_Xmaj+T.StrctFrm_Xkor);
+            %transforms the data to ternary space
+            X1=0.5.*(Xmaj)+(Xkor);
+            Y1=(Xmaj)*(cos(30*pi()/180));
+                 X1((T.StrctFrm_Xgrs+T.StrctFrm_Xprp+T.StrctFrm_Xmaj+T.StrctFrm_Xkor)<0.01)=nan;
+            Y1((T.StrctFrm_Xgrs+T.StrctFrm_Xprp+T.StrctFrm_Xmaj+T.StrctFrm_Xkor)<0.01)=nan;
         end
     case 'tern_mscelprl'
 
@@ -240,30 +227,30 @@ switch options.type.Value
         Y1=(F)*(cos(30*pi()/180));
 
     case 'tern_ap2'
-             %  'apatite: Ca+Sr+Ba-REE^{3+}-Na+K ternary';2
-     %variables for the ternary plot
+        %  'apatite: Ca+Sr+Ba-REE^{3+}-Na+K ternary';2
+        %variables for the ternary plot
 
- 
-     REE = T.apfu_Ce + T.apfu_La ; %add Pr and Nd
+
+        REE = T.apfu_Ce + T.apfu_La ; %add Pr and Nd
         Na_K = T.apfu_Na+T.apfu_K;
         X1=0.5.*(Na_K)+(REE);
         Y1=(Na_K)*(cos(30*pi()/180));
 
 
-            
+
 
 
     case 'tern_ap3'
-       % 'apatite: Ca-Sr+Ba-Na+K+REE';3
-    %variables for the ternary plot
-  %  if T.apfu_Na+T.apfu_K<0.9 || T.apfu_Na+T.apfu_K>1.1
+        % 'apatite: Ca-Sr+Ba-Na+K+REE';3
+        %variables for the ternary plot
+        %  if T.apfu_Na+T.apfu_K<0.9 || T.apfu_Na+T.apfu_K>1.1
 
 
         Sr = (T.apfu_Sr + T.apfu_Ba);
         Na_K_REE = T.apfu_Na+T.apfu_K+T.apfu_Ce+T.apfu_La;
         X1=0.5.*(Na_K_REE)+(Sr);
         Y1=(Na_K_REE)*(cos(30*pi()/180));
- %   end
+        %   end
 
 
     case 'tern_scap'
@@ -301,7 +288,7 @@ switch options.type.Value
         %transforms the data to ternary space
         X1=0.5.*(XCa)+(XMg);
         Y1=(XCa)*(cos(30*pi()/180));
- case 'tern_ep_cz_pm'
+    case 'tern_ep_cz_pm'
 
         %Normalization of Xgrs + Xprp + Xalm + Xsps to 1
         Mn3=T.apfu_Mn3./(T.apfu_Mn3+T.apfu_Fe3+T.apfu_Al);
@@ -314,16 +301,28 @@ switch options.type.Value
 
         if isfield(options,'X1')&& not(isempty(options.X1))
             X0=T.(char(options.X1));
+            if ~ isnumeric(X0) && iscell(X0)
+                X0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), X0);
+            end
+
         else
             X0=(1:size(T,1))';
         end
         if isfield(options,'Y1')&& not(isempty(options.Y1))
             Y0=T.(char(options.Y1));
+            if ~ isnumeric(Y0) && iscell(Y0)
+                Y0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), Y0);
+            end
+
         else
             Y0=(1:size(T,1))';
         end
         if isfield(options,'Z1')&& not(isempty(options.Z1))
             Z0=T.(char(options.Z1));
+            if ~ isnumeric(Z0) && iscell(Z0)
+                Z0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), Z0);
+            end
+
         else
             Z0=(1:size(T,1))';
         end
@@ -338,6 +337,9 @@ end
 
 if isfield(options,'C1')&& not(isempty(options.C1)) && ismember(options.C1,T.Properties.VariableNames)
     C1=T.(char(options.C1));
+    if ~ isnumeric(C1) && iscell(C1)
+        C1 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), C1);
+    end
 elseif isfield(options,'C1')&& not(isempty(options.C1)) && strcmp(options.C1,'1:n')
     C1=(1:size(T,1))';
 else
@@ -370,7 +372,7 @@ if  exist('X1','var') &&  exist('Y1','var') &&any(not(any((isnan([X1 Y1])),2)))
         s= scatter(ax2plot,X1(:),Y1(:),symbsize,C1(:),symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'LineWidth',mlw);
         cbar= colorbar;
         cbar.Label.String=cbar_str;
-cbar.Label.Interpreter=ax2plot.XAxis.Label.Interpreter;
+        cbar.Label.Interpreter=ax2plot.XAxis.Label.Interpreter;
 
     else
         s=  scatter(ax2plot,X1(:),Y1(:),symbsize,symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'MarkerFaceColor',fil,'LineWidth',mlw);

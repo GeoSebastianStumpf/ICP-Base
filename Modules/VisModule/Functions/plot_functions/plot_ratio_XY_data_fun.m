@@ -70,28 +70,48 @@ end
 
 if isfield(options,'X1')&& not(isempty(options.X1))
     A0=T.(char(options.X1));
+    if ~ isnumeric(A0) && iscell(A0)
+        A0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), A0);
+    end
+
 else
     A0=1';
 end
 if isfield(options,'Y1')&& not(isempty(options.Y1))
     B0=T.(char(options.Y1));
+    if ~ isnumeric(B0) && iscell(B0)
+        B0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), B0);
+    end
+
 else
     B0=1';
 end
 if isfield(options,'Z1')&& not(isempty(options.Z1))
     C0=T.(char(options.Z1));
+    if ~ isnumeric(C0) && iscell(C0)
+        C0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), C0);
+    end
+
 else
     C0=1';
 end
 
 if isfield(options,'D1')&& not(isempty(options.D1))
     D0=T.(char(options.D1));
+    if ~ isnumeric(D0) && iscell(D0)
+        D0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), D0);
+    end
+
 else
     D0=1';
 end
 
 if isfield(options,'C1')&& not(isempty(options.C1))
     C1=T.(char(options.C1));
+    if ~ isnumeric(C1) && iscell(C1)
+        C1 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), C1);
+    end
+
 else
     C1=1';
 end

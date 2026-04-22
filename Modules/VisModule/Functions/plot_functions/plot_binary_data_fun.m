@@ -111,6 +111,10 @@ end
 
 if isfield(options,'C1')&& not(isempty(options.C1)) && ismember(options.C1,T.Properties.VariableNames)
     C1=T.(char(options.C1));
+    if ~ isnumeric(C1) && iscell(C1)
+        C1 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), C1);
+    end
+
 elseif isfield(options,'C1')&& not(isempty(options.C1)) && strcmp(options.C1,'1:n')
     C1=1:size(T,1);
 else

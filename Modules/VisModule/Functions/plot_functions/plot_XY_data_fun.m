@@ -116,11 +116,11 @@ switch options.type.Value
         if ismember('StrctFrm_XKkos',T.Properties.VariableNames) && ismember('StrctFrm_XKjd',T.Properties.VariableNames)
             Y1=T.StrctFrm_XKkos + T.StrctFrm_XKjd;
             X1=T.StrctFrm_XCaes;
-        end    
+        end
     case 'cpx_alkaline'
-            Y1=T.apfu_Na ./ (T.apfu_Na+T.apfu_Ca);
-            X1=T.StrctFrm_Al_T./(T.StrctFrm_Al_T+T.StrctFrm_Fe3_T);
-        
+        Y1=T.apfu_Na ./ (T.apfu_Na+T.apfu_Ca);
+        X1=T.StrctFrm_Al_T./(T.StrctFrm_Al_T+T.StrctFrm_Fe3_T);
+
     case 'ol_NiO_XY'
         X1=T.StrctFrm_XFo.*100;
         if any(strcmp(T.Properties.VariableNames,'NiO'))
@@ -261,11 +261,18 @@ switch options.type.Value
     case 'custom_XY'
         if isfield(options,'X1')&& not(isempty(options.X1))
             X1=T.(char(options.X1));
+            if ~isnumeric(X1) && iscell(X1)
+                X1 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), X1);
+            end
         else
             X1=(1:size(T,1))';
         end
+
         if isfield(options,'Y1')&& not(isempty(options.Y1))
             Y1=T.(char(options.Y1));
+            if ~ isnumeric(Y1) && iscell(Y1)
+                Y1 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), Y1);
+            end
         else
             Y1=(1:size(T,1))';
         end
@@ -274,6 +281,9 @@ end
 
 if isfield(options,'C1')&& not(isempty(options.C1)) && ismember(options.C1,T.Properties.VariableNames)
     C1=T.(char(options.C1));
+    if ~ isnumeric(C1) && iscell(C1)
+        C1 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), C1);
+    end
 elseif isfield(options,'C1')&& not(isempty(options.C1)) && strcmp(options.C1,'1:n')
     C1=1:size(T,1);
 else
@@ -308,20 +318,20 @@ if  exist('X1','var') &&  exist('Y1','var') %% && any(not(any((isnan([X1 Y1])),2
         s=scatter(ax2plot,X1(:),Y1(:),symbsize,C1(:),symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'LineWidth',mlw);
         cbar= colorbar;
         cbar.Label.String=cbar_str;
-cbar.Label.Interpreter=ax2plot.XAxis.Label.Interpreter;
+        cbar.Label.Interpreter=ax2plot.XAxis.Label.Interpreter;
 
 
     else
 
 
-if isfield(options,'plot_settings') && isfield(options.plot_settings,'plot_mean_error')&& isfield(options.plot_settings.plot_mean_error,'Value') && options.plot_settings.plot_mean_error.Value==true
+        if isfield(options,'plot_settings') && isfield(options.plot_settings,'plot_mean_error')&& isfield(options.plot_settings.plot_mean_error,'Value') && options.plot_settings.plot_mean_error.Value==true
             x_plot_error= std(X1)./sqrt(length(X1));
             y_plot_error=std(Y1)./sqrt(length(Y1));
             errorbar(ax2plot,mean(X1),mean(Y1),y_plot_error,y_plot_error,x_plot_error,x_plot_error,'')
             scatter(ax2plot,mean(X1),mean(Y1),symbsize,symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'MarkerFaceColor',fil,'LineWidth',mlw)
-  else
-        s=scatter(ax2plot,(X1),(Y1),symbsize,symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'MarkerFaceColor',fil,'LineWidth',mlw);
-  end
+        else
+            s=scatter(ax2plot,(X1),(Y1),symbsize,symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'MarkerFaceColor',fil,'LineWidth',mlw);
+        end
 
 
     end

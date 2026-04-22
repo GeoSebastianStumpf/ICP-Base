@@ -141,21 +141,31 @@ switch options.type.Value
         Z1=T.apfu_Si(condition);
 
     case 'custom_XYZ'
+
         if isfield(options,'X1')&& not(isempty(options.X1))
             X1=T.(char(options.X1));
+            if ~isnumeric(X1) && iscell(X1)
+                X1 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), X1);
+            end
         else
             X1=(1:size(T,1))';
         end
         if isfield(options,'Y1')&& not(isempty(options.Y1))
             Y1=T.(char(options.Y1));
+            if ~ isnumeric(Y1) && iscell(Y1)
+                Y1 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), Y1);
+            end
         else
             Y1=(1:size(T,1))';
         end
 
-        if isfield(options,'Z1')&& not(isempty(options.Z1))
-            Z1=T.(char(options.Z1));
+        if isfield(options,'Z1')&& not(isempty(options.Y1))
+            Z1=T.(char(options.Y1));
+            if ~ isnumeric(Z1) && iscell(Z1)
+                Z1 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), Z1);
+            end
         else
-            Z1=zeros(size(Y1));
+            Z1=(1:size(T,1))';
         end
 
 

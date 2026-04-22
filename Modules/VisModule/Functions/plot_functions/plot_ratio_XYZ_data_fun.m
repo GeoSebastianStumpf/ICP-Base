@@ -70,34 +70,58 @@ end
 
 if isfield(options,'X1')&& not(isempty(options.X1))
     A0=T.(char(options.X1));
+    if ~ isnumeric(A0) && iscell(A0)
+        A0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), A0);
+    end
+
 else
     A0=ones(size(T,1),1);
 end
 if isfield(options,'Y1')&& not(isempty(options.Y1))
     B0=T.(char(options.Y1));
+    if ~ isnumeric(B0) && iscell(B0)
+        B0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), B0);
+    end
+
 else
     B0=ones(size(T,1),1);
 end
 if isfield(options,'Z1')&& not(isempty(options.Z1))
     C0=T.(char(options.Z1));
+    if ~ isnumeric(C0) && iscell(C0)
+        C0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), C0);
+    end
+
 else
     C0=ones(size(T,1),1);
 end
 
 if isfield(options,'D1')&& not(isempty(options.D1))
     D0=T.(char(options.D1));
+    if ~ isnumeric(D0) && iscell(D0)
+        D0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), D0);
+    end
+
 else
     D0=ones(size(T,1),1);
 end
 
 if isfield(options,'E1')&& not(isempty(options.E1))
     E0=T.(char(options.E1));
+    if ~ isnumeric(E0) && iscell(E0)
+        E0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), E0);
+    end
+
 else
     E0=ones(size(T,1),1);
 end
 
 if isfield(options,'F1')&& not(isempty(options.F1))
     F0=T.(char(options.F1));
+    if ~ isnumeric(F0) && iscell(F0)
+        F0 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), F0);
+    end
+
 else
     F0=ones(size(T,1),1);
 end
@@ -113,6 +137,9 @@ Z1=E0./F0;
 
 if isfield(options,'C1')&& not(isempty(options.C1)) && ismember(options.C1,T.Properties.VariableNames)
     C1=T.(char(options.C1));
+    if ~ isnumeric(C1) && iscell(C1)
+        C1 = cellfun(@(x) str2double(x) * ~startsWith(string(x), '<'), C1);
+    end
 elseif isfield(options,'C1')&& not(isempty(options.C1)) && strcmp(options.C1,'1:n')
     C1=(1:size(T,1))';
 else
@@ -125,13 +152,13 @@ if exist('condition','var')
 end
 
 if  exist('X1','var') &&  exist('Y1','var') &&  exist('Z1','var') %&&any(not(any((isnan([X1 Y1 Z1])),2)))
-   if isfield(options,'custom') && isfield(options.custom,'Annotation')&& options.custom.Annotation==true && isfield(options.custom,'AnnotationColumn')
-    label_list=cell(1,numel(options.custom.AnnotationColumn));
-    for anl=1:numel(options.custom.AnnotationColumn)
-        label_list{anl}=T.(options.custom.AnnotationColumn{anl});
+    if isfield(options,'custom') && isfield(options.custom,'Annotation')&& options.custom.Annotation==true && isfield(options.custom,'AnnotationColumn')
+        label_list=cell(1,numel(options.custom.AnnotationColumn));
+        for anl=1:numel(options.custom.AnnotationColumn)
+            label_list{anl}=T.(options.custom.AnnotationColumn{anl});
+        end
     end
-   end
-   
+
     if isfield(options,'ColorData') && isfield(options.ColorData,'Value') && options.ColorData.Value && isfield(options.ColorData,'colormap') && not(isempty(options.ColorData.colormap))
         colormap(ax2plot,options.ColorData.colormap)
 
@@ -144,19 +171,19 @@ if  exist('X1','var') &&  exist('Y1','var') &&  exist('Z1','var') %&&any(not(any
         s=  scatter3(ax2plot,X1(not(any(isnan([X1 Y1 Z1]),2))),Y1(not(any(isnan([X1 Y1 Z1]),2))),Z1(not(any(isnan([X1 Y1 Z1]),2))),symbsize,C1(not(any(isnan([X1 Y1 Z1]),2))),symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'LineWidth',mlw);
         cbar= colorbar;
         cbar.Label.String=cbar_str;
-cbar.Label.Interpreter=ax2plot.XAxis.Label.Interpreter;
+        cbar.Label.Interpreter=ax2plot.XAxis.Label.Interpreter;
 
-     
+
     else
-      s=  scatter3(ax2plot,X1(not(any(isnan([X1 Y1 Z1]),2))),Y1(not(any(isnan([X1 Y1 Z1]),2))),Z1(not(any(isnan([X1 Y1 Z1]),2))),symbsize,symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'MarkerFaceColor',fil,'LineWidth',mlw);
+        s=  scatter3(ax2plot,X1(not(any(isnan([X1 Y1 Z1]),2))),Y1(not(any(isnan([X1 Y1 Z1]),2))),Z1(not(any(isnan([X1 Y1 Z1]),2))),symbsize,symb,'filled','MarkerFaceAlpha',mfa,'MarkerEdgeAlpha',mea,'MarkerEdgeColor',mec,'MarkerFaceColor',fil,'LineWidth',mlw);
     end
-        if exist("label_list","var")
-            s.DataTipTemplate.Interpreter='none';
+    if exist("label_list","var")
+        s.DataTipTemplate.Interpreter='none';
 
-            for anl=1:numel(options.custom.AnnotationColumn)
-                s.DataTipTemplate.DataTipRows(end+1) = dataTipTextRow(string(options.custom.AnnotationColumn{anl}), @(x) string(label_list{anl}));
-            end
-        end        
+        for anl=1:numel(options.custom.AnnotationColumn)
+            s.DataTipTemplate.DataTipRows(end+1) = dataTipTextRow(string(options.custom.AnnotationColumn{anl}), @(x) string(label_list{anl}));
+        end
+    end
 
     if  isfield(options,'legend') && isfield(options.legend,'String')
         legend_str=options.legend.String(any(not(isnan(X1)) & not(isnan(Y1))));
