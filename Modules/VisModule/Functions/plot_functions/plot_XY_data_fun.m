@@ -193,7 +193,7 @@ switch options.type.Value
     case 'mica_XY_ph'
 
         %only plots Dioctahedral, 50 % rule
-        condition=T.StrctFrm_XDiOct >= 0.50;
+        condition=T.Endmembers_XDiOct >= 0.50;
 
         X1=T.apfu_Al(condition);
         Y1=T.apfu_Si(condition);
@@ -209,7 +209,7 @@ switch options.type.Value
     case 'mica_XY_bio'
 
         %only plots trioctahedral, 50 % rule
-        condition=T.StrctFrm_XTriOct >= 0.50;
+        condition=T.Endmembers_XTriOct >= 0.50;
 
         XMg=zeros(size(T,1),1);
         XMg(T.StrctFrm_Mg_M>0)=T.StrctFrm_Mg_M(T.StrctFrm_Mg_M>0)./(T.StrctFrm_Mg_M(T.StrctFrm_Mg_M>0)+T.StrctFrm_Fe2_M(T.StrctFrm_Mg_M>0));

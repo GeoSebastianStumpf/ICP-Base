@@ -111,8 +111,8 @@ switch options.type.Value
             Y1=(Xquad)*(cos(30*pi()/180));
        
     case {'tern_feldspar_simple','tern_feldspar_complex','tern_feldspar_complex2'}
-        X1=0.5.*(T.StrctFrm_Xan)+(T.StrctFrm_Xor);
-        Y1=(T.StrctFrm_Xan)*(cos(30*pi()/180));
+        X1=0.5.*(T.Endmembers_Xan)+(T.Endmembers_Xor);
+        Y1=(T.Endmembers_Xan)*(cos(30*pi()/180));
     case 'tern_ol'
 
         X1=0.5.*(T.StrctFrm_XLrn)+(T.StrctFrm_XFa+T.StrctFrm_XTep);
@@ -182,11 +182,11 @@ switch options.type.Value
     case 'tern_mscelprl'
 
         %only plots Dioctahedral, 50 % rule
-        condition=T.StrctFrm_XDiOct >= 0.50;
+        condition=T.Endmembers_XDiOct >= 0.50;
 
         %normalize the ternary components to 1
-        XAlCelN=T.StrctFrm_XAlcel./(T.StrctFrm_XAlcel+T.StrctFrm_Xprl+T.StrctFrm_Xms);
-        XPrlN=T.StrctFrm_Xprl./(T.StrctFrm_XAlcel+T.StrctFrm_Xprl+T.StrctFrm_Xms);
+        XAlCelN=T.Endmembers_XAlcel./(T.Endmembers_XAlcel+T.Endmembers_Xprl+T.Endmembers_Xms);
+        XPrlN=T.Endmembers_Xprl./(T.Endmembers_XAlcel+T.Endmembers_Xprl+T.Endmembers_Xms);
 
         %transforms the data to ternary space
         X1=0.5.*(XAlCelN(condition))+(XPrlN(condition));
