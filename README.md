@@ -23,9 +23,9 @@ The software is best executed in MATLAB 2021b, the version in which it was origi
 
 ## Feedback, Features and Bugs
 
-If you are using an LA or ICP-MS system for which file import is not yet supported, please send an example data file along with the brand and model name of your LA or ICP-MS system to sebastian.stumpf@unibe.ch.
+ICP-Base was programmed within a relatively short timeframe by S. Stumpf, without formal training in software engineering. While every effort has been made to thoroughly test the software and ensure it is as stable and reliable as possible, some edge cases may still result in unexpected behavior. If an error or such unexpected behaviour is encountered please conduct the Common_Pitfalls_ICP-Base.pdf file found in the release files. This file will answer some of the most common pitfalls and give detailed instructions on how to report an issue.
 
-ICP-Base was programmed within a relatively short timeframe by S. Stumpf, without formal training in software engineering. While every effort has been made to thoroughly test the software and ensure it is as stable and reliable as possible, some edge cases may still result in unexpected behavior. If you encounter a bug or any unexpected issue, we would greatly appreciate your feedback. Please send a clear description of the problem along with an example dataset, if possible, to sebastian.stumpf@unibe.ch so we can investigate and continue improving the software.
+If the LA or ICP-MS system in use is not yet supported for file import, please send an example data file along with the detailed brand and model name to sebastian.stumpf@unibe.ch.
 
 Constructive and positive feedback is always welcome!
 
