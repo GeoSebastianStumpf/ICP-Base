@@ -3,7 +3,7 @@
 
 [The latest stable version and up-to-date manuals can be downloaded here](https://github.com/GeoSebastianStumpf/ICP-Base/releases)
 
-[Abstract to cite (Manuscript is submitted to Computers & Geosciences - stay tuned!)](https://doi.org/10.7185/gold2025.30834)
+[Preprint is available here (Manuscript is submitted to Computers & Geosciences - stay tuned!)](https://doi.org/10.31223/X5378S)
 
 ## Welcome to ICP-Base
 
@@ -12,6 +12,16 @@ ICP-Base is a free and open-source software for processing and visualizing Laser
 This software was developed by Sebastian Stumpf in close collaboration with Nils B. Gies, Thomas Pettke, and Marcel Guillong, whose contributions and expertise helped shape the design and functionality of the software.
 
 ICP-Base is licensed under GPL-3.0
+
+## Citation Guidelines
+
+We recommend that you use the following citations in your publications or presentations when referring to data processed and with ICP-Base, e.g., data were processed using ICP-Base (Stumpf et al. 2026).
+
+Stumpf S., Gies N.B., Pettke T.,  Guillong M. (2026). ICP-Base: A free and open-source software solution for centralized LA-ICP-MS data processing, evaluation and management. EarthArXiv. https://doi.org/10.31223/X5378S
+
+If the VisModule from MinPlotX was used to visualize the data we recommend e.g., data were processed using ICP-Base (Stumpf et al. 2026) and visualized using the integrated VisModule ([Walters and Gies 2025](https://doi.org/10.2478/mipo-2025-0003)).
+
+It is not recommended to cite ICP-Base only in the supplementary material, as these citations are not taken into account by citation statistics platforms.
 
 ## Getting started
 
@@ -29,15 +39,6 @@ If the LA or ICP-MS system in use is not yet supported for file import, please s
 
 Constructive and positive feedback is always welcome!
 
-## Citation Guidelines
-
-We recommend that you use the following citations in your publications or presentations when referring to data processed and with ICP-Base, e.g., data were processed using ICP-Base (Stumpf et al. 2025).
-
-Stumpf S., Pettke T., Gies N.B., Guillong M. (2025).  ICP-Base: A new approach to LA-ICP-MS data reduction. Goldschmidt 2025 Conference. https://doi.org/10.7185/gold2025.30834
-
-If the VisModule from MinPlotX was used to visualize the data we recommend e.g., data were processed using ICP-Base (Stumpf et al. 2025) and visualized using the integrated VisModule ([Walters and Gies 2025](https://doi.org/10.2478/mipo-2025-0003)).
-
-It is not recommended to cite ICP-Base only in the supplementary material, as these citations are not taken into account by citation statistics platforms.
 
 
 
