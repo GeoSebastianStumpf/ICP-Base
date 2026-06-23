@@ -3,7 +3,7 @@
 
 [The latest stable version and up-to-date manuals can be downloaded here](https://github.com/GeoSebastianStumpf/ICP-Base/releases)
 
-[Preprint is available here (Manuscript is submitted to Computers & Geosciences - stay tuned!)](https://eartharxiv.org/repository/view/13644/)
+[Preprint is available here (Manuscript is submitted to Computers & Geosciences - stay tuned!)](https://doi.org/10.31223/X5378S)
 
 ## Welcome to ICP-Base
 
