@@ -1,7 +1,7 @@
 !- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 !                                                                 !
 !                    XMAPTOOLS Spider diagrams File               !
-!              Last update (24.06.2026)    Anna Zappatini         !
+!   Last update (24.06.2026)    Anna Zappatini & Sebastian Stumpf !
 !                                                                 !
 !- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ! 
@@ -13,6 +13,10 @@
 !
 ! DO NOT USE ‘>’ or ‘*’ as first character because they are used for the block definitions
 !
+> PM (Palme & O'Neill 2004)
+Li Be B Na P S Cl K Ca Sc Ti V Cr Mn Co Ni Cu Zn As Br Rb Sr Y Zr Nb Mo Sb Cs Ba La Ce Pr Nd Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf W Ta Pb Bi Th U
+1.6 0.062 0.26 2590 87 200 30 260 26100 16.4 1265 86 2520 1050 102 1860 20 53.5 0.068 0.075 0.605 22 4.13 10.3 0.595 0.047 0.054 0.018 6.85 0.6832 1.7529 0.2657 1.341 0.4347 0.1665 0.5855 0.1075 0.7239 0.1597 0.4684 0.07383 0.4774 0.07083 0.3014 0.012 0.043 0.185 0.003 0.0849 0.0229
+
 > CI REE (Barrat et al. 2012)
 La Ce Pr Nd Sm Eu Gd Tb Dy Ho Er Tm Yb Lu
 0.235 0.6 0.091 0.464 0.153 0.0586 0.206 0.0375 0.254 0.0566 0.166 0.0262 0.168 0.0246
