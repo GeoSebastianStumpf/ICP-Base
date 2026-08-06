@@ -55,18 +55,21 @@ try
         disp('  ')
     end
     disp(['Error in message: ' ME.message])
+    disp(getReport(ME,'extended'))
     disp('  ')
     disp('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
     disp('_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
     disp('  ')
     disp('  ')
-catch ME
+catch displayME
     disp('Error occured during: DisplayError(ME,WhichOperation)')
-    for n=numel(ME.stack):-1:1
+    for n=numel(displayME.stack):-1:1
         disp('Error in file:')
-        disp(ME.stack(n).file)
-        disp(['Error in line: ',num2str(ME.stack(n).line)])
+        disp(displayME.stack(n).file)
+        disp(['Error in line: ',num2str(displayME.stack(n).line)])
         disp('_________________________________________')
+            disp(getReport(displayME,'extended'))
+
         disp('  ')
     end
 end
