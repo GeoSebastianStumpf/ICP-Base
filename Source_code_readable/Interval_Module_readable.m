@@ -1,4 +1,4 @@
-% GENERATED from Interval_Module.mlapp on 2026-10-27 10:27 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Interval_Module.mlapp on 2026-10-27 16:55 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Interval_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -1708,7 +1708,7 @@ classdef Interval_Module_readable < matlab.apps.AppBase
 
             app.UIFigure.Tag = sprintf('%d_%d', project_id, session_id);
 
-            watch_session_changes(app, true);
+            watch_session_changes(app);
         end
 
         % Value changed function: ElementLegendListBox
@@ -1888,46 +1888,49 @@ classdef Interval_Module_readable < matlab.apps.AppBase
 
         % Value changed function: bg_lower_indentEditField
         function bg_lower_indentEditFieldValueChanged(app, event)
-            if ~confirm_overwrite_manual_intervals(app)
+          if ~confirm_overwrite_manual_intervals(app)
+                app.bg_lower_indentEditField.Value = event.PreviousValue;
                 return
             end
 
             changes = check_changes(app, 'interval');
             if changes == false
+                app.bg_lower_indentEditField.Value = event.PreviousValue;
                 return
             end
             app.editstatus = true;
-
-            settings.bg_lower_indent = app.bg_lower_indentEditField.Value;
 
             % Ensure the new value does not go below 0
             if app.bg_lower_indentEditField.Value < 0
                 app.bg_lower_indentEditField.Value = 0;
             end
 
+            settings.bg_lower_indent = app.bg_lower_indentEditField.Value;
+
             settings.interval_module_GUI_update_state = true;
             set_automatic_background(app, settings)
-
         end
 
         % Value changed function: bg_upper_indentEditField
         function bg_upper_indentEditFieldValueChanged(app, event)
-            if ~confirm_overwrite_manual_intervals(app)
+           if ~confirm_overwrite_manual_intervals(app)
+                app.bg_upper_indentEditField.Value = event.PreviousValue;
                 return
             end
 
             changes = check_changes(app, 'interval');
             if changes == false
+                app.bg_upper_indentEditField.Value = event.PreviousValue;
                 return
             end
             app.editstatus = true;
-
-            settings.bg_upper_indent = app.bg_upper_indentEditField.Value;
 
             % Ensure the new value does not go below 0
             if app.bg_upper_indentEditField.Value < 0
                 app.bg_upper_indentEditField.Value = 0;
             end
+
+            settings.bg_upper_indent = app.bg_upper_indentEditField.Value;
 
             settings.interval_module_GUI_update_state = true;
             set_automatic_background(app, settings)
@@ -3205,22 +3208,24 @@ classdef Interval_Module_readable < matlab.apps.AppBase
 
         % Value changed function: matrix_lower_indentEditField
         function matrix_lower_indentEditFieldValueChanged(app, event)
-            if ~confirm_overwrite_manual_intervals(app)
+       if ~confirm_overwrite_manual_intervals(app)
+                app.matrix_lower_indentEditField.Value = event.PreviousValue;
                 return
             end
 
             changes = check_changes(app, 'interval');
             if changes == false
+                app.matrix_lower_indentEditField.Value = event.PreviousValue;
                 return
             end
             app.editstatus = true;
-
-            settings.matrix_lower_indent = app.matrix_lower_indentEditField.Value;
 
             % Ensure the new value does not go below 0
             if app.matrix_lower_indentEditField.Value < 0
                 app.matrix_lower_indentEditField.Value = 0;
             end
+
+            settings.matrix_lower_indent = app.matrix_lower_indentEditField.Value;
 
             settings.interval_module_GUI_update_state = true;
             set_automatic_matrix(app, settings)
@@ -3228,22 +3233,24 @@ classdef Interval_Module_readable < matlab.apps.AppBase
 
         % Value changed function: matrix_upper_indentEditField
         function matrix_upper_indentEditFieldValueChanged(app, event)
-            if ~confirm_overwrite_manual_intervals(app)
+      if ~confirm_overwrite_manual_intervals(app)
+                app.matrix_upper_indentEditField.Value = event.PreviousValue;
                 return
             end
 
             changes = check_changes(app, 'interval');
             if changes == false
+                app.matrix_upper_indentEditField.Value = event.PreviousValue;
                 return
             end
             app.editstatus = true;
-
-            settings.matrix_upper_indent = app.matrix_upper_indentEditField.Value;
 
             % Ensure the new value does not go below 0
             if app.matrix_upper_indentEditField.Value < 0
                 app.matrix_upper_indentEditField.Value = 0;
             end
+
+            settings.matrix_upper_indent = app.matrix_upper_indentEditField.Value;
 
             settings.interval_module_GUI_update_state = true;
             set_automatic_matrix(app, settings)

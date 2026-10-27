@@ -1,4 +1,4 @@
-% GENERATED from Results_Module.mlapp on 2026-10-27 10:27 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Results_Module.mlapp on 2026-10-27 16:55 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Results_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -1039,16 +1039,6 @@ end
 
         end
         
-        function data = convertToNumericIfPossible(~, input)
-            % Tries to convert a string to a number. If it fails, returns the original input.
-            [num, status] = str2num(input);
-            if status && isscalar(num)
-                data = num; % It's a number
-            else
-                data = input; % It's not a number, keep as is
-            end
-        end
-
         function [colType, isDetermined] = getColumnInfo(~, columnData)
 
             isDetermined = false;
@@ -3580,10 +3570,8 @@ end
         % Button pushed function: ApplyButton
         function ApplyButtonPushed(app, event)
 
-
             selected_string = app.SpotnamecontainsEditField.Value;
 
-            % ... existing code for finding selected_spot_indices ...
             if contains(selected_string, '&&')
                 substrings = strtrim(strsplit(selected_string, '&&'));
                 selected_spot_indices = find(all(contains(app.base.project.session.spot.name, substrings), 2));
@@ -3598,37 +3586,26 @@ end
                 return; % No spots matched, do nothing
             end
 
-            % --- Validation Logic ---
             targetColumn = app.StringCompareDropDown.Value;
-            inputValue = app.MetadataInputEditField.Value;
+            inputValue   = app.MetadataInputEditField.Value;
 
-            % Get the column's current data
             currentColumnData = app.base.project.session.meta.(targetColumn);
-            [colType, isDetermined] = app.getColumnInfo(currentColumnData);
 
-            % Try to convert input to numeric
-            num = str2double(inputValue);
-            isNumericInput = ~isnan(num);
-
-            if isDetermined
-                if strcmp(colType, 'numeric') && ~isNumericInput
+            % the column type is set when the column is created (numeric or text button)
+            if isnumeric(currentColumnData)
+                processedValue = str2double(inputValue);
+                % empty input = NaN, anything that is not a single number is rejected
+                if isnan(processedValue) && strlength(strtrim(string(inputValue))) > 0
                     uialert(app.UIFigure, ['Column "' targetColumn '" requires a numeric value.'], 'Invalid Data Type');
                     return
-                elseif strcmp(colType, 'char') && isNumericInput
-                    uialert(app.UIFigure, ['Column "' targetColumn '" requires a text value.'], 'Invalid Data Type');
-                    return
                 end
-            end
-
-            % --- Process and Store Data ---
-            if isNumericInput
-                processedValue = num;
+                app.base.project.session.meta.(targetColumn)(selected_spot_indices) = processedValue;
+            elseif isstring(currentColumnData)
+                app.base.project.session.meta.(targetColumn)(selected_spot_indices) = string(inputValue);
             else
-                processedValue = inputValue;
+                app.base.project.session.meta.(targetColumn)(selected_spot_indices) = {inputValue};
             end
 
-            % Update the underlying data structure
-            app.base.project.session.meta.(targetColumn)(selected_spot_indices) = processedValue;
             app.base.project.session.config.synced = false;
 
             update_metadata_table(app)
@@ -3679,62 +3656,41 @@ end
 
             currentColumnData = app.base.project.session.meta.(columnName);
 
-            [colType, isDetermined] = app.getColumnInfo(currentColumnData);
-
-            if isnumeric(newData)
-                isNumericInput = true;
-                num = newData;
-            elseif ischar(newData) || isstring(newData)
-                [num, isNumericInput] = str2num(newData);
-            else
-                isNumericInput = false;
-                num = NaN;
-            end
-
-            isValid = false;
-            if ~isDetermined
-                isValid = true;
-            elseif strcmp(colType, 'numeric') && isNumericInput
-                isValid = true;
-            elseif strcmp(colType, 'char') && ~isNumericInput
-                isValid = true;
-            end
-
-            if isValid
-                if isNumericInput
-                    processedData = num;
-                else
+            % the column type is set when the column is created (numeric or text button)
+            if isnumeric(currentColumnData)
+                if isnumeric(newData)
                     processedData = newData;
-                end
-
-                row          = indices(1);
-                selectedRows = unique(app.MetadataTable.Selection(:, 1));
-                if isempty(selectedRows) || ~any(selectedRows == row)
-                    targetRows = row;
                 else
-                    targetRows = selectedRows;
+                    processedData = str2double(newData);
+                    % empty cell = NaN, anything that is not a single number is rejected
+                    if isnan(processedData) && strlength(strtrim(string(newData))) > 0
+                        uialert(app.UIFigure, ['Column "' columnName '" requires a numeric value.'], 'Invalid Data Type');
+                        app.MetadataTable.Data{indices(1), indices(2)} = {event.PreviousData};
+                        return
+                    end
                 end
-
-                if isnumeric(currentColumnData)
-                    app.base.project.session.meta.(columnName)(targetRows) = processedData;
-                elseif isstring(currentColumnData)
-                    app.base.project.session.meta.(columnName)(targetRows) = string(processedData);
-                else
-                    app.base.project.session.meta.(columnName)(targetRows) = {processedData};
-                end
-
-                app.base.project.session.config.synced = false;
-                update_metadata_table(app);
-
             else
-                if strcmp(colType, 'numeric')
-                    msg = ['Column "' columnName '" requires a numeric value.'];
-                else
-                    msg = ['Column "' columnName '" requires a text value.'];
-                end
-                uialert(app.UIFigure, msg, 'Invalid Data Type');
-                app.MetadataTable.Data{indices(1), indices(2)} = {event.PreviousData};
+                processedData = newData; % text column: everything is stored as text
             end
+
+            row          = indices(1);
+            selectedRows = unique(app.MetadataTable.Selection(:, 1));
+            if isempty(selectedRows) || ~any(selectedRows == row)
+                targetRows = row;
+            else
+                targetRows = selectedRows;
+            end
+
+            if isnumeric(currentColumnData)
+                app.base.project.session.meta.(columnName)(targetRows) = processedData;
+            elseif isstring(currentColumnData)
+                app.base.project.session.meta.(columnName)(targetRows) = string(processedData);
+            else
+                app.base.project.session.meta.(columnName)(targetRows) = {processedData};
+            end
+
+            app.base.project.session.config.synced = false;
+            update_metadata_table(app);
         end
 
         % Menu selected function: AdjustQCRMAxisFontsizeMenu

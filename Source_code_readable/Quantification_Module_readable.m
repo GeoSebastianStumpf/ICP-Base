@@ -1,4 +1,4 @@
-% GENERATED from Quantification_Module.mlapp on 2026-10-27 10:27 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Quantification_Module.mlapp on 2026-10-27 16:55 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Quantification_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -4956,6 +4956,9 @@ end
                         % Extract spot numbers (column 1) and values from columns 3, 4, 5, 6
                         spot_numbers = data{:, 1};
                         internal_standard = data{:, 3};  % Column 3: Analyte
+                        if isnumeric(internal_standard)
+                            internal_standard = repmat("", size(internal_standard));
+                        end
                         internal_standard_values = data{:, 4};  % Column 4: x__g_g_
                         total_oxides = data{:, 5};  % Column 5: x_TotalOxides
                         fe_ratio = data{:, 6};  % Column 6: FeO__FeO_Fe2O3_
@@ -4973,14 +4976,12 @@ end
                         % Process internal_standard_oxide_wt (column 5)
                         oxide_cell = num2cell(total_oxides);
                         nan_mask = isnan(total_oxides);
-                        oxide_cell(nan_mask) = {[]};
-                        app.base.project.session.spot.internal_standard_oxide_wt{bracket_id, CAL}(spot_numbers) = oxide_cell;
+                        app.base.project.session.spot.internal_standard_oxide_wt{bracket_id, CAL}(spot_numbers) = total_oxides;
 
                         % Process Fe_ratio_for_total_oxide (column 6)
                         fe_cell = num2cell(fe_ratio);
                         nan_mask = isnan(fe_ratio);
-                        fe_cell(nan_mask) = {[]};
-                        app.base.project.session.spot.Fe_ratio_for_total_oxide{bracket_id, CAL}(spot_numbers) = fe_cell;
+                        app.base.project.session.spot.Fe_ratio_for_total_oxide{bracket_id, CAL}(spot_numbers) = fe_ratio;
 
                     elseif isequal(host_inclusion, 'Inclusion')
 
@@ -5045,6 +5046,9 @@ end
                         % Extract spot numbers (column 1) and values from columns 3, 4, 5, 6
                         spot_numbers = data{:, 1};
                         internal_standard = data{:, 3};  % Column 3: Analyte
+                        if isnumeric(internal_standard)
+                            internal_standard = repmat("", size(internal_standard));
+                        end
                         internal_standard_values = data{:, 4};  % Column 4: x__g_g_
                         total_oxides = data{:, 5};  % Column 5: x_TotalOxides
                         fe_ratio = data{:, 6};  % Column 6: FeO__FeO_Fe2O3_
@@ -5059,16 +5063,10 @@ end
                         app.base.project.session.spot.internal_standard_mass_fraction_inclusion{bracket_id, CAL}(spot_numbers) = values_cell;
 
                         % Process internal_standard_oxide_wt (column 5)
-                        oxide_cell = num2cell(total_oxides);
-                        nan_mask = isnan(total_oxides);
-                        oxide_cell(nan_mask) = {[]};
-                        app.base.project.session.spot.internal_standard_oxide_wt_inclusion{bracket_id, CAL}(spot_numbers) = oxide_cell;
+                        app.base.project.session.spot.internal_standard_oxide_wt_inclusion{bracket_id, CAL}(spot_numbers) = total_oxides;
 
                         % Process Fe_ratio_for_total_oxide (column 6)
-                        fe_cell = num2cell(fe_ratio);
-                        nan_mask = isnan(fe_ratio);
-                        fe_cell(nan_mask) = {[]};
-                        app.base.project.session.spot.Fe_ratio_for_total_oxide_inclusion{bracket_id, CAL}(spot_numbers) = fe_cell;
+                        app.base.project.session.spot.Fe_ratio_for_total_oxide_inclusion{bracket_id, CAL}(spot_numbers) = fe_ratio;
 
                         % process second internal standard.
                         second_internal_standard = data{:, 7};  % Column 7: Analyte

@@ -1,4 +1,4 @@
-% GENERATED from ICP_Base.mlapp on 2026-10-27 10:27 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from ICP_Base.mlapp on 2026-10-27 16:55 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef ICP_Base_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -682,6 +682,12 @@ classdef ICP_Base_readable < matlab.apps.AppBase
                 writeNumeric(app, val, filepath, path);
             elseif isstring(val) || ischar(val)
                 writeString(app, val, filepath, path);
+            elseif isdatetime(val)
+                writeString(app, string(val, 'yyyy-MM-dd HH:mm:ss.SSS'), filepath, path);
+            elseif isduration(val)
+                writeNumeric(app, seconds(val), filepath, path);
+            elseif iscategorical(val)
+                writeString(app, string(val), filepath, path);
             else
                 warning('base2h5: skipping unsupported type at %s (%s)', path, class(val));
             end
@@ -1061,14 +1067,22 @@ classdef ICP_Base_readable < matlab.apps.AppBase
         % =========================================================
         function names = h5_child_names(~, filepath, grouppath)
             fid = H5F.open(filepath, 'H5F_ACC_RDONLY', 'H5P_DEFAULT');
-            gid = H5G.open(fid, grouppath);
-            n   = H5G.get_info(gid).nlinks;
-            names = cell(1, n);
-            for k = 0:n-1
-                names{k+1} = H5L.get_name_by_idx(gid, '.', 'H5_INDEX_NAME', 'H5_ITER_INC', k, 'H5P_DEFAULT');
+            gid = [];
+            try
+                gid = H5G.open(fid, grouppath);
+                n   = H5G.get_info(gid).nlinks;
+                names = cell(1, n);
+                for k = 0:n-1
+                    names{k+1} = H5L.get_name_by_idx(gid, '.', 'H5_INDEX_NAME', 'H5_ITER_INC', k, 'H5P_DEFAULT');
+                end
+                H5G.close(gid);
+                H5F.close(fid);
+            catch ME
+                % close what was opened, then pass the error on as before
+                if ~isempty(gid), H5G.close(gid); end
+                H5F.close(fid);
+                rethrow(ME)
             end
-            H5G.close(gid);
-            H5F.close(fid);
         end
 
 
@@ -1409,6 +1423,25 @@ classdef ICP_Base_readable < matlab.apps.AppBase
                     else
                         val = {};
                     end
+                case 'struct_array'
+                    items = {};
+                    for k = 1:numel(info.Groups)
+                        parts = strsplit(info.Groups(k).Name, '/');
+                        tok   = regexp(parts{end}, '^item_(\d+)$', 'tokens', 'once');
+                        if isempty(tok), continue; end
+                        items{str2double(tok{1})} = readH5Group(app, filepath, info.Groups(k).Name); %#ok<AGROW>
+                    end
+                    if isempty(items)
+                        val = struct([]);
+                    else
+                        try
+                            val = [items{:}];
+                            sz  = h5read(filepath, [grouppath '/__struct_size__']);
+                            val = reshape(val, sz(:)');
+                        catch
+                            val = items; % items with different fields: keep them as a cell
+                        end
+                    end
                 otherwise
                     val = struct();
                     for k = 1:numel(info.Datasets)
@@ -1468,17 +1501,31 @@ classdef ICP_Base_readable < matlab.apps.AppBase
                 data = h5read(filepath, [grouppath '/data']);
                 val  = array2table(data, 'VariableNames', colnames);
             else
-                colData = cell(1, numel(colnames));
+                % columns are datasets (numeric, string) or groups (cell columns)
+                grpNames  = arrayfun(@(g) g.Name, info.Groups, 'UniformOutput', false);
+                tableSize = h5getAttr(app, info.Attributes, 'table_size');
+                colData   = {};
+                colKept   = {};
                 for j = 1:numel(colnames)
-                    dsIdx = find(strcmp(dsNames, ['col_' colnames{j}]), 1);
+                    colPath = [grouppath '/col_' colnames{j}];
+                    dsIdx   = find(strcmp(dsNames, ['col_' colnames{j}]), 1);
                     if ~isempty(dsIdx)
-                        colData{j} = readH5Dataset(app, filepath, ...
-                            [grouppath '/col_' colnames{j}], info.Datasets(dsIdx).Attributes);
+                        colVal = readH5Dataset(app, filepath, colPath, info.Datasets(dsIdx).Attributes);
+                    elseif any(strcmp(grpNames, colPath))
+                        colVal = readH5Group(app, filepath, colPath);
                     else
-                        colData{j} = [];
+                        warning('h52base: column %s in %s is missing and is skipped', colnames{j}, grouppath);
+                        continue
                     end
+                    % a column with the wrong length would make table() fail and lose the whole session
+                    if isnumeric(tableSize) && ~isempty(tableSize) && size(colVal, 1) ~= tableSize(1)
+                        warning('h52base: column %s in %s has the wrong length and is skipped', colnames{j}, grouppath);
+                        continue
+                    end
+                    colData{end+1} = colVal; %#ok<AGROW>
+                    colKept{end+1} = colnames{j}; %#ok<AGROW>
                 end
-                val = table(colData{:}, 'VariableNames', colnames);
+                val = table(colData{:}, 'VariableNames', colKept);
             end
         end
 
@@ -2240,8 +2287,8 @@ classdef ICP_Base_readable < matlab.apps.AppBase
         % ImportButton, IntervalButton, QuantificationButton, ResultsButton
         function ImportButtonPushed(app, event)
             try
-                                    progress = uiprogressdlg(app.UIFigure, 'Title', 'Fetching session data from base...',...
-                        'Message', 'Please wait', 'Cancelable', 'off', 'Indeterminate', 'on');
+                progress = uiprogressdlg(app.UIFigure, 'Title', 'Fetching session data from base...',...
+                    'Message', 'Please wait', 'Cancelable', 'off', 'Indeterminate', 'on');
 
                 % check if selection is not empty
                 if ~isempty(app.SessionTable.Selection) && not(isequal(app.SessionTable.Selection(1),0))
@@ -3922,6 +3969,13 @@ classdef ICP_Base_readable < matlab.apps.AppBase
                         dsname = msInfo.Datasets(k).Name;
                         skeleton.config.module_status.(dsname) = h5read(app.basepath, [msPath '/' dsname]);
                     end
+                catch
+                end
+
+                try
+                    raw = h5read(app.basepath, [spath '/config/reductiontype']);
+                    if iscell(raw), raw = raw{1}; end
+                    skeleton.config.reductiontype = string(raw);
                 catch
                 end
 

@@ -1,4 +1,4 @@
-% GENERATED from Moving_average_Submodule.mlapp on 2026-10-27 10:27 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Moving_average_Submodule.mlapp on 2026-10-27 16:55 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Moving_average_Submodule_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components

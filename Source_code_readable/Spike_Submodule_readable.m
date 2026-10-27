@@ -1,4 +1,4 @@
-% GENERATED from Spike_Submodule.mlapp on 2026-10-27 10:27 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Spike_Submodule.mlapp on 2026-10-27 16:55 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Spike_Submodule_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -385,10 +385,6 @@ classdef Spike_Submodule_readable < matlab.apps.AppBase
         % Button pushed function: FinishButton
         function FinishButtonPushed(app, event)
 
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
 
             % Check if there are remaining spikes that haven't been reviewed
             if app.current_spike_index > 0 && app.current_spike_index <= height(app.eliminated_spikes)
@@ -420,6 +416,17 @@ classdef Spike_Submodule_readable < matlab.apps.AppBase
                         % User cancelled - don't finish
                         return;
                 end
+            end
+
+            % no spike accepted: nothing to write, so no reset dialog and no desync
+            if height(app.eliminated_spikes) == 0
+                delete(app)
+                return
+            end
+
+            changes = check_changes(app.source, 'interval', app.UIFigure);
+            if changes == false
+                return
             end
 
             % Ensure the storage for eliminated spikes exists

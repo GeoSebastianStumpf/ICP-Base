@@ -1,4 +1,4 @@
-% GENERATED from Import_Module.mlapp on 2026-10-27 10:27 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Import_Module.mlapp on 2026-10-27 16:55 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Import_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -5100,11 +5100,23 @@ classdef Import_Module_readable < matlab.apps.AppBase
                         current_length = length(app.base.project.session.spot.signal_data);
                     end
 
+                                        % work on local copies and write back once at the end,
+                    % so an abort halfway leaves the session untouched
+                    if isfield(app.base.project.session, 'spot')
+                        spot = app.base.project.session.spot;
+                    else
+                        spot = struct();
+                    end
+                    if isfield(app.base.project.session, 'meta')
+                        meta = app.base.project.session.meta;
+                    else
+                        meta = struct();
+                    end
+
                     all_analytes = {};
 
                     for i = 1:length(filenames)
                         signal_path = new_signal_paths{i};
-                        filename = filenames{i};
 
                         [~, signal_data, spotname, time, icp_ms_parameters, dwelltimes,~, ~] = read_signal_files_wrapper(app, signal_path, settings);
 
@@ -5112,71 +5124,57 @@ classdef Import_Module_readable < matlab.apps.AppBase
                         current_analytes = string(signal_data.Properties.VariableNames(2:end)');
                         if isempty(all_analytes)
                             all_analytes = current_analytes;
-                        else
-                            if ~isequal(sort(all_analytes), sort(current_analytes))
-                                message = "Only load files that contain the same analytes!";
-                                uialert(app.UIFigure, message, "Warning", "Icon", "warning");
-                                return;
-                            end
+                        elseif ~isequal(sort(all_analytes), sort(current_analytes))
+                            uialert(app.UIFigure, "Only load files that contain the same analytes!", "Warning", "Icon", "warning");
+                            return;
                         end
 
                         % Check if there are already analytes in the data structure
-                        if isfield(app.base, 'project') && isfield(app.base.project, 'session') && isfield(app.base.project.session, 'spot') && isfield(app.base.project.session.spot, 'analytes') && ~isempty(app.base.project.session.spot.analytes)
-                            if ~isequal(sort(app.base.project.session.spot.analytes), sort(all_analytes))
-                                message = "Only load files that contain the same analytes!";
-                                uialert(app.UIFigure, message, "Warning", "Icon", "warning");
-                                return;
-                            end
+                        if isfield(spot, 'analytes') && ~isempty(spot.analytes) && ~isequal(sort(spot.analytes), sort(all_analytes))
+                            uialert(app.UIFigure, "Only load files that contain the same analytes!", "Warning", "Icon", "warning");
+                            return;
                         end
 
-                        app.base.project.session.spot.analytes = string(current_analytes);
+                        spot.analytes = string(current_analytes);
 
-                        % First make the check and only then load them in
-                        app.base.project.session.spot.signal_data{current_length + i, 1} = signal_data;
-                        %app.base.project.session.config.signal_path{current_length + i, 1} = char(signal_path);
-                        app.base.project.session.spot.acquisition_datetime{current_length + i, 1} = time;
-                        app.base.project.session.spot.name{current_length + i, 1} = char(spotname);
+                        spot.signal_data{current_length + i, 1} = signal_data;
+                        spot.acquisition_datetime{current_length + i, 1} = time;
+                        spot.name{current_length + i, 1} = char(spotname);
 
                         % signal detection
                         [signal_starts, signal_ends] = detect_single_spot_signal_starts_ends(app, signal_data);
-                        app.base.project.session.spot.signal_starts(current_length + i, 1) = signal_starts;
-                        app.base.project.session.spot.signal_ends(current_length + i, 1) = signal_ends;
+                        spot.signal_starts(current_length + i, 1) = signal_starts;
+                        spot.signal_ends(current_length + i, 1) = signal_ends;
 
-                        % get the icp_ms_parameters - right now it stores
-                        % the parameters of the first spot for all of them
-                        % similar to the agilent batch folder for single.
+                        % icp_ms_parameters of the first spot are used for all of them
                         if ~isempty(fields(icp_ms_parameters))
-                            if ~isfield(app.base.project.session.meta, 'icp_ms_parameters') || ...
-                                    isempty(fieldnames(app.base.project.session.meta.icp_ms_parameters))
-                                app.base.project.session.meta.icp_ms_parameters = icp_ms_parameters;
+                            if ~isfield(meta, 'icp_ms_parameters') || isempty(fieldnames(meta.icp_ms_parameters))
+                                meta.icp_ms_parameters = icp_ms_parameters;
                             end
                         end
-                        % if they should be stored for each spot
-                        % independently, this should be done here and then
-                        % also for the Agilent batch folder
                         if ~isempty(dwelltimes)
-                            if ~isfield(app.base.project.session.spot, 'dwelltimes') || ...
-                                    isempty(fieldnames(app.base.project.session.spot.dwelltimes))
-                                app.base.project.session.spot.dwelltimes = dwelltimes;
+                            if ~isfield(spot, 'dwelltimes') || isempty(fieldnames(spot.dwelltimes))
+                                spot.dwelltimes = dwelltimes;
                             end
                         end
-
                     end
 
-                    app.base.project.session.spot.name = string(app.base.project.session.spot.name);
-                    app.base.project.session.spot.acquisition_datetime = string(app.base.project.session.spot.acquisition_datetime);
+                    spot.name = string(spot.name);
+                    spot.acquisition_datetime = string(spot.acquisition_datetime);
 
                     % Sort spots by acquisition time
-                    acqDt = datetime(app.base.project.session.spot.acquisition_datetime, 'InputFormat', 'yyyy-MM-dd HH:mm:ss');
+                    acqDt = datetime(spot.acquisition_datetime, 'InputFormat', 'yyyy-MM-dd HH:mm:ss');
                     if ~issorted(acqDt)
                         [~, idx] = sort(acqDt);
-                        app.base.project.session.spot.signal_data      = app.base.project.session.spot.signal_data(idx);
-                        app.base.project.session.spot.name             = app.base.project.session.spot.name(idx);
-                        app.base.project.session.spot.acquisition_datetime = app.base.project.session.spot.acquisition_datetime(idx);
-                        app.base.project.session.spot.signal_starts    = app.base.project.session.spot.signal_starts(idx);
-                        app.base.project.session.spot.signal_ends      = app.base.project.session.spot.signal_ends(idx);
+                        spot.signal_data          = spot.signal_data(idx);
+                        spot.name                 = spot.name(idx);
+                        spot.acquisition_datetime = spot.acquisition_datetime(idx);
+                        spot.signal_starts        = spot.signal_starts(idx);
+                        spot.signal_ends          = spot.signal_ends(idx);
                     end
 
+                    app.base.project.session.spot = spot;
+                    app.base.project.session.meta = meta;
                     app.base.project.session.config.datatype = 'Single';
                     update_single_panel(app)
 
