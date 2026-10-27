@@ -42,6 +42,9 @@ function changes = check_changes(app, stage, dialog_figure)
 
     if ~any_stage_is_done(module_status, rule.dialog_if_done)
         app.base.project.session.config.synced = false;
+        if isfield(rule, 'outdated_flag')
+            app.base.project.session.config.(rule.outdated_flag) = true;
+        end
         changes = true;
         return
     end
@@ -78,7 +81,14 @@ function changes = check_changes(app, stage, dialog_figure)
     session.spot    = remove_fields_if_present(session.spot, spot_fields_to_remove);
     session         = remove_fields_if_present(session, rule.session_fields);
 
+    if isfield(rule, 'config_fields')
+        session.config = remove_fields_if_present(session.config, rule.config_fields);
+    end
+    
     session.config.synced = false;
+    if isfield(rule, 'outdated_flag')
+        session.config.(rule.outdated_flag) = true;
+    end
     app.base.project.session = session;
 
     settings.ICP_Base_GUI_update_state = true;
@@ -111,6 +121,7 @@ function rules = reset_rules()
                                          'quantification_inputs', 'drift_outputs', 'quantification_outputs', ...
                                          'results_products'};
     rules.import.session_fields       = {'plotstyles', 'referencematerials'};
+    rules.import.config_fields        = {'manual_intervals', 'quantification_outdated'};
     rules.import.message              = "You changed something, do you want to reset everything?";
     rules.import.title                = "Attention";
     rules.import.refresh_after_cancel = '';
@@ -157,6 +168,7 @@ function rules = reset_rules()
     rules.quantification.title                = "Attention";
     rules.quantification.refresh_after_cancel = 'update_quantification_module_GUI';
     rules.quantification.refresh_after_reset  = '';
+    rules.quantification.outdated_flag        = 'quantification_outdated';
 end
 
 
