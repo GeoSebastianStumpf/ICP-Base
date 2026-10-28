@@ -1,4 +1,4 @@
-% GENERATED from Drift_Module.mlapp on 2026-10-28 15:37 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Drift_Module.mlapp on 2026-10-28 16:53 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Drift_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -136,6 +136,35 @@ classdef Drift_Module_readable < matlab.apps.AppBase
 
         end
 
+        function same = values_match(app, a, b)
+            % equal up to floating-point noise: recomputing on another computer (e.g. Windows vs macOS)
+            % can change the last digits, which must not count as a change of the results
+            relative_tolerance = 1e-8;
+
+            if istable(a) && istable(b)
+                same = isequal(a.Properties.VariableNames, b.Properties.VariableNames);
+                if same
+                    try
+                        same = values_match(app, table2array(a), table2array(b));
+                    catch
+                        same = isequaln(a, b);   % table with non-numeric columns
+                    end
+                end
+
+            elseif iscell(a) && iscell(b)
+                same = isequal(size(a), size(b)) && ...
+                    all(cellfun(@(x, y) values_match(app, x, y), a(:), b(:)));
+
+            elseif isnumeric(a) && isnumeric(b)
+                a = double(a(:));
+                b = double(b(:));
+                same = numel(a) == numel(b) && ...
+                    all(a == b | (isnan(a) & isnan(b)) | abs(a - b) <= relative_tolerance * max(abs(a), abs(b)) | abs(a - b) < 1e-12);
+
+            else
+                same = isequaln(a, b);
+            end
+        end
 
         function update_progress_buttons(app)
 
@@ -237,7 +266,7 @@ classdef Drift_Module_readable < matlab.apps.AppBase
                     added_fields{end+1} = field_name; %#ok<AGROW>
                 elseif exists_before && ~exists_after
                     changed_fields{end+1} = field_name; %#ok<AGROW>
-                elseif exists_before && exists_after && ~isequaln(spot_before.(field_name), spot_after.(field_name))
+                elseif exists_before && exists_after && ~values_match(app, spot_before.(field_name), spot_after.(field_name))
                     changed_fields{end+1} = field_name; %#ok<AGROW>
                 end
             end
