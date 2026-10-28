@@ -1,4 +1,4 @@
-% GENERATED from Quantification_Module.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Quantification_Module.mlapp on 2026-10-28 14:17 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Quantification_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -1411,6 +1411,7 @@ end
                 DisplayError(ME, 'Error reading oxides from Oxides.csv. Close it if it is open in another program. Make sure the Total Oxide folder was not moved or renamed.')
                 message = {'Error reading oxides from Oxides.csv. Did you rename or move the folder? Close the Oxides.csv if it is open in another program. If you got the base/project/session from someone else, adjust the total oxides folder path.'};
                 uialert(app.UIFigure, message, ' Error');
+                return   
             end
 
             element_names      = raw(:, 1);
@@ -3137,10 +3138,14 @@ end
 
             progress = uiprogressdlg(app.UIFigure, 'Title', 'Quantification', ...
                 'Message', 'Calculating...', 'Cancelable', 'off', 'Indeterminate','on');
-
+            closer = onCleanup(@() delete(progress(isvalid(progress))));
 
             % load in the Oxide.xlsx
             get_oxides_from_file(app)
+            if ~isfield(app.base.project.session, 'oxides')
+                quantification_failed = true;
+                return
+            end
 
 
             %%%%%%%%%% Matrix/Host
@@ -3812,7 +3817,8 @@ end
 
             % read in the Oxide.xlsx
             try
-                if ~isfield(app.base.project.session.config, 'total_oxides_path')
+                if ~isfield(app.base.project.session.config, 'total_oxides_path') || ...
+                        ~isfolder(app.base.project.session.config.total_oxides_path)
 
                     % Check if the main app has the path property set (User Documents)
                     if isprop(app.sourceapp, 'default_oxides_path') && ~isempty(app.sourceapp.default_oxides_path)
@@ -4138,7 +4144,7 @@ end
 
         % Button pushed function: ApplyButton
         function ApplyButtonPushed(app, event)
-            changes = check_changes(app, 'quantification');
+           changes = check_changes(app, 'quantification');
             if changes == false
                 return
             end
@@ -4147,21 +4153,23 @@ end
             newData = app.StringCompareInputEditField.Value;
             colName = app.StringCompareDropDown.Value;
 
-            if ischar(newData) || isstring(newData)
-                if ~startsWith(lower(newData), 'from')
-                    try
-                        newData = str2double(newData);
-                        if isnan(newData), newData = NaN; end
-                    catch
-                        newData = NaN;
-                    end
+            % "from <CAL>" (value taken from another calibrator) is only valid in the mass fraction columns
+            is_mass_fraction_column = any(strcmp(colName, {'[µg/g]', '[µg/g] (I.S.1)', '[µg/g] (I.S.2)'}));
+            keep_reference = (ischar(newData) || isstring(newData)) && ...
+                startsWith(lower(string(newData)), 'from') && is_mass_fraction_column;
+
+            if ~keep_reference
+                if ischar(newData) || isstring(newData)
+                    newData = str2double(newData);
+                elseif ~isnumeric(newData)
+                    newData = NaN;
                 end
-            elseif ~isnumeric(newData);  newData = NaN;
-            elseif isnan(newData);       newData = NaN;
-            elseif isequal(newData, 0);  newData = NaN;
-            elseif newData < 0;          newData = NaN;
-            elseif strcmp(colName, 'FeO/(FeO + Fe2O3)') && (newData < 0 || newData > 1);   newData = NaN;
-            elseif strcmp(colName, '% Total Oxides')     && (newData < 0 || newData > 100); newData = NaN;
+                % checked after the conversion, so typed text gets the same limits as numbers
+                if isnan(newData) || newData <= 0 ...
+                        || (strcmp(colName, 'FeO/(FeO + Fe2O3)') && newData > 1) ...
+                        || (strcmp(colName, '% Total Oxides')    && newData > 100)
+                    newData = NaN;
+                end
             end
 
             bracket_id       = app.BracketidDropDown.Value;
@@ -4267,7 +4275,13 @@ end
                         case '[µg/g]'
                             app.base.project.session.spot.internal_standard_mass_fraction{app.BracketidDropDown.Value, app.selected_CAL}{spot_idx} = newData;
                         case '± 1σ [µg/g]'
-                            app.base.project.session.spot.internal_standard_mass_fraction_uncertainty{app.BracketidDropDown.Value, app.selected_CAL}(spot_idx) = newData;
+                            is_frac = app.base.project.session.spot.internal_standard_mass_fraction{app.BracketidDropDown.Value, app.selected_CAL}{spot_idx};
+                            is_val  = app.base.project.session.spot.internal_standard{app.BracketidDropDown.Value, app.selected_CAL}(spot_idx);
+                            takes_value_from_other_calibrator = ~isempty(is_frac) && startsWith(string(is_frac), 'from');
+                            % a value inherited from another calibrator carries its own uncertainty, so an input here is discarded
+                            if ~isequal(is_val, 'Total Oxides') && ~takes_value_from_other_calibrator
+                                app.base.project.session.spot.internal_standard_mass_fraction_uncertainty{app.BracketidDropDown.Value, app.selected_CAL}(spot_idx) = newData;
+                            end
                         case '% Total Oxides'
                             app.base.project.session.spot.internal_standard_oxide_wt{app.BracketidDropDown.Value, app.selected_CAL}(spot_idx) = newData;
                         case '± 1σ [%]'
@@ -4291,7 +4305,13 @@ end
 
             if app.editstatus == true || inputs_changed || all(all(cellfun(@isempty, app.base.project.session.spot.matrix_composition)))
 
-                quantification_failed = quantification_wrapper(app);
+                try
+                    quantification_failed = quantification_wrapper(app);
+                catch ME
+                    DisplayError(ME, 'Quantification failed');
+                    uialert(app.UIFigure, ['The quantification failed. Details: ' ME.message], 'Quantification Failed', 'Icon', 'error');
+                    return
+                end
 
                 if quantification_failed == true
                     return
@@ -5147,24 +5167,25 @@ end
 
         % Menu selected function: ShowOxidesthatwillbeusedMenu
         function ShowOxidesthatwillbeusedMenuSelected(app, event)
-
-            changes = check_changes(app, 'quantification');
-            if changes == false
+ % only display Oxides.csv, the session keeps the oxides the last quantification used
+            try
+                oxide_path = fullfile(app.base.project.session.config.total_oxides_path, 'Oxides.csv');
+                raw        = readtable(oxide_path, detectImportOptions(oxide_path));
+            catch ME
+                DisplayError(ME, 'Show oxides that will be used');
+                uialert(app.UIFigure, ['Oxides.csv could not be read. Check the Total Oxides folder in the Settings menu. Details: ' ME.message], ...
+                    'Oxides Not Found', 'Icon', 'error');
                 return
             end
-            app.editstatus = true;
-
-            get_oxides_from_file(app)
 
             fig = uifigure('Name', "Oxides to be used for quantification from: " + app.base.project.session.config.total_oxides_path, 'Position', [200, 200, 800, 600]);
             uit = uitable(fig);
 
-            oxides_data        = app.base.project.session.oxides;
-            element_names      = oxides_data.element_names;
-            oxide_names        = oxides_data.oxide_names;
-            conv_factors       = oxides_data.conversion_factor_values;
-            preferred_isotopes = oxides_data.preferred_isotopes;
-            considered_major   = oxides_data.considered_major;
+            element_names      = string(raw{:, 1});
+            oxide_names        = string(raw{:, 2});
+            conv_factors       = double(raw{:, 3});
+            preferred_isotopes = string(raw{:, 4});
+            considered_major   = string(raw{:, 5});
 
             tabledata = table(element_names, oxide_names, conv_factors, preferred_isotopes, considered_major, ...
                 'VariableNames', {'Element', 'Oxide', 'ConversionFactor', 'PreferredIsotope', 'IsMajor'});

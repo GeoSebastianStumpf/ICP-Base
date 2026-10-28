@@ -169,6 +169,18 @@ function rules = reset_rules()
     rules.quantification.refresh_after_cancel = 'update_quantification_module_GUI';
     rules.quantification.refresh_after_reset  = '';
     rules.quantification.outdated_flag        = 'quantification_outdated';
+
+    % ---- Switching Matrix <-> Inclusion (Import, Proceed): the unmixing changes all calculated results ----
+    rules.reductiontype.dialog_if_done       = {'drift', 'quantification'};
+    rules.reductiontype.reset_status         = {'drift', 'quantification', 'results'};
+    rules.reductiontype.field_groups         = {'drift_outputs', 'quantification_outputs', 'results_products'};
+    rules.reductiontype.session_fields       = {};
+    rules.reductiontype.message              = "You switched between Matrix and Inclusion mode. Drift, Quantification and Results have to be calculated again. Continue?";
+    rules.reductiontype.title                = "Attention";
+    rules.reductiontype.refresh_after_cancel = '';
+    rules.reductiontype.refresh_after_reset  = '';
+
+
 end
 
 

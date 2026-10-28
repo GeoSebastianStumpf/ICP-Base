@@ -1,4 +1,4 @@
-% GENERATED from Drift_Module.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Drift_Module.mlapp on 2026-10-28 14:17 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Drift_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -751,8 +751,7 @@ classdef Drift_Module_readable < matlab.apps.AppBase
                     if isempty(bracket_indices)
                         message = "Too many CAL intervals are missing to regress sensitivities. ICP-Base needs a bracket start and end to do the regression between them.";
                         uialert(app.UIFigure, message, "Warning", "Icon", "warning");
-                        disp("Too many CAL intervals are missing for a bracket")
-                        return
+                        error('ICP_Base:driftFailed', message);
                     end
 
                     sensitivities_to_average = zeros(numel(bracket_indices), size(app.initial_sensitivities, 2));
@@ -869,10 +868,9 @@ classdef Drift_Module_readable < matlab.apps.AppBase
                         continue
                     end
                     if isequal(numel(current_cell.indices), 0) || isequal(numel(current_cell.indices), 1)
-                        message = "Drift calculation failed. Maybe too many Calibrator intervals are missing to regress sensitivities.";
+                        message = "Drift calculation failed. Maybe too many Calibrator intervals are missing to regress sensitivities or not enough calibrators were selected to build brackets.";
                         uialert(app.UIFigure,message,"Warning", "Icon","warning");
-                        disp("Too many CAL intervals are missing for a bracket")
-                        return
+                        error('ICP_Base:driftFailed', message)
                     end
 
                     % Get x values (signal starts)
@@ -1435,6 +1433,12 @@ classdef Drift_Module_readable < matlab.apps.AppBase
         % basically just a wrapper
 
         function drift_correction(app)
+
+            % without a calibrator nothing can be calculated, and the module cannot display anything
+            if ~any(app.base.project.session.spot.type == "CAL")
+                error('ICP_Base:driftNoCAL', ['No calibrator (CAL) is assigned. ' ...
+                    'Assign at least one CAL with a reference material in the Classification module.']);
+            end
 
             calculate_integer_time_points(app)
            

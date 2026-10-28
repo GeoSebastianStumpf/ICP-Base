@@ -1,4 +1,4 @@
-% GENERATED from Classification_Module.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Classification_Module.mlapp on 2026-10-28 14:17 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Classification_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -568,6 +568,10 @@ end
         % Button pushed function: ProceedtoDriftModuleButton
         function ProceedtoDriftModuleButtonPushed(app, event)
 
+            if ~any(app.base.project.session.spot.type == "CAL")
+                uialert(app.UIFigure, "Assign at least one calibrator (CAL) with a reference material.", "Warning", "Icon", "warning");
+                return
+            end
 
             if any(contains(unique(app.base.project.session.spot.referencematerial), 'Select Reference Material'))...
                     || any(contains(unique(app.base.project.session.spot.type), 'Select Type'))
@@ -606,9 +610,12 @@ end
                     else
                         progress = uiprogressdlg(app.UIFigure, 'Title', 'Correcting drift...', ...
                             'Message', 'Calculating...', 'Cancelable', 'off', 'Indeterminate', 'on');
+                        source_app = app.sourceapp; 
                         launch_drift_module(app)
                         delete(progress)
                         delete(app)
+
+                        refresh_session_buttons(source_app)
                     end
                 case 'Cancel'
                     return

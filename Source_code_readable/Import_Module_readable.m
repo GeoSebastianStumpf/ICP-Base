@@ -1,4 +1,4 @@
-% GENERATED from Import_Module.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Import_Module.mlapp on 2026-10-28 14:17 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Import_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -525,13 +525,14 @@ classdef Import_Module_readable < matlab.apps.AppBase
                 signal_ends = [];
             elseif starts == ends
 
-                signal_starts = height(single_spot)/3;
+                signal_starts = max(1, round(height(single_spot)/3));
                 signal_ends = height(single_spot);
 
             elseif isequal(starts, 1) && isequal(ends, height(single_spot)-1)
 
-                signal_starts = height(single_spot)/3;
+                signal_starts = max(1, round(height(single_spot)/3));
                 signal_ends = height(single_spot);
+
 
             else
                 signal_starts = min(starts);
@@ -802,6 +803,22 @@ classdef Import_Module_readable < matlab.apps.AppBase
                 return
             end
 
+
+            % names, signal starts and ends must belong to the same spots
+            n_names  = 0;
+            if isfield(app.base.project.session.spot, 'name')
+                n_names = numel(app.base.project.session.spot.name);
+            end
+            n_starts = numel(app.base.project.session.spot.signal_starts);
+            n_ends   = numel(app.base.project.session.spot.signal_ends);
+
+            if n_names ~= n_starts || n_starts ~= n_ends
+                uialert(app.UIFigure, sprintf(['There are %d spot names but %d detected signals. ' ...
+                    'Check the laser log, adjust the signal indent, or select the signals manually.'], n_names, n_starts), ...
+                    'Signals Do Not Match', 'Icon', 'warning');
+                return
+            end
+
             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
             if isfield(app.base.project.session.spot, 'acquisition_datetime') && ~isempty(app.base.project.session.spot.acquisition_datetime)
@@ -895,6 +912,15 @@ classdef Import_Module_readable < matlab.apps.AppBase
 
                 switch selection
                     case 'Yes'
+
+                        % switching Matrix <-> Inclusion changes everything that Drift and Quantification calculate
+                        if ~isempty(selected_reductiontype) && isfield(app.base.project.session.config, 'reductiontype') ...
+                                && ~isequal(app.base.project.session.config.reductiontype, selected_reductiontype)
+                            changes = check_changes(app, 'reductiontype');
+                            if changes == false
+                                return
+                            end
+                        end
 
                         if assume_default_dwelltimes
                             columns = numel(app.base.project.session.spot.analytes);
@@ -4562,7 +4588,8 @@ classdef Import_Module_readable < matlab.apps.AppBase
                 return
             end
 
-            if ~isfield(app.base.project.session.spot, 'signal_data') && ~isfield(app.base.project.session.spot, 'name')
+            if ~isfield(app.base.project.session, 'spot') || ...
+                    (~isfield(app.base.project.session.spot, 'signal_data') && ~isfield(app.base.project.session.spot, 'name'))
                 message = "Load a signal file and a logfile";
                 uialert(app.UIFigure,message,"Warning", ...
                     "Icon","warning");
@@ -4743,7 +4770,7 @@ classdef Import_Module_readable < matlab.apps.AppBase
                         [~, ~, ~, dwelltimes, ~, ~]  = read_mass_spec_metadata_wrapper(app, app.base.project.session.config.mass_spec_metadata_path, settings);
 
 
-                        if isfield(app.base.project.session, 'spot') && isfield(app.base.project.session.spot, 'analytes') && ~isempty(app.base.project.session.spot.analytes)
+                            if isfield(app.base.project.session, 'spot') && isfield(app.base.project.session.spot, 'analytes') && ~isempty(app.base.project.session.spot.analytes)
                             % Get analytes list
                             analytes = app.base.project.session.spot.analytes;
 

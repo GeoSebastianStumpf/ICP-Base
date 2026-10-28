@@ -1,4 +1,4 @@
-% GENERATED from Interference_Correction_Submodule.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Interference_Correction_Submodule.mlapp on 2026-10-28 14:17 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Interference_Correction_Submodule_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -488,9 +488,11 @@ classdef Interference_Correction_Submodule_readable < matlab.apps.AppBase
             end
 
             delete(app.icm_progress)
+            source_app = app.source.sourceapp;
             app.source.launch_drift_module()
             delete(app.source)
             delete(app)
+            refresh_session_buttons(source_app)
         end
 
         % Cell edit callback: ICMTable

@@ -1,4 +1,4 @@
-% GENERATED from Interval_Module.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Interval_Module.mlapp on 2026-10-28 14:17 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Interval_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -1380,6 +1380,20 @@ classdef Interval_Module_readable < matlab.apps.AppBase
 
                 end
 
+                % an indent larger than the space before the signal would give an empty or reversed background:
+                % leave it empty (ignored like every NaN interval) and tell the user which spots
+                background_starts = max(background_starts, 1);
+                invalid = background_ends < background_starts;
+                if any(invalid)
+                    background_starts(invalid) = NaN;
+                    background_ends(invalid)   = NaN;
+                    invalid_idx = find(invalid);
+                    spot_list   = strjoin(compose("%d (%s)", invalid_idx(:), app.base.project.session.spot.name(invalid_idx(:))), ', ');
+                    uialert(app.UIFigure, sprintf(['The background indents are too large for spot(s) %s, so their background was left empty ' ...
+                        '(the background end would be before the background start). Reduce the indents or set these backgrounds manually.'], spot_list), ...
+                        'Background Not Set', 'Icon', 'warning');
+                end
+
                 % if test_state = false, push the data from the cache to the
                 % data structure
                 if test_state == false
@@ -1443,6 +1457,18 @@ classdef Interval_Module_readable < matlab.apps.AppBase
                     matrix_starts(i) = signal_starts(i) + lower_indent;
                     matrix_ends(i) = signal_ends(i) - upper_indent;
 
+                end
+
+                % indents larger than the signal would give an empty or reversed matrix interval
+                invalid = matrix_ends < matrix_starts;
+                if any(invalid)
+                    matrix_starts(invalid) = NaN;
+                    matrix_ends(invalid)   = NaN;
+                    invalid_idx = find(invalid);
+                    spot_list   = strjoin(compose("%d (%s)", invalid_idx(:), app.base.project.session.spot.name(invalid_idx(:))), ', ');
+                    uialert(app.UIFigure, sprintf(['The matrix indents are longer than the signal of spot(s) %s, so their matrix interval was left empty. ' ...
+                        'Reduce the indents or set these intervals manually.'], spot_list), ...
+                        'Matrix Not Set', 'Icon', 'warning');
                 end
 
                 % if test_state = false, push the data from the cache to the
@@ -1851,6 +1877,36 @@ classdef Interval_Module_readable < matlab.apps.AppBase
                 message = 'No inclusions were unmixed.';
                 uialert(app.UIFigure, message, 'Warning', 'Icon', 'warning');
                 return
+            end
+
+                        % at least one spot needs intervals, otherwise Drift has nothing to calculate
+            if all(isnan(app.base.project.session.spot.background_starts))
+                uialert(app.UIFigure, 'No spot has intervals yet. Set the backgrounds and matrix intervals first.', ...
+                    'No Intervals', 'Icon', 'warning');
+                return
+            end
+
+            % every interval that is set must lie inside the signal of its spot and must not be reversed
+            if isequal(app.base.project.session.config.datatype, 'Continuous')
+                n_sweeps = repmat(height(app.base.project.session.spot.signal_data), numel(app.base.project.session.spot.name), 1);
+            else
+                n_sweeps = cellfun(@height, app.base.project.session.spot.signal_data(:));
+            end
+
+            interval_names = {'background', 'matrix_1', 'matrix_2', 'matrix_3'};
+            if isequal(app.base.project.session.config.reductiontype, 'Inclusion')
+                interval_names{end+1} = 'inclusion_1';
+            end
+            for k = 1:numel(interval_names)
+                starts = app.base.project.session.spot.([interval_names{k} '_starts'])(:);
+                ends   = app.base.project.session.spot.([interval_names{k} '_ends'])(:);
+                bad = find(~isnan(starts) & ~isnan(ends) & (ends < starts | starts < 1 | ends > n_sweeps), 1);
+                if ~isempty(bad)
+                    uialert(app.UIFigure, sprintf(['The %s interval of spot %d (%s) is reversed or lies outside the signal. ' ...
+                        'Set it again for this spot.'], strrep(interval_names{k}, '_', ' '), bad, app.base.project.session.spot.name(bad)), ...
+                        'Invalid Interval', 'Icon', 'warning');
+                    return
+                end
             end
 
             if app.editstatus == true
@@ -2295,7 +2351,7 @@ classdef Interval_Module_readable < matlab.apps.AppBase
                     %% check the position of the other lines
                     if isempty(app.hVerticalLinesBounds)
                         tmp=nan(1,numel(app.hVerticalLines));
-                        for n = numel(app.hVerticalLines) %1:10
+                        for n = 1:numel(app.hVerticalLines) %1:10
                             if isempty(app.hVerticalLines(n).xl)
                                 continue
                             end
@@ -3644,52 +3700,58 @@ classdef Interval_Module_readable < matlab.apps.AppBase
         % ImportButton, QuantificationButton, ResultsButton
         function ImportButtonPushed(app, event)
             try
-                background_empty = find(isnan(app.base.project.session.spot.background_starts));
-                all_matrix_indices = [];
-                all_background_only_indices = [];
+                target = event.Source.Parent.Parent.Parent.Parent.CallbackObject.Text;
 
-                if isequal(app.base.project.session.config.reductiontype, 'Inclusion')
-                    fields_to_check = {'matrix_1_starts', 'matrix_2_starts', 'matrix_3_starts', 'inclusion_1_starts'};
-                else
-                    fields_to_check = {'matrix_1_starts', 'matrix_2_starts', 'matrix_3_starts'};
-                end
+                % going back to Import must always be possible, e.g. to fix the detection that caused the bad intervals
+                if ~strcmp(target, 'Import')
 
-                for field = 1:length(fields_to_check)
-                    matrix_empty = find(isnan(app.base.project.session.spot.(fields_to_check{field})));
-                    matrix_indices = setdiff(background_empty, matrix_empty);
-                    all_matrix_indices = unique([all_matrix_indices; matrix_indices]);
-                end
+                    background_empty = find(isnan(app.base.project.session.spot.background_starts));
+                    all_matrix_indices = [];
+                    all_background_only_indices = [];
 
-                for i = 1:length(app.base.project.session.spot.background_starts)
-                    if ~isnan(app.base.project.session.spot.background_starts(i))
-                        all_empty = true;
-                        for field = 1:length(fields_to_check)
-                            if ~isnan(app.base.project.session.spot.(fields_to_check{field})(i))
-                                all_empty = false;
-                                break;
+                    if isequal(app.base.project.session.config.reductiontype, 'Inclusion')
+                        fields_to_check = {'matrix_1_starts', 'matrix_2_starts', 'matrix_3_starts', 'inclusion_1_starts'};
+                    else
+                        fields_to_check = {'matrix_1_starts', 'matrix_2_starts', 'matrix_3_starts'};
+                    end
+
+                    for field = 1:length(fields_to_check)
+                        matrix_empty = find(isnan(app.base.project.session.spot.(fields_to_check{field})));
+                        matrix_indices = setdiff(background_empty, matrix_empty);
+                        all_matrix_indices = unique([all_matrix_indices; matrix_indices]);
+                    end
+
+                    for i = 1:length(app.base.project.session.spot.background_starts)
+                        if ~isnan(app.base.project.session.spot.background_starts(i))
+                            all_empty = true;
+                            for field = 1:length(fields_to_check)
+                                if ~isnan(app.base.project.session.spot.(fields_to_check{field})(i))
+                                    all_empty = false;
+                                    break;
+                                end
+                            end
+                            if all_empty
+                                all_background_only_indices = [all_background_only_indices; i];
                             end
                         end
-                        if all_empty
-                            all_background_only_indices = [all_background_only_indices; i];
+                    end
+
+                    if ~isempty(all_matrix_indices)
+                        for idx = all_matrix_indices'
+                            spotname = app.base.project.session.spot.name(idx);
+                            message = sprintf("Missing Background Interval for Spot %d: %s", idx, spotname);
+                            uialert(app.UIFigure, message, "Warning", "Icon", "warning");
+                            return
                         end
                     end
-                end
 
-                if ~isempty(all_matrix_indices)
-                    for idx = all_matrix_indices'
-                        spotname = app.base.project.session.spot.name(idx);
-                        message = sprintf("Missing Background Interval for Spot %d: %s", idx, spotname);
-                        uialert(app.UIFigure, message, "Warning", "Icon", "warning");
-                        return
-                    end
-                end
-
-                if ~isempty(all_background_only_indices)
-                    for idx = all_background_only_indices'
-                        spotname = app.base.project.session.spot.name(idx);
-                        message = sprintf("Missing Matrix or Inclusion Interval for Spot %d: %s", idx, spotname);
-                        uialert(app.UIFigure, message, "Warning", "Icon", "warning");
-                        return
+                    if ~isempty(all_background_only_indices)
+                        for idx = all_background_only_indices'
+                            spotname = app.base.project.session.spot.name(idx);
+                            message = sprintf("Missing Matrix or Inclusion Interval for Spot %d: %s", idx, spotname);
+                            uialert(app.UIFigure, message, "Warning", "Icon", "warning");
+                            return
+                        end
                     end
                 end
 
@@ -3709,7 +3771,7 @@ classdef Interval_Module_readable < matlab.apps.AppBase
                         settings.ICP_Base_GUI_update_state = true;
                         [app.project_id, app.session_id] = save_to_base(app.sourceapp, app.project_id, app.base.project.session, app.session_id, app.base.project_name, settings);
 
-                        switch event.Source.Parent.Parent.Parent.Parent.CallbackObject.Text
+                        switch target
                             case 'Import'
                                 Import_Module(app.sourceapp, app.base.project_name, app.project_id, app.session_id)
                             case 'Interval'

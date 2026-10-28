@@ -1,4 +1,4 @@
-% GENERATED from Results_Module.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Results_Module.mlapp on 2026-10-28 14:17 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Results_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -3950,8 +3950,6 @@ end
         function SendtoVisModuleButtonPushed(app, event)
             
 
-            progress = uiprogressdlg(app.UIFigure, 'Title', 'ICP-Base', ...
-                'Message', 'Sending table to VisModule', 'Cancelable', 'off', 'Indeterminate','on');
 
             if isempty(app.AssignedTable.Data)
                 message = "Proceeding to the VisModule failed.";
@@ -3959,6 +3957,10 @@ end
                     "Icon","warning");
                 return
             end
+
+            progress = uiprogressdlg(app.UIFigure, 'Title', 'ICP-Base', ...
+                'Message', 'Sending table to VisModule', 'Cancelable', 'off', 'Indeterminate','on');
+            closer = onCleanup(@() delete(progress(isvalid(progress))));
 
             VisModule(app.AssignedTable.Data, app.sourceapp);
             delete(progress)

@@ -1,4 +1,4 @@
-% GENERATED from Spot_Group_Interval_Submodule.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Spot_Group_Interval_Submodule.mlapp on 2026-10-28 14:17 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Spot_Group_Interval_Submodule_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
