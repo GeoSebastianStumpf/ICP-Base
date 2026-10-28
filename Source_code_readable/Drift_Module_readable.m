@@ -1,4 +1,4 @@
-% GENERATED from Drift_Module.mlapp on 2026-10-27 16:55 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Drift_Module.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Drift_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -1535,8 +1535,20 @@ classdef Drift_Module_readable < matlab.apps.AppBase
             try
                 drift_correction(app)
             catch ME
-                watcher.Enabled = true;
-                rethrow(ME)
+                % the calculation failed: close without saving, the session in the base stays as it was
+                DisplayError(ME, 'Drift calculation failed');
+                source_app = app.sourceapp;
+                delete(app)
+                try
+                    refresh_session_buttons(source_app)
+                catch
+                end
+                uialert(source_app.UIFigure, ...
+                    ['The drift calculation failed, so the Drift module was closed without saving. ' ...
+                    'Your session data was not changed. Check the intervals for the reference materials and their RM files and the settings in the ' ...
+                    'Classification module, then open Drift again.' newline newline 'Details: ' ME.message], ...
+                    'Drift Calculation Failed', 'Icon', 'error');
+                return
             end
             watcher.Enabled = true;
 

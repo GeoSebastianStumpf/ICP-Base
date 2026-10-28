@@ -1,4 +1,4 @@
-% GENERATED from Spot_Group_Interval_Submodule.mlapp on 2026-10-27 16:55 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Spot_Group_Interval_Submodule.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Spot_Group_Interval_Submodule_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -64,6 +64,46 @@ classdef Spot_Group_Interval_Submodule_readable < matlab.apps.AppBase
     end
 
 
+    
+    methods (Access = private)
+
+        function shift_interval_limit(app, field_name, step)
+            % moves one interval limit of all selected spots by step sweeps, keeping start < end
+            spot = app.source.base.project.session.spot;
+
+            if isempty(app.selected_spot) || any(isnan(spot.(field_name)(app.selected_spot)))
+                return
+            end
+
+            old_values = spot.(field_name)(app.selected_spot);
+            if endsWith(field_name, '_starts')
+                ends       = spot.(replace(field_name, '_starts', '_ends'))(app.selected_spot);
+                new_values = min(max(1, old_values + step), ends - 1);
+            else
+                starts     = spot.(replace(field_name, '_ends', '_starts'))(app.selected_spot);
+                new_values = max(old_values + step, starts + 1);
+            end
+
+            % already at the limit: nothing changes, so no dialog and no desync
+            if isequal(new_values, old_values)
+                return
+            end
+
+            changes = check_changes(app.source, 'interval', app.UIFigure);
+            if changes == false
+                return
+            end
+            app.source.editstatus = true;
+
+            app.source.base.project.session.spot.(field_name)(app.selected_spot) = new_values;
+            app.source.base.project.session.config.manual_intervals = true;
+
+            app.source.update_Interval_Module_GUI()
+        end
+
+    end
+
+
     % Callbacks that handle component events
     methods (Access = private)
 
@@ -110,349 +150,85 @@ classdef Spot_Group_Interval_Submodule_readable < matlab.apps.AppBase
 
         % Button pushed function: BgLowerLimitPlusTenButton
         function BgLowerLimitPlusTenButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.background_starts(app.selected_spot)))
-                return
-            end
-
-            current_bg_starts = app.source.base.project.session.spot.background_starts(app.selected_spot);
-            new_bg_starts = max(0, current_bg_starts + 10);
-            app.source.base.project.session.spot.background_starts(app.selected_spot) = new_bg_starts;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            % Update the plot
-            app.source.update_Interval_Module_GUI()
+            shift_interval_limit(app, 'background_starts', 10)
 
         end
 
         % Button pushed function: BgLowerLimitPlusOneButton
         function BgLowerLimitPlusOneButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.background_starts(app.selected_spot)))
-                return
-            end
-
-            current_bg_starts = app.source.base.project.session.spot.background_starts(app.selected_spot);
-            new_bg_starts = max(0, current_bg_starts + 1);
-            app.source.base.project.session.spot.background_starts(app.selected_spot) = new_bg_starts;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            % Update the plot
-            app.source.update_Interval_Module_GUI()
+            shift_interval_limit(app, 'background_starts', 1)
 
         end
 
         % Button pushed function: BgLowerLimitMinusOneButton
         function BgLowerLimitMinusOneButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.background_starts(app.selected_spot)))
-                return
-            end
-
-            current_bg_starts = app.source.base.project.session.spot.background_starts(app.selected_spot);
-            new_bg_starts = max(0, current_bg_starts - 1);
-            app.source.base.project.session.spot.background_starts(app.selected_spot) = new_bg_starts;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            app.source.update_Interval_Module_GUI()
+            shift_interval_limit(app, 'background_starts', -1)
         end
 
         % Button pushed function: BgLowerLimitMinusTenButton
         function BgLowerLimitMinusTenButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.background_starts(app.selected_spot)))
-                return
-            end
-
-            current_bg_starts = app.source.base.project.session.spot.background_starts(app.selected_spot);
-            new_bg_starts = max(0, current_bg_starts - 10);
-            app.source.base.project.session.spot.background_starts(app.selected_spot) = new_bg_starts;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            app.source.update_Interval_Module_GUI()
+            shift_interval_limit(app, 'background_starts', -10)
         end
 
         % Button pushed function: BgUpperLimitPlusTenButton
         function BgUpperLimitPlusTenButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.background_ends(app.selected_spot)))
-                return
-            end
-
-            current_bg_ends = app.source.base.project.session.spot.background_ends(app.selected_spot);
-            new_bg_ends = max(0, current_bg_ends + 10);
-            app.source.base.project.session.spot.background_ends(app.selected_spot) = new_bg_ends;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            app.source.update_Interval_Module_GUI()
-
+            shift_interval_limit(app, 'background_ends', 10)
         end
 
         % Button pushed function: BgUpperLimitPlusOneButton
         function BgUpperLimitPlusOneButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.background_ends(app.selected_spot)))
-                return
-            end
-
-            current_bg_ends = app.source.base.project.session.spot.background_ends(app.selected_spot);
-            new_bg_ends = max(0, current_bg_ends + 1);
-            app.source.base.project.session.spot.background_ends(app.selected_spot) = new_bg_ends;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            app.source.update_Interval_Module_GUI()
-
+            shift_interval_limit(app, 'background_ends', 1)
         end
 
         % Button pushed function: BgUpperLimitMinusOneButton
         function BgUpperLimitMinusOneButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.background_ends(app.selected_spot)))
-                return
-            end
-
-            current_bg_ends = app.source.base.project.session.spot.background_ends(app.selected_spot);
-            new_bg_ends = max(0, current_bg_ends - 1);
-            app.source.base.project.session.spot.background_ends(app.selected_spot) = new_bg_ends;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            app.source.update_Interval_Module_GUI()
+            shift_interval_limit(app, 'background_ends', -1)
         end
 
         % Button pushed function: BgUpperLimitMinusTenButton
         function BgUpperLimitMinusTenButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.background_ends(app.selected_spot)))
-                return
-            end
-
-            current_bg_ends = app.source.base.project.session.spot.background_ends(app.selected_spot);
-            new_bg_ends = max(0, current_bg_ends - 10);
-            app.source.base.project.session.spot.background_ends(app.selected_spot) = new_bg_ends;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            app.source.update_Interval_Module_GUI()
+            shift_interval_limit(app, 'background_ends', -10)
         end
 
         % Button pushed function: MatrixLowerLimitPlusTenButton
         function MatrixLowerLimitPlusTenButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.matrix_1_starts(app.selected_spot)))
-                return
-            end
-
-            current_mat_starts = app.source.base.project.session.spot.matrix_1_starts(app.selected_spot);
-            new_mat_starts = max(0, current_mat_starts + 10);
-            app.source.base.project.session.spot.matrix_1_starts(app.selected_spot) = new_mat_starts;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            app.source.update_Interval_Module_GUI()
-
+            shift_interval_limit(app, 'matrix_1_starts', 10)
         end
 
         % Button pushed function: MatrixLowerLimitPlusOneButton
         function MatrixLowerLimitPlusOneButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.matrix_1_starts(app.selected_spot)))
-                return
-            end
-
-            current_mat_starts = app.source.base.project.session.spot.matrix_1_starts(app.selected_spot);
-            new_mat_starts = max(0, current_mat_starts + 1);
-            app.source.base.project.session.spot.matrix_1_starts(app.selected_spot) = new_mat_starts;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            app.source.update_Interval_Module_GUI()
-
+            shift_interval_limit(app, 'matrix_1_starts', 1)
         end
 
         % Button pushed function: MatrixLowerLimitMinusOneButton
         function MatrixLowerLimitMinusOneButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.matrix_1_starts(app.selected_spot)))
-                return
-            end
-
-            current_mat_starts = app.source.base.project.session.spot.matrix_1_starts(app.selected_spot);
-            new_mat_starts = max(0, current_mat_starts - 1);
-            app.source.base.project.session.spot.matrix_1_starts(app.selected_spot) = new_mat_starts;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            app.source.update_Interval_Module_GUI()
+            shift_interval_limit(app, 'matrix_1_starts', -1)
         end
 
         % Button pushed function: MatrixLowerLimitMinusTenButton
         function MatrixLowerLimitMinusTenButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.matrix_1_starts(app.selected_spot)))
-                return
-            end
-
-            current_mat_starts = app.source.base.project.session.spot.matrix_1_starts(app.selected_spot);
-            new_mat_starts = max(0, current_mat_starts - 10);
-            app.source.base.project.session.spot.matrix_1_starts(app.selected_spot) = new_mat_starts;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            app.source.update_Interval_Module_GUI()
-
+            shift_interval_limit(app, 'matrix_1_starts', -10)
         end
 
         % Button pushed function: MatrixUpperLimitPlusTenButton
         function MatrixUpperLimitPlusTenButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.matrix_1_ends(app.selected_spot)))
-                return
-            end
-
-            current_mat_ends = app.source.base.project.session.spot.matrix_1_ends(app.selected_spot);
-            new_mat_ends = max(0, current_mat_ends + 10);
-            app.source.base.project.session.spot.matrix_1_ends(app.selected_spot) = new_mat_ends;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            app.source.update_Interval_Module_GUI()
+            shift_interval_limit(app, 'matrix_1_ends', 10)
 
         end
 
         % Button pushed function: MatrixUpperLimitPlusOneButton
         function MatrixUpperLimitPlusOneButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.matrix_1_ends(app.selected_spot)))
-                return
-            end
-
-            current_mat_ends = app.source.base.project.session.spot.matrix_1_ends(app.selected_spot);
-            new_mat_ends = max(0, current_mat_ends + 1);
-            app.source.base.project.session.spot.matrix_1_ends(app.selected_spot) = new_mat_ends;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            app.source.update_Interval_Module_GUI()
+            shift_interval_limit(app, 'matrix_1_ends', 1)
         end
 
         % Button pushed function: MatrixUpperLimitMinusOneButton
         function MatrixUpperLimitMinusOneButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.matrix_1_ends(app.selected_spot)))
-                return
-            end
-
-            current_mat_ends = app.source.base.project.session.spot.matrix_1_ends(app.selected_spot);
-            new_mat_ends = max(0, current_mat_ends - 1);
-            app.source.base.project.session.spot.matrix_1_ends(app.selected_spot) = new_mat_ends;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            app.source.update_Interval_Module_GUI()
+            shift_interval_limit(app, 'matrix_1_ends', -1)
         end
 
         % Button pushed function: MatrixUpperLimitMinusTenButton
         function MatrixUpperLimitMinusTenButtonPushed(app, event)
-            changes = check_changes(app.source, 'interval', app.UIFigure);
-            if changes == false
-                return
-            end
-
-
-            if any(isnan(app.source.base.project.session.spot.matrix_1_ends(app.selected_spot)))
-                return
-            end
-
-            current_mat_ends = app.source.base.project.session.spot.matrix_1_ends(app.selected_spot);
-            new_mat_ends = max(0, current_mat_ends - 10);
-            app.source.base.project.session.spot.matrix_1_ends(app.selected_spot) = new_mat_ends;
-
-            app.source.base.project.session.config.manual_intervals = true;
-
-            app.source.update_Interval_Module_GUI()
-
+            shift_interval_limit(app, 'matrix_1_ends', -10)
         end
     end
 

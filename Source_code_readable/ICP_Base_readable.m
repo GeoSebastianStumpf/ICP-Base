@@ -1,4 +1,4 @@
-% GENERATED from ICP_Base.mlapp on 2026-10-27 16:55 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from ICP_Base.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef ICP_Base_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -1260,6 +1260,7 @@ classdef ICP_Base_readable < matlab.apps.AppBase
 
 
         function [project_id, session_id] = save_to_base(app, project_id, session, session_id, project_name, settings)
+           stored = false;
             try
                 if isequal(project_id, 0) || isempty(project_id)
                     project_id = numel(app.base) + 1;
@@ -1299,6 +1300,8 @@ classdef ICP_Base_readable < matlab.apps.AppBase
                     app.base(project_id).project(session_id).session.session_name = 'New Session';
                 end
 
+                stored = true;   % the session is in the base, what follows is only GUI
+
                 if isfield(settings, 'ICP_Base_GUI_update_state') && settings.ICP_Base_GUI_update_state == true
                     if ~isempty(app.LastSelectedProjectRow) && app.LastSelectedProjectRow == project_id
                         update_session_table(app, project_id)
@@ -1309,6 +1312,10 @@ classdef ICP_Base_readable < matlab.apps.AppBase
                 end
             catch ME
                 DisplayError(ME, 'Error - save_to_base')
+                % the session did not reach the base: stop the caller, so the module stays open and keeps its edits
+                if ~stored
+                    rethrow(ME)
+                end
             end
         end
 
@@ -1847,7 +1854,7 @@ classdef ICP_Base_readable < matlab.apps.AppBase
             src = char(app.basepath);
             [fdir, fname, fext] = fileparts(src);
             dst = fullfile(fdir, [fname '_repack' fext]);
-            bak = fullfile(fdir, [fname '_backup' fext]);    % e.g. MyBase_backup.h5
+            bak = fullfile(fdir, [fname '_backup_' char(datetime('now', 'Format', 'yyyyMMdd_HHmmss')) fext]);    % e.g. MyBase_backup_20261028_101500.h5
 
             d = dir(src); before_bytes = d.bytes; after_bytes = before_bytes;
 
@@ -1904,7 +1911,6 @@ classdef ICP_Base_readable < matlab.apps.AppBase
             end
 
             % --- safe swap: old -> .bak, new -> real name, delete .bak ---
-            if isfile(bak), delete(bak); end
             movefile(src, bak);
             try
                 movefile(dst, src);
@@ -4172,7 +4178,7 @@ classdef ICP_Base_readable < matlab.apps.AppBase
                 if exist('progress', 'var') && isvalid(progress), delete(progress); end
                 DisplayError(ME, 'Compacting base failed');
                        uialert(app.UIFigure, ...
-                    ['Compacting the base failed — your base was NOT modified. A file named "' fname '_backup' fext ...
+                    ['Compacting the base failed — your base was NOT modified. A file named "' fname '_backup_<date_time>' fext ...
                     '" may remain next to it; that is a complete copy of your original base and can be opened via ' ...
                     'Open Base if needed. Delete it once you have confirmed the base still opens. Details: ' ME.message], ...
                     'Compact Failed', 'Icon', 'error');

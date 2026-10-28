@@ -1,4 +1,4 @@
-% GENERATED from Classification_Module.mlapp on 2026-10-27 16:55 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Classification_Module.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Classification_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -249,28 +249,34 @@ end
             nRows  = height(app.ReferenceMaterialTable.Data);
 
             bg = ones(nRows, 3);
+            orange = [1, 229/255, 204/255];
 
             no_refmat = refmat == "None" | refmat == "Select Reference Material";
+            no_type   = type == "Unknown" | type == "Select Type";
 
-            idx_refmat_not_none_unknown    = ~no_refmat & type == "Unknown";
-            idx_none_type_not_unknown_icm  = no_refmat  & type ~= "Unknown" & type ~= "ICM";
-            idx_cal                        = ~no_refmat & type == "CAL";
-            idx_qcrm                       = ~no_refmat & type == "QCRM";
-            idx_icm                        = type == "ICM";
-
-            bg(idx_refmat_not_none_unknown, :) = repmat([1, 229/255, 204/255], sum(idx_refmat_not_none_unknown), 1);
-            if any(idx_refmat_not_none_unknown)
-                app.base.project.session.spot.type(idx_refmat_not_none_unknown) = "Select Type";
+            % RM set but no type yet: orange, and ask for the type
+            idx_refmat_no_type = ~no_refmat & no_type;
+            bg(idx_refmat_no_type, :) = repmat(orange, sum(idx_refmat_no_type), 1);
+            idx_set_select_type = ~no_refmat & type == "Unknown";
+            if any(idx_set_select_type)
+                app.base.project.session.spot.type(idx_set_select_type) = "Select Type";
             end
 
-            bg(idx_none_type_not_unknown_icm, :) = repmat([1, 229/255, 204/255], sum(idx_none_type_not_unknown_icm), 1);
-            if any(idx_none_type_not_unknown_icm)
-                app.base.project.session.spot.referencematerial(idx_none_type_not_unknown_icm) = "Select Reference Material";
+            % type set but no RM yet: orange, and ask for the RM
+            idx_type_no_refmat = no_refmat & ~no_type & type ~= "ICM";
+            bg(idx_type_no_refmat, :) = repmat(orange, sum(idx_type_no_refmat), 1);
+            idx_set_select_rm = idx_type_no_refmat & refmat ~= "Select Reference Material";
+            if any(idx_set_select_rm)
+                app.base.project.session.spot.referencematerial(idx_set_select_rm) = "Select Reference Material";
             end
+
+            idx_cal  = ~no_refmat & type == "CAL";
+            idx_qcrm = ~no_refmat & type == "QCRM";
+            idx_icm  = type == "ICM";
 
             bg(idx_cal,  :) = repmat([204/255, 1,        204/255], sum(idx_cal),  1);
             bg(idx_qcrm, :) = repmat([204/255, 1,        1      ], sum(idx_qcrm), 1);
-            bg(idx_icm, :)  = repmat([204/255, 204/255,  1      ], sum(idx_icm), 1);
+            bg(idx_icm, :)  = repmat([204/255, 204/255,  1      ], sum(idx_icm),  1);
             if any(refmat(idx_icm) ~= "None")
                 app.base.project.session.spot.referencematerial(idx_icm) = "None";
             end
@@ -451,7 +457,7 @@ end
             % assign spots to reference materials
             % Ensure the first item is a cell array of character vectors
             app.RMListBox.Items = {'---------'};
-            app.RMListBox.ItemsData = 1;
+            app.RMListBox.ItemsData = 0;
             % Convert the names to a cell array of character vectors
             if isfield(app.base.project.session, 'referencematerials')
 
@@ -628,6 +634,10 @@ end
 
         % Value changed function: RMListBox
         function RMListBoxValueChanged(app, event)
+            if isequal(app.RMListBox.Value, 0)
+                return
+            end
+            
             changes = check_changes(app, 'classification');
             if changes == false
                 return

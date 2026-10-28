@@ -1,4 +1,4 @@
-% GENERATED from Interval_Module.mlapp on 2026-10-27 16:55 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Interval_Module.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Interval_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -1136,17 +1136,15 @@ classdef Interval_Module_readable < matlab.apps.AppBase
             host_3_start = app.base.project.session.spot.matrix_3_starts(host_spot_idx);
             host_3_end   = app.base.project.session.spot.matrix_3_ends(host_spot_idx);
 
+           
             if isnan(host_1_start) && isnan(host_2_start) && isnan(host_3_start)
-                if host_spot_idx == app.selected_spot
-                    return;
-                else
-                    message = "Selected spot has no matrix intervals";
-                    uialert(app.UIFigure, message, "Warning", "Icon", "warning");
-                    app.base.project.session.spot.matrix_from_spot(app.selected_spot) = app.base.project.session.spot.name(app.selected_spot);
-                    update_Interval_Module_GUI(app)
-                    return;
+                if host_spot_idx ~= app.selected_spot
+                    uialert(app.UIFigure, "The host spot has no matrix intervals, so the unmixing cannot be shown. Choose another host spot.", ...
+                        "Warning", "Icon", "warning");
                 end
+                return
             end
+        
 
             if isequal(app.base.project.session.config.datatype, 'Continuous')
                 data_host = table2array(app.base.project.session.spot.signal_data(:, 2:end));
@@ -3601,13 +3599,25 @@ classdef Interval_Module_readable < matlab.apps.AppBase
 
         % Value changed function: HostfromspotDropDown
         function HostfromspotDropDownValueChanged(app, event)
+            host_spot_idx = app.HostfromspotDropDown.Value;
+
+            % a host spot without matrix intervals cannot be used for the unmixing
+            if host_spot_idx ~= app.selected_spot && ...
+                    isnan(app.base.project.session.spot.matrix_1_starts(host_spot_idx)) && ...
+                    isnan(app.base.project.session.spot.matrix_2_starts(host_spot_idx)) && ...
+                    isnan(app.base.project.session.spot.matrix_3_starts(host_spot_idx))
+                uialert(app.UIFigure, "Selected spot has no matrix intervals", "Warning", "Icon", "warning");
+                app.HostfromspotDropDown.Value = event.PreviousValue;
+                return
+            end
+
             changes = check_changes(app, 'interval');
             if changes == false
                 return
             end
             app.editstatus = true;
 
-            app.base.project.session.spot.matrix_from_spot(app.selected_spot) = app.base.project.session.spot.name(app.HostfromspotDropDown.Value);
+            app.base.project.session.spot.matrix_from_spot(app.selected_spot) = app.base.project.session.spot.name(host_spot_idx);
 
             update_Interval_Module_GUI(app)
         end
@@ -3806,13 +3816,25 @@ classdef Interval_Module_readable < matlab.apps.AppBase
 
         % Value changed function: FromSpotDropDown
         function FromSpotDropDownValueChanged(app, event)
+           host_spot_idx = app.FromSpotDropDown.Value;
+
+            % a host spot without matrix intervals cannot be used for the unmixing
+            if host_spot_idx ~= app.selected_spot && ...
+                    isnan(app.base.project.session.spot.matrix_1_starts(host_spot_idx)) && ...
+                    isnan(app.base.project.session.spot.matrix_2_starts(host_spot_idx)) && ...
+                    isnan(app.base.project.session.spot.matrix_3_starts(host_spot_idx))
+                uialert(app.UIFigure, "Selected spot has no matrix intervals", "Warning", "Icon", "warning");
+                app.FromSpotDropDown.Value = event.PreviousValue;
+                return
+            end
+
             changes = check_changes(app, 'interval');
             if changes == false
                 return
             end
             app.editstatus = true;
 
-            app.base.project.session.spot.matrix_from_spot(app.selected_spot) = app.base.project.session.spot.name(app.FromSpotDropDown.Value);
+            app.base.project.session.spot.matrix_from_spot(app.selected_spot) = app.base.project.session.spot.name(host_spot_idx);
 
             update_Interval_Module_GUI(app)
         end

@@ -1,4 +1,4 @@
-% GENERATED from Quantification_Module.mlapp on 2026-10-27 16:55 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Quantification_Module.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Quantification_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -805,13 +805,13 @@ end
                                     IS_mass_fraction = app.base.project.session.spot.matrix_composition{bracket_idx,source_cal_idx}{unk, char(IS_element)};
 
                                     if IS_mass_fraction > 0
-                                        original_IS_mass_fraction = app.base.project.session.spot.internal_standard_mass_fraction{bracket_idx,cal_idx}{unk};
+                                        
                                         old_row      = mass_fractions_mat(unk,:);
                                         IS_name      = IS_element;
                                         IS_intensity = app.base.project.session.spot.bkgd_corrected_cps.(char(IS_name))(unk);
 
-                                        % Temporarily set the resolved IS mass fraction for computation
-                                        app.base.project.session.spot.internal_standard_mass_fraction{bracket_idx,cal_idx}{unk} = IS_mass_fraction;
+
+
 
                                         cps_row  = table2array(app.base.project.session.spot.bkgd_corrected_cps(unk, shared_analyte_cols));
                                         sens_row = table2array(app.sensitivity_relative_to_internal_standard{bracket_idx,cal_idx}(unk, shared_analyte_cols));
@@ -842,8 +842,7 @@ end
                                         LOD_row = zeros(1, n_bkgd_cols);
                                         LOD_row(shared_col_positions) = LOD_vals;
 
-                                        % Restore original 'from ...' reference string
-                                        app.base.project.session.spot.internal_standard_mass_fraction{bracket_idx,cal_idx}{unk} = original_IS_mass_fraction;
+
 
                                         mass_fractions_mat(unk,:) = new_row;
                                         LOD_mat(unk,:)            = LOD_row;
@@ -1183,12 +1182,8 @@ end
                                     continue
                                 end
 
-                                old_values       = table2array(app.base.project.session.spot.inclusion_composition{bracket_idx,cal_idx}(unk,:));
-                                original_IS_mf_1 = IS_mf_raw;
-                                app.base.project.session.spot.internal_standard_mass_fraction_inclusion{bracket_idx,cal_idx}{unk} = calculated_is_value_1;
+                                old_values = table2array(app.base.project.session.spot.inclusion_composition{bracket_idx,cal_idx}(unk,:));
                                 if second_is_from
-                                    original_IS_mf_2 = second_IS_mf;
-                                    app.base.project.session.spot.second_internal_standard_mass_fraction_inclusion{bracket_idx,cal_idx}{unk} = calculated_is_value_2;
                                     second_IS_mf = calculated_is_value_2;
                                 end
 
@@ -1238,7 +1233,8 @@ end
                                             inclusion_quantification_failed = true; return
                                         end
                                     end
-                                    mixing_ratio_unk       = calculate_mixing_ratio_via_two_IS(app, bracket_idx, cal_idx, unk, host_from_spot_index, IS_name, IS_mf);
+
+                                    mixing_ratio_unk       = calculate_mixing_ratio_via_two_IS(app, bracket_idx, cal_idx, unk, host_from_spot_index, IS_name, IS_mf, second_IS_mf);
                                     intensity_mix_is2      = app.base.project.session.spot.bkgd_corrected_cps_mix.(char(second_IS))(unk);
                                     mass_fraction_host_is2 = app.base.project.session.spot.matrix_composition{bracket_idx,cal_idx}.(char(second_IS))(host_from_spot_index);
                                     mass_fraction_mix_is2  = (1 - mixing_ratio_unk) * mass_fraction_host_is2 + mixing_ratio_unk * second_IS_mf;
@@ -1282,8 +1278,8 @@ end
 
                                 end
 
-                                app.base.project.session.spot.internal_standard_mass_fraction_inclusion{bracket_idx,cal_idx}{unk} = original_IS_mf_1;
-                                if second_is_from, app.base.project.session.spot.second_internal_standard_mass_fraction_inclusion{bracket_idx,cal_idx}{unk} = original_IS_mf_2; end
+
+
 
                                 inclusion_composition_mat(unk,:) = mass_fractions_inclusion;
                                 mixing_ratio_vec(unk)            = mixing_ratio_unk;
@@ -1308,9 +1304,7 @@ end
                                     continue
                                 end
 
-                                old_values       = table2array(app.base.project.session.spot.inclusion_composition{bracket_idx,cal_idx}(unk,:));
-                                original_IS_mf_2 = second_IS_mf;
-                                app.base.project.session.spot.second_internal_standard_mass_fraction_inclusion{bracket_idx,cal_idx}{unk} = calculated_is_value_2;
+                                old_values   = table2array(app.base.project.session.spot.inclusion_composition{bracket_idx,cal_idx}(unk,:));
                                 second_IS_mf = calculated_is_value_2;
 
                                 IS_name      = IS;
@@ -1359,7 +1353,7 @@ end
                                             inclusion_quantification_failed = true; return
                                         end
                                     end
-                                    mixing_ratio_unk       = calculate_mixing_ratio_via_two_IS(app, bracket_idx, cal_idx, unk, host_from_spot_index, IS_name, IS_mf);
+                                    mixing_ratio_unk       = calculate_mixing_ratio_via_two_IS(app, bracket_idx, cal_idx, unk, host_from_spot_index, IS_name, IS_mf, second_IS_mf);
                                     intensity_mix_is2      = app.base.project.session.spot.bkgd_corrected_cps_mix.(char(second_IS))(unk);
                                     mass_fraction_host_is2 = app.base.project.session.spot.matrix_composition{bracket_idx,cal_idx}.(char(second_IS))(host_from_spot_index);
                                     mass_fraction_mix_is2  = (1 - mixing_ratio_unk) * mass_fraction_host_is2 + mixing_ratio_unk * second_IS_mf;
@@ -1371,8 +1365,6 @@ end
                                     mass_fractions_inclusion(mix_incl_positions) = mf_incl_row;
                                     mass_fractions_mix(mix_incl_positions)       = mf_mix_row;
                                 end
-
-                                app.base.project.session.spot.second_internal_standard_mass_fraction_inclusion{bracket_idx,cal_idx}{unk} = original_IS_mf_2;
 
                                 inclusion_composition_mat(unk,:) = mass_fractions_inclusion;
                                 mixing_ratio_vec(unk)            = mixing_ratio_unk;
@@ -1767,11 +1759,13 @@ end
 
         end
 
-        function mixing_ratio = calculate_mixing_ratio_via_two_IS(app, bracket_idx, cal_idx, unk, host_from_spot_index, internal_standard_name, internal_standard_mass_fraction)
+        function mixing_ratio = calculate_mixing_ratio_via_two_IS(app, bracket_idx, cal_idx, unk, host_from_spot_index, internal_standard_name, internal_standard_mass_fraction, second_internal_standard_mass_fraction)
 
-            second_internal_standard_name            = app.base.project.session.spot.second_internal_standard_inclusion{bracket_idx,cal_idx}(unk);
-            second_internal_standard_mass_fraction   = app.base.project.session.spot.second_internal_standard_mass_fraction_inclusion{bracket_idx,cal_idx}{unk};
-
+            second_internal_standard_name = app.base.project.session.spot.second_internal_standard_inclusion{bracket_idx,cal_idx}(unk);
+            % the caller can pass a resolved 'from <CAL>' value for IS2, otherwise the stored value is used
+            if nargin < 8
+                second_internal_standard_mass_fraction = app.base.project.session.spot.second_internal_standard_mass_fraction_inclusion{bracket_idx,cal_idx}{unk};
+            end
             intensity_mix_is1 = app.base.project.session.spot.bkgd_corrected_cps_mix.(char(internal_standard_name))(unk);
             intensity_mix_is2 = app.base.project.session.spot.bkgd_corrected_cps_mix.(char(second_internal_standard_name))(unk);
 
@@ -3933,37 +3927,41 @@ end
             end
             app.editstatus = true;
 
-            indices = event.Indices;
-            newData = event.NewData;
+            indices     = event.Indices;
+            newData     = event.NewData;
+            column_name = app.MatrixTable.ColumnName{indices(2)};
 
-            if ischar(newData) || isstring(newData)
-                if ~startsWith(lower(newData), 'from')
-                    try
-                        newData = str2double(newData);
-                        if isnan(newData), newData = NaN; end
-                    catch
-                        newData = NaN;
-                    end
+            % "from <CAL>" (value taken from another calibrator) is only valid in the mass fraction column
+            keep_reference = (ischar(newData) || isstring(newData)) && ...
+                startsWith(lower(string(newData)), 'from') && strcmp(column_name, '[µg/g]');
+
+            if ~keep_reference
+                if ischar(newData) || isstring(newData)
+                    newData = str2double(newData);
+                elseif ~isnumeric(newData)
+                    newData = NaN;
                 end
-            elseif ~isnumeric(newData);  newData = NaN;
-            elseif isnan(newData);       newData = NaN;
-            elseif isequal(newData, 0);  newData = NaN;
-            elseif newData < 0;          newData = NaN;
-            elseif strcmp(app.MatrixTable.ColumnName{indices(2)}, 'FeO/(FeO + Fe2O3)') && (newData < 0 || newData > 1);   newData = NaN;
-            elseif strcmp(app.MatrixTable.ColumnName{indices(2)}, '% Total Oxides')     && (newData < 0 || newData > 100); newData = NaN;
+                % checked after the conversion, so typed text gets the same limits as numbers
+                if isnan(newData) || newData <= 0 ...
+                        || (strcmp(column_name, 'FeO/(FeO + Fe2O3)') && newData > 1) ...
+                        || (strcmp(column_name, '% Total Oxides')    && newData > 100)
+                    newData = NaN;
+                end
             end
 
             b = app.BracketidDropDown.Value;
             c = app.selected_CAL;
 
             for spot_idx = app.selected_spot'
-                switch app.MatrixTable.ColumnName{indices(2)}
+                switch column_name
                     case '[µg/g]'
                         app.base.project.session.spot.internal_standard_mass_fraction{b, c}{spot_idx} = newData;
                     case '± 1σ [µg/g]'
                         is_frac = app.base.project.session.spot.internal_standard_mass_fraction{b, c}{spot_idx};
                         is_val  = app.base.project.session.spot.internal_standard{b, c}(spot_idx);
-                        if ~isequal(is_val, 'Total Oxides') && ~startsWith(string(is_frac), 'from')
+                        takes_value_from_other_calibrator = ~isempty(is_frac) && startsWith(string(is_frac), 'from');
+                        % a value inherited from another calibrator carries its own uncertainty, so an input here is discarded
+                        if ~isequal(is_val, 'Total Oxides') && ~takes_value_from_other_calibrator
                             app.base.project.session.spot.internal_standard_mass_fraction_uncertainty{b, c}(spot_idx) = newData;
                         end
                     case '% Total Oxides'
@@ -4408,9 +4406,12 @@ end
             indices = event.Indices;
             newData = event.NewData;
 
+            column_name = app.InclusionTable.ColumnName{indices(2)};
+            is_mass_fraction_column = any(strcmp(column_name, {'[µg/g] (I.S.1)', '[µg/g] (I.S.2)'}));
+
             % Validate newData
             if ischar(newData) || isstring(newData)
-                if ~startsWith(lower(string(newData)), 'from')
+                if ~(startsWith(lower(string(newData)), 'from') && is_mass_fraction_column)
                     newData = str2double(newData);
                     if isnan(newData) || newData == 0
                         newData = [];
@@ -4437,10 +4438,12 @@ end
                     case '[µg/g] (I.S.1)'
                         app.base.project.session.spot.internal_standard_mass_fraction_inclusion{app.BracketidDropDown.Value, app.selected_CAL}{spot_idx} = newData;
                     case '% Total Oxides'
-                        val = newData; if isempty(val); val = NaN; end
+                         val = newData; if isempty(val); val = NaN; end
+                        if ~isnan(val) && (val <= 0 || val > 100); val = NaN; end
                         app.base.project.session.spot.internal_standard_oxide_wt_inclusion{app.BracketidDropDown.Value, app.selected_CAL}(spot_idx) = val;
                     case 'FeO/(FeO + Fe2O3)'
                         val = newData; if isempty(val); val = NaN; end
+                        if ~isnan(val) && (val <= 0 || val > 1); val = NaN; end
                         app.base.project.session.spot.Fe_ratio_for_total_oxide_inclusion{app.BracketidDropDown.Value, app.selected_CAL}(spot_idx) = val;
                     case '[µg/g] (I.S.2)'
                         if ~ismember(spot_idx, app.two_IS_rows)

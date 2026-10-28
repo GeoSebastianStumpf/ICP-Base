@@ -1,4 +1,4 @@
-% GENERATED from Import_Module.mlapp on 2026-10-27 16:55 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Import_Module.mlapp on 2026-10-28 10:32 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Import_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -4631,6 +4631,8 @@ classdef Import_Module_readable < matlab.apps.AppBase
 
         % Button pushed function: GetMassSpecMetadataButton
         function GetMassSpecMetadataButtonPushed(app, event)
+            settings = struct(); % passed to read_mass_spec_metadata_wrapper, which reads the dropdown itself
+            
             changes = check_changes(app, 'import');
             if changes == false
                 return
@@ -4741,7 +4743,7 @@ classdef Import_Module_readable < matlab.apps.AppBase
                         [~, ~, ~, dwelltimes, ~, ~]  = read_mass_spec_metadata_wrapper(app, app.base.project.session.config.mass_spec_metadata_path, settings);
 
 
-                        if isfield(app.base.project.session.spot, 'analytes') || ~isempty(app.base.project.session.spot.analytes)
+                        if isfield(app.base.project.session, 'spot') && isfield(app.base.project.session.spot, 'analytes') && ~isempty(app.base.project.session.spot.analytes)
                             % Get analytes list
                             analytes = app.base.project.session.spot.analytes;
 
@@ -4913,7 +4915,13 @@ classdef Import_Module_readable < matlab.apps.AppBase
 
         % Callback function: ExitMenu, UIFigure
         function ExitMenuSelected(app, event)
-            if isempty(app.base) || isempty(app.base.project)
+            % nothing imported: no signal data in this session
+            no_data = isempty(app.base) || isempty(app.base.project) || ...
+                ~isfield(app.base.project, 'session') || ~isfield(app.base.project.session, 'spot') || ...
+                ~isfield(app.base.project.session.spot, 'signal_data') || isempty(app.base.project.session.spot.signal_data);
+
+            % a new session (not in the base yet) where nothing was imported: close without adding it
+            if no_data && (isempty(app.session_id) || isequal(app.session_id, 0))
                 source_app = app.sourceapp;
                 delete(app)
                 try
@@ -4926,11 +4934,14 @@ classdef Import_Module_readable < matlab.apps.AppBase
 
             settings.ICP_Base_GUI_update_state = true;
 
-            session_config = app.base.project.session.config;
-            if ~isfield(session_config, 'module_status') ...
-                    || ~isfield(session_config.module_status, 'import') ...
-                    || ~session_config.module_status.import
-                app.base.project.session.config.module_status.import = true;
+            % import is only done when there is data
+            if ~no_data
+                session_config = app.base.project.session.config;
+                if ~isfield(session_config, 'module_status') ...
+                        || ~isfield(session_config.module_status, 'import') ...
+                        || ~session_config.module_status.import
+                    app.base.project.session.config.module_status.import = true;
+                end
             end
 
             [~,~] =   save_to_base(app.sourceapp, app.project_id, app.base.project.session, app.session_id, app.base.project_name, settings);
@@ -5536,12 +5547,21 @@ classdef Import_Module_readable < matlab.apps.AppBase
 
         % Value changed function: globalsignalindentEditField
         function globalsignalindentEditFieldValueChanged(app, event)
+            % the indent is applied to the laser on/off times, so a laser log and signal data are needed
+            if ~isfield(app.base.project.session, 'spot') || ~isfield(app.base.project.session.spot, 'signal_data') || ...
+                    ~isfield(app.base.project.session, 'meta') || ~isfield(app.base.project.session.meta, 'laser_parameters') || ...
+                    ~isfield(app.base.project.session.meta.laser_parameters, 'laser_start_times')
+                uialert(app.UIFigure, "Load the signal file and the laser log file first, the indent is applied to the laser on/off times.", ...
+                    "Warning", "Icon", "warning");
+                app.globalsignalindentEditField.Value = event.PreviousValue;
+                return
+            end
+
             changes = check_changes(app, 'import');
             if changes == false
                 return
             end
             app.editstatus = true;
-
 
 
             app.global_signal_indent = app.globalsignalindentEditField.Value;
