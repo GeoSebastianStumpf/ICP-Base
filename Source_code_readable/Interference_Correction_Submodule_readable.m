@@ -1,4 +1,4 @@
-% GENERATED from Interference_Correction_Submodule.mlapp on 2026-10-28 14:22 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Interference_Correction_Submodule.mlapp on 2026-10-28 15:37 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Interference_Correction_Submodule_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components

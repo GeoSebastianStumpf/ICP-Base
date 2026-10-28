@@ -1,6 +1,6 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="1813367151" file="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base.prj" location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev" name="ICP-Base" preferred-package-location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
-    <param.appname>ICP_Base</param.appname>
+  <configuration build-checksum="603994883" file="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base.prj" location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev" name="ICP-Base" preferred-package-location="C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>ICP-Basev1.4.0</param.appname>
     <param.icon>${PROJECT_ROOT}\ICP-Base_resources\icon.ico</param.icon>
     <param.icons>
       <file>${PROJECT_ROOT}\ICP-Base_resources\icon_48.png</file>
@@ -96,8 +96,8 @@
     </fileset.depfun>
     <build-deliverables>
       <file location="${PROJECT_ROOT}\ICP-Base\for_testing" name="readme.txt" optional="true">C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base\for_testing\readme.txt</file>
-      <file location="${PROJECT_ROOT}\ICP-Base\for_testing" name="ICP_Base.exe" optional="false">C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base\for_testing\ICP_Base.exe</file>
       <file location="${PROJECT_ROOT}\ICP-Base\for_testing" name="splash.png" optional="false">C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\ICP-Base\for_testing" name="ICP-Basev1.4.0.exe" optional="false">C:\Users\Sebastian\OneDrive - Universitaet Bern\PhD\ICP-Base\ICP-Base_dev\ICP-Base\for_testing\ICP-Basev1.4.0.exe</file>
     </build-deliverables>
     <workflow />
     <matlab>

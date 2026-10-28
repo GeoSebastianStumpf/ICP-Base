@@ -1,4 +1,4 @@
-% GENERATED from Interval_Module.mlapp on 2026-10-28 14:22 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
+% GENERATED from Interval_Module.mlapp on 2026-10-28 15:37 by export_mlapp_to_m. This file is for reading purposes, any real changes need to be applied to the .mlapp files and exported again.
 classdef Interval_Module_readable < matlab.apps.AppBase
 
     % Properties that correspond to app components
@@ -1121,6 +1121,9 @@ classdef Interval_Module_readable < matlab.apps.AppBase
 
             background_start_incl      = app.base.project.session.spot.background_starts(app.selected_spot);
             background_end_incl        = app.base.project.session.spot.background_ends(app.selected_spot);
+            if isnan(background_start_incl) || isnan(background_end_incl)
+                return
+            end
             background_values_incl     = data_incl(background_start_incl:background_end_incl, :);
             background_values_mean_incl = mean(background_values_incl, 1);
             data_incl_corrected        = data_incl - background_values_mean_incl;
@@ -1154,6 +1157,9 @@ classdef Interval_Module_readable < matlab.apps.AppBase
 
             background_start_host      = app.base.project.session.spot.background_starts(host_spot_idx);
             background_end_host        = app.base.project.session.spot.background_ends(host_spot_idx);
+            if isnan(background_start_host) || isnan(background_end_host)
+                return
+            end
             background_values_host     = data_host(background_start_host:background_end_host, :);
             background_values_mean_host = mean(background_values_host, 1);
             data_host_corrected        = data_host - background_values_mean_host;
